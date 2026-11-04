@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>arXiv Query</title>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00001v2</id>
+    <updated>2026-10-31T10:00:00Z</updated><published>2026-10-31T10:00:00Z</published>
+    <title>Long-Horizon Agent
+  Planning with Memory</title>
+    <summary>We study how language model agents plan over long horizons and show that a simple memory mechanism improves success rates on multi-step tasks while reducing cost. We study how language model agents plan over long horizons and show that a simple memory mechanism improves success rates on multi-step tasks while reducing cost. </summary>
+    <author><name>Ada Lovelace</name></author><author><name>Alan Turing</name></author>
+    <link href="http://arxiv.org/abs/2610.00001v2" rel="alternate" type="text/html"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00002v1</id>
+    <updated>2026-10-31T10:00:00Z</updated><published>2026-10-31T10:00:00Z</published>
+    <title>Sparse Attention Kernels</title>
+    <summary>A study of GPU kernels for sparse attention with measured speedups across sequence lengths and head counts, including detailed ablations on memory bandwidth and occupancy. A study of GPU kernels for sparse attention with measured speedups across sequence lengths and head counts, including detailed ablations on memory bandwidth and occupancy. </summary>
+    <author><name>Ada Lovelace</name></author><author><name>Alan Turing</name></author>
+    <link href="http://arxiv.org/abs/2610.00002v1" rel="alternate" type="text/html"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00003v1</id>
+    <updated>2026-10-31T10:00:00Z</updated><published>2026-10-31T10:00:00Z</published>
+    <title>Tiny abstract</title>
+    <summary>Too short.</summary>
+    <author><name>Ada Lovelace</name></author><author><name>Alan Turing</name></author>
+    <link href="http://arxiv.org/abs/2610.00003v1" rel="alternate" type="text/html"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+</feed>

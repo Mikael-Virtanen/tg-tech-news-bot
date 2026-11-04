@@ -1,0 +1,81 @@
+name: Tech news bot
+
+# Fetch -> summarize (Gemini) -> Telegraph article -> post to Telegram (mode "single"),
+# or collect quietly for the daily digest (mode "digest"). See README.md.
+
+on:
+  schedule:
+    # Every 3 hours at minute 17 (UTC). Not :00: the top of the hour is the most congested slot and
+    # GitHub may delay scheduled runs by many minutes anyway.
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: log what would be posted. Sends, publishes and saves nothing."
+        type: boolean
+        default: true
+
+permissions:
+  contents: write   # push the `state` branch (and the occasional keep-alive commit)
+
+concurrency:
+  # ONE writer of the state at a time, shared with digest.yml. A queued run waits for the running one.
+  group: news-bot-state
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # state branch push + higher GitHub API limits for READMEs
+      # Optional settings (Settings > Secrets and variables > Actions > Variables). Unset = default.
+      PUBLISH_MODE: ${{ vars.PUBLISH_MODE || 'single' }}   # single = post each item as it is processed
+      ITEMS_PER_SOURCE: ${{ vars.ITEMS_PER_SOURCE }}
+      MAX_POSTS_PER_RUN: ${{ vars.MAX_POSTS_PER_RUN }}
+      WRITE_ARTICLES: ${{ vars.WRITE_ARTICLES }}
+      SOURCES: ${{ vars.SOURCES }}
+      HN_MIN_POINTS: ${{ vars.HN_MIN_POINTS }}
+      ARXIV_CATEGORIES: ${{ vars.ARXIV_CATEGORIES }}
+      ARXIV_KEYWORDS: ${{ vars.ARXIV_KEYWORDS }}
+      CHANNEL_HANDLE: ${{ vars.CHANNEL_HANDLE }}
+      TELEGRAPH_AUTHOR_NAME: ${{ vars.TELEGRAPH_AUTHOR_NAME }}
+      TELEGRAPH_AUTHOR_URL: ${{ vars.TELEGRAPH_AUTHOR_URL }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      GEMINI_THINKING_LEVEL: ${{ vars.GEMINI_THINKING_LEVEL }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore state
+        id: restore
+        run: bash scripts/state_pull.sh
+
+      - name: Run bot
+        timeout-minutes: 15   # a step-level timeout still lets the `always()` save step below run
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAPH_ACCESS_TOKEN: ${{ secrets.TELEGRAPH_ACCESS_TOKEN }}
+        run: python -m src.main run
+
+      # Runs even if the bot crashed or timed out, so progress made before the failure is kept
+      # (otherwise the next run would post those items again). Never runs unless the restore
+      # succeeded, and never for dry runs.
+      - name: Save state
+        if: ${{ always() && steps.restore.outcome == 'success' && env.DRY_RUN != 'true' }}
+        run: bash scripts/state_push.sh
+
+      - name: Keep the schedule alive
+        if: ${{ github.event_name == 'schedule' }}
+        continue-on-error: true   # e.g. a protected default branch: warn, don't fail the run
+        run: bash scripts/keepalive.sh

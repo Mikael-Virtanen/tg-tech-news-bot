@@ -1,0 +1,68 @@
+name: Daily digest
+
+# Posts ONE message with the best summarized items of the last 48 hours.
+# Only active when the repository variable PUBLISH_MODE is "digest" (or when started by hand).
+
+on:
+  schedule:
+    # Daily at 16:43 UTC. An off-peak minute on purpose (see bot.yml). Edit the hour for your audience.
+    - cron: "43 16 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: log what would be posted. Sends, publishes and saves nothing."
+        type: boolean
+        default: true
+
+permissions:
+  contents: write   # push the `state` branch
+
+concurrency:
+  # ONE writer of the state at a time, shared with bot.yml. A queued run waits for the running one.
+  group: news-bot-state
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    if: ${{ vars.PUBLISH_MODE == 'digest' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # state branch push + higher GitHub API limits for READMEs
+      # Optional settings (Settings > Secrets and variables > Actions > Variables). Unset = default.
+      PUBLISH_MODE: ${{ vars.PUBLISH_MODE || 'single' }}   # single = post each item as it is processed
+      DIGEST_SIZE: ${{ vars.DIGEST_SIZE }}
+      DIGEST_MAX_AGE_HOURS: ${{ vars.DIGEST_MAX_AGE_HOURS }}
+      CHANNEL_HANDLE: ${{ vars.CHANNEL_HANDLE }}
+      TELEGRAPH_AUTHOR_NAME: ${{ vars.TELEGRAPH_AUTHOR_NAME }}
+      TELEGRAPH_AUTHOR_URL: ${{ vars.TELEGRAPH_AUTHOR_URL }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore state
+        id: restore
+        run: bash scripts/state_pull.sh
+
+      - name: Post the digest
+        timeout-minutes: 5
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m src.main digest
+
+      # Runs even if the bot crashed or timed out, so progress made before the failure is kept
+      # (otherwise the next run would post those items again). Never runs unless the restore
+      # succeeded, and never for dry runs.
+      - name: Save state
+        if: ${{ always() && steps.restore.outcome == 'success' && env.DRY_RUN != 'true' }}
+        run: bash scripts/state_push.sh
+

@@ -1,0 +1,38 @@
+{
+ "hits": [
+  {
+   "objectID": "1001",
+   "title": "A fast new database engine",
+   "url": "https://blog.example.com/fast-db",
+   "points": 512,
+   "num_comments": 230,
+   "story_text": null
+  },
+  {
+   "objectID": "1002",
+   "title": "Ask HN: How do you run LLMs locally?",
+   "url": null,
+   "points": 150,
+   "num_comments": 90,
+   "story_text": "<p>I have been trying to run open models on a laptop GPU and I keep hitting memory limits.</p><p>What quantization settings and runtimes work well for you, and how do you keep latency acceptable for interactive use? I would love concrete numbers and setups.</p>"
+  },
+  {
+   "objectID": "1003",
+   "title": "Low scoring post",
+   "url": "https://example.org/low",
+   "points": 30,
+   "num_comments": 3,
+   "story_text": null
+  },
+  {
+   "objectID": "1004",
+   "title": "A PDF paper",
+   "url": "https://example.org/paper.pdf",
+   "points": 300,
+   "num_comments": 40,
+   "story_text": null
+  }
+ ],
+ "nbHits": 4,
+ "page": 0
+}

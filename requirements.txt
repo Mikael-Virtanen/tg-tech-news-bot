@@ -1,0 +1,4 @@
+requests>=2.32
+beautifulsoup4>=4.12
+feedparser>=6.0
+google-genai>=2.0
