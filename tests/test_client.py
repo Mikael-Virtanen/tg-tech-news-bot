@@ -22,12 +22,20 @@ def gemini_body(text: str | None = '{"ok": true}', finish: str = "STOP") -> dict
     return {"candidates": [{"content": {"role": "model", "parts": parts}, "finishReason": finish}]}
 
 
+def openai_body(text: str | None = '{"ok": true}', finish: str = "stop") -> dict:
+    return {"choices": [{"message": {"role": "assistant", "content": text}, "finish_reason": finish}]}
+
+
 def rest_response(status=200, body=None) -> requests.Response:
     response = requests.Response()
     response.status_code = status
     response.headers["Content-Type"] = "application/json"
     response._content = json.dumps(body if body is not None else gemini_body()).encode("utf-8")
     return response
+
+
+def gateway_response(text: str | None = '{"ok": true}', finish: str = "stop") -> requests.Response:
+    return rest_response(200, openai_body(text, finish))
 
 
 def error_body(code, status, message, **extra):
@@ -85,20 +93,25 @@ def test_default_endpoint_is_googles_v1beta_and_carries_the_api_key_header(fake,
     assert "Authorization" not in sent_headers(fake)    # Google endpoint: no Bearer header
 
 
-def test_custom_base_url_is_used_verbatim_with_no_sdk_paths_added(fake, monkeypatch):
+def test_custom_base_url_routes_to_openai_chat_completions(fake, monkeypatch):
+    """A custom base URL means an OpenAI-compatible gateway (OneAPI/Sinox): chat/completions."""
     monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setenv("GEMINI_MODEL", "t-gemini-3.8-flash")
     monkeypatch.setenv("GEMINI_BASE_URL", "https://sinoxapi.com/v1/")  # trailing slash is noise
-    call()
-    assert sent_url(fake) == f"https://sinoxapi.com/v1/models/{client.DEFAULT_MODEL}:generateContent"
-    assert sent_headers(fake)["x-goog-api-key"] == "k"
+    fake.return_value = gateway_response()
+    assert call() == '{"ok": true}'
+    assert sent_url(fake) == "https://sinoxapi.com/v1/chat/completions"
     assert sent_headers(fake)["Authorization"] == "Bearer k"  # gateways read this one
+    payload = sent_payload(fake)
+    assert payload["model"] == "t-gemini-3.8-flash"
+    assert payload["messages"] == MESSAGES                     # OpenAI-style messages pass through
+    assert payload["response_format"] == {"type": "json_object"}
+    assert payload["max_tokens"] == 800
 
     monkeypatch.setenv("GEMINI_BASE_URL", "")  # GitHub passes unset variables as ""
+    fake.return_value = rest_response()
     call()
     assert sent_url(fake).startswith("https://generativelanguage.googleapis.com/v1beta/")
-
-
-# ------------------------------ request mapping ----------------------------- #
 
 
 # ------------------------------ request mapping ----------------------------- #
@@ -134,6 +147,52 @@ def test_temperature_is_left_default_on_gemini_3_but_applied_on_older_models(fak
     monkeypatch.setenv("GEMINI_TEMPERATURE", "0.5")
     call()
     assert sent_payload(fake)["generationConfig"]["temperature"] == 0.5  # explicit override wins everywhere
+
+
+def test_gateway_temperature_follows_the_same_gemini_3_rule_even_behind_a_prefix(fake, monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://sinoxapi.com/v1")
+    fake.return_value = gateway_response()
+    monkeypatch.setenv("GEMINI_MODEL", "t-gemini-3.8-flash")  # renamed by the gateway
+    call()
+    assert "temperature" not in sent_payload(fake)  # "gemini-3" anywhere in the name counts
+    monkeypatch.setenv("GEMINI_MODEL", "gpt-4o-mini")
+    call(temperature=0.3)
+    assert sent_payload(fake)["temperature"] == 0.3
+
+
+def test_gateway_content_dialects_are_read_tolerantly(fake, monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://sinoxapi.com/v1")
+    monkeypatch.setenv("GEMINI_MODEL", "t-gemini-3.8-flash")
+    fake.return_value = rest_response(body={"choices": [{"message": {"content": [
+        {"type": "text", "text": "a"}, {"type": "text", "text": "b"}]}, "finish_reason": "stop"}]})
+    assert call() == "ab"
+    fake.return_value = rest_response(body={"choices": [{"message": {"refusal": "no"}, "finish_reason": "stop"}]})
+    with pytest.raises(client.LLMError, match="refused"):
+        call()
+    fake.return_value = rest_response(body={"choices": [{"message": {"content": None}, "finish_reason": "stop"}]})
+    with pytest.raises(client.LLMError, match="no message content"):
+        call()
+
+
+def test_gateway_200_with_an_error_envelope_is_an_llm_error(fake, monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://sinoxapi.com/v1")
+    fake.return_value = rest_response(body={"error": {"message": "upstream quota"}})
+    with pytest.raises(client.LLMError, match="error envelope"):
+        call()
+    fake.return_value = rest_response(body={"error": "string envelope"})
+    with pytest.raises(client.LLMError, match="error envelope"):
+        call()
+
+
+def test_gateway_length_finish_returns_partial_text_so_callers_can_retry(fake, monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://sinoxapi.com/v1")
+    fake.return_value = rest_response(body=openai_body('{"title": "cut', finish="length"))
+    assert call() == '{"title": "cut'
+    assert client.parse_json_object(call())[0] is None
 
 
 def test_thinking_level_adds_token_headroom_except_minimal(fake, monkeypatch):
@@ -313,6 +372,26 @@ def test_summarizer_runs_end_to_end_on_the_rest_client(fake):
     assert summary.bullets == ("الف", "ب", "ج")
     assert sent_payload(fake)["systemInstruction"]["parts"][0]["text"] == SYSTEM_PROMPT
     assert sent_payload(fake)["generationConfig"]["maxOutputTokens"] == 800
+
+
+def test_summarizer_runs_end_to_end_through_the_gateway(fake, monkeypatch):
+    """The full retry loop over an OpenAI-compatible proxy: messages pass through verbatim."""
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://sinoxapi.com/v1")
+    monkeypatch.setenv("GEMINI_MODEL", "t-gemini-3.8-flash")
+    too_long = json.dumps({
+        "title": "ع" * 90, "hook": "h", "bullets": ["a", "b", "c"], "hashtags": ["x", "y", "z"],
+    }, ensure_ascii=False)
+    good = json.dumps({
+        "title": "t", "hook": "h", "bullets": ["a", "b", "c"], "hashtags": ["x", "y", "z"],
+    }, ensure_ascii=False)
+    fake.side_effect = [gateway_response(too_long), gateway_response(good)]
+    item = NewsItem("hackernews:1", "hackernews", "Title", "https://example.com", "body")
+    summary = summarizer.summarize(item)
+    assert summary.title == "t"
+    messages = sent_payload(fake)["messages"]
+    assert messages[0]["role"] == "system" and messages[-1]["role"] == "user"  # corrective retry appended
+    assert sent_payload(fake)["model"] == "t-gemini-3.8-flash"
 
 
 # ------------------------------ configuration errors ------------------------- #
