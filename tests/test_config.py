@@ -65,13 +65,16 @@ def test_modules_that_read_env_directly_also_treat_empty_as_unset(monkeypatch):
 
     # the model name is resolved inside call_model; prove an empty variable falls back to the default
     from unittest.mock import MagicMock, patch
-    from google.genai import types
-    sdk = MagicMock()
-    sdk.models.generate_content.return_value = types.GenerateContentResponse(candidates=[types.Candidate(
-        content=types.Content(role="model", parts=[types.Part(text="{}")]), finish_reason=types.FinishReason.STOP)])
-    with patch.object(client, "_client", return_value=sdk):
+    import json as _json
+    post = MagicMock()
+    post.return_value.status_code = 200
+    post.return_value.json.return_value = {"candidates": [{"content": {"role": "model", "parts": [{"text": "{}"}]}, "finishReason": "STOP"}]}
+    session = MagicMock()
+    session.post = post
+    with patch.object(client, "_session", return_value=session):
         client.call_model([{"role": "user", "content": "x"}], {"json_schema": {"schema": {}}}, max_completion_tokens=10)
-    assert sdk.models.generate_content.call_args.kwargs["model"] == client.DEFAULT_MODEL
+    assert post.call_args.args[0] == f"{client.DEFAULT_BASE_URL}/models/{client.DEFAULT_MODEL}:generateContent"
+    assert _json.dumps(post.call_args.kwargs["json"])  # payload is JSON-serializable
 
     # USER_AGENT is read at import time: check in a fresh interpreter instead of reloading the module here
     import os, subprocess, sys

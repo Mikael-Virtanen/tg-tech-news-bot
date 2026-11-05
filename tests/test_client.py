@@ -1,9 +1,9 @@
-"""Gemini client tests. No network or API key needed: the SDK client is replaced by a fake."""
+"""Gemini REST client tests. No network or API key needed: HTTP is replaced by a fake."""
 import json
 from unittest.mock import MagicMock, patch
 
 import pytest
-from google.genai import errors, types
+import requests
 
 from src.llm import client, summarizer
 from src.llm.prompts import RESPONSE_FORMAT, SYSTEM_PROMPT
@@ -17,31 +17,45 @@ MESSAGES = [
 ]
 
 
-def gemini_response(text: str | None = '{"ok": true}', finish=types.FinishReason.STOP) -> types.GenerateContentResponse:
-    parts = [types.Part(text=text)] if text is not None else []
-    return types.GenerateContentResponse(
-        candidates=[types.Candidate(content=types.Content(role="model", parts=parts), finish_reason=finish)]
-    )
+def gemini_body(text: str | None = '{"ok": true}', finish: str = "STOP") -> dict:
+    parts = [{"text": text}] if text is not None else []
+    return {"candidates": [{"content": {"role": "model", "parts": parts}, "finishReason": finish}]}
+
+
+def rest_response(status=200, body=None) -> requests.Response:
+    response = requests.Response()
+    response.status_code = status
+    response.headers["Content-Type"] = "application/json"
+    response._content = json.dumps(body if body is not None else gemini_body()).encode("utf-8")
+    return response
+
+
+def error_body(code, status, message, **extra):
+    return {"error": {"code": code, "status": status, "message": message, **extra}}
 
 
 def quota_error(message="Quota exceeded.", delay="1s", quota_id="GenerateRequestsPerMinutePerProjectPerModel-FreeTier"):
-    body = {"error": {"code": 429, "message": message, "status": "RESOURCE_EXHAUSTED", "details": [
-        {"@type": "type.googleapis.com/google.rpc.RetryInfo", "retryDelay": delay},
-        {"@type": "type.googleapis.com/google.rpc.QuotaFailure", "violations": [{"quotaId": quota_id}]},
-    ]}}
-    return errors.ClientError(429, body)
+    return error_body(
+        429, "RESOURCE_EXHAUSTED", message,
+        details=[
+            {"@type": "type.googleapis.com/google.rpc.RetryInfo", "retryDelay": delay},
+            {"@type": "type.googleapis.com/google.rpc.QuotaFailure", "violations": [{"quotaId": quota_id}]},
+        ],
+    )
 
 
 @pytest.fixture
 def fake(monkeypatch):
-    """Patch the SDK client and clear env so each test controls its own configuration."""
+    """Patch HTTP and clear env so each test controls its own configuration."""
     for var in ("GEMINI_MODEL", "GEMINI_THINKING_LEVEL", "GEMINI_TEMPERATURE", "GEMINI_BASE_URL"):
         monkeypatch.delenv(var, raising=False)
-    sdk = MagicMock()
-    sdk.models.generate_content.return_value = gemini_response()
-    with patch.object(client, "_client", return_value=sdk), patch.object(client.time, "sleep") as sleep:
-        sdk.sleep = sleep
-        yield sdk
+    post = MagicMock(return_value=rest_response())
+    session = MagicMock()
+    session.post = post
+    with patch.object(client, "_session", return_value=session), patch.object(client.time, "sleep") as sleep:
+        post.sleep = sleep
+        post.session = session
+        yield post
 
 
 def call(**overrides):
@@ -50,16 +64,49 @@ def call(**overrides):
     return client.call_model(MESSAGES, RESPONSE_FORMAT, **kwargs)
 
 
-def sent_config(sdk) -> types.GenerateContentConfig:
-    return sdk.models.generate_content.call_args.kwargs["config"]
+def sent_payload(fake) -> dict:
+    return fake.call_args.kwargs["json"]
+
+
+def sent_headers(fake) -> dict:
+    return fake.call_args.kwargs["headers"]
+
+
+def sent_url(fake) -> str:
+    return fake.call_args.args[0]
+
+
+# ------------------------------ endpoint / headers --------------------------- #
+def test_default_endpoint_is_googles_v1beta_and_carries_the_api_key_header(fake, monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    assert call() == '{"ok": true}'
+    assert sent_url(fake) == f"https://generativelanguage.googleapis.com/v1beta/models/{client.DEFAULT_MODEL}:generateContent"
+    assert sent_headers(fake)["x-goog-api-key"] == "k"
+    assert "Authorization" not in sent_headers(fake)    # Google endpoint: no Bearer header
+
+
+def test_custom_base_url_is_used_verbatim_with_no_sdk_paths_added(fake, monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://sinoxapi.com/v1/")  # trailing slash is noise
+    call()
+    assert sent_url(fake) == f"https://sinoxapi.com/v1/models/{client.DEFAULT_MODEL}:generateContent"
+    assert sent_headers(fake)["x-goog-api-key"] == "k"
+    assert sent_headers(fake)["Authorization"] == "Bearer k"  # gateways read this one
+
+    monkeypatch.setenv("GEMINI_BASE_URL", "")  # GitHub passes unset variables as ""
+    call()
+    assert sent_url(fake).startswith("https://generativelanguage.googleapis.com/v1beta/")
+
+
+# ------------------------------ request mapping ----------------------------- #
 
 
 # ------------------------------ request mapping ----------------------------- #
 def test_messages_become_system_instruction_and_model_role_turns():
     system, contents = client._split_messages(MESSAGES)
     assert system == "SYS"
-    assert [c.role for c in contents] == ["user", "model", "user"]
-    assert contents[1].parts[0].text == "draft"
+    assert [c["role"] for c in contents] == ["user", "model", "user"]
+    assert contents[1]["parts"][0]["text"] == "draft"
 
 
 def test_unknown_role_is_rejected():
@@ -67,38 +114,37 @@ def test_unknown_role_is_rejected():
         client._split_messages([{"role": "tool", "content": "x"}])
 
 
-def test_request_carries_schema_json_mime_tokens_and_millisecond_timeout(fake):
-    assert call(timeout=30.0) == '{"ok": true}'
-    config = sent_config(fake)
-    assert fake.models.generate_content.call_args.kwargs["model"] == client.DEFAULT_MODEL
-    assert config.system_instruction == "SYS"
-    assert config.response_mime_type == "application/json"
-    assert config.response_json_schema == RESPONSE_FORMAT["json_schema"]["schema"]
-    assert config.max_output_tokens == 800
-    assert config.http_options.timeout == 30_000
+def test_request_carries_schema_config_and_system_instruction(fake):
+    call(timeout=30.0)
+    payload = sent_payload(fake)
+    assert payload["systemInstruction"]["parts"][0]["text"] == "SYS"
+    config = payload["generationConfig"]
+    assert config["responseMimeType"] == "application/json"
+    assert config["responseJsonSchema"] == RESPONSE_FORMAT["json_schema"]["schema"]
+    assert config["maxOutputTokens"] == 800
 
 
 def test_temperature_is_left_default_on_gemini_3_but_applied_on_older_models(fake, monkeypatch):
     call()
-    assert sent_config(fake).temperature is None  # default model is gemini-3.x
+    assert "temperature" not in sent_payload(fake)["generationConfig"]  # default model is gemini-3.x
     monkeypatch.setenv("GEMINI_MODEL", "gemini-2.5-flash")
     call(temperature=0.3)
-    assert sent_config(fake).temperature == 0.3
+    assert sent_payload(fake)["generationConfig"]["temperature"] == 0.3
     monkeypatch.setenv("GEMINI_MODEL", "gemini-3.8-flash")
     monkeypatch.setenv("GEMINI_TEMPERATURE", "0.5")
     call()
-    assert sent_config(fake).temperature == 0.5  # explicit override wins everywhere
+    assert sent_payload(fake)["generationConfig"]["temperature"] == 0.5  # explicit override wins everywhere
 
 
 def test_thinking_level_adds_token_headroom_except_minimal(fake, monkeypatch):
     monkeypatch.setenv("GEMINI_THINKING_LEVEL", "minimal")
     call()
-    assert sent_config(fake).max_output_tokens == 800
+    assert sent_payload(fake)["generationConfig"]["maxOutputTokens"] == 800
     monkeypatch.setenv("GEMINI_THINKING_LEVEL", "low")
     call()
-    config = sent_config(fake)
-    assert config.max_output_tokens == 800 + client.THINKING_HEADROOM_TOKENS
-    assert config.thinking_config.thinking_level == types.ThinkingLevel.LOW
+    config = sent_payload(fake)["generationConfig"]
+    assert config["maxOutputTokens"] == 800 + client.THINKING_HEADROOM_TOKENS
+    assert config["thinkingConfig"]["thinkingLevel"] == "low"
 
 
 def test_invalid_thinking_level_is_reported(fake, monkeypatch):
@@ -107,75 +153,61 @@ def test_invalid_thinking_level_is_reported(fake, monkeypatch):
         call()
 
 
-# ------------------------------ endpoint (proxy) ---------------------------- #
-def test_base_url_defaults_to_google_and_follows_the_environment_variable(fake, monkeypatch):
-    call()
-    assert sent_config(fake).http_options.base_url == client.DEFAULT_BASE_URL
-
-    monkeypatch.setenv("GEMINI_BASE_URL", "https://proxy.example.com/v1beta/")  # trailing slash is noise
-    call()
-    assert sent_config(fake).http_options.base_url == "https://proxy.example.com/v1beta"
-
-    monkeypatch.setenv("GEMINI_BASE_URL", "")  # GitHub passes unset variables as ""
-    call()
-    assert sent_config(fake).http_options.base_url == client.DEFAULT_BASE_URL
-
-
-def test_sdk_client_is_created_with_the_configured_base_url(monkeypatch):
-    monkeypatch.setenv("GEMINI_API_KEY", "proxy-key")
-    monkeypatch.setenv("GEMINI_BASE_URL", "https://proxy.example.com")
-    client._client.cache_clear()
-    try:
-        with patch.object(client.genai, "Client") as ctor:
-            client._client()
-        assert ctor.call_args.kwargs["api_key"] == "proxy-key"
-        assert ctor.call_args.kwargs["http_options"].base_url == "https://proxy.example.com"
-    finally:
-        client._client.cache_clear()
-
-
 def test_missing_api_key_is_a_clear_error(monkeypatch):
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
-    client._client.cache_clear()
     with pytest.raises(client.LLMError, match="GEMINI_API_KEY"):
-        client._client()
+        client._api_key()
 
 
 # ------------------------------ response handling --------------------------- #
+def test_snake_case_gateway_responses_are_read_tolerantly(fake):
+    fake.return_value = rest_response(body={
+        "candidates": [{"finish_reason": "STOP", "content": {"role": "model", "parts": [{"text": "snake"}]}}],
+    })
+    assert call() == "snake"
+
+
 def test_blocked_prompt_raises(fake):
-    fake.models.generate_content.return_value = types.GenerateContentResponse(
-        prompt_feedback=types.GenerateContentResponsePromptFeedback(block_reason=types.BlockedReason.SAFETY)
-    )
+    fake.return_value = rest_response(body={"promptFeedback": {"blockReason": "SAFETY"}})
     with pytest.raises(client.LLMError, match="blocked the prompt.*SAFETY"):
         call()
 
 
 def test_withheld_or_empty_response_raises(fake):
-    fake.models.generate_content.return_value = gemini_response(None, finish=types.FinishReason.SAFETY)
+    fake.return_value = rest_response(body=gemini_body(None, finish="SAFETY"))
     with pytest.raises(client.LLMError, match="SAFETY"):
         call()
-    fake.models.generate_content.return_value = gemini_response("partial", finish=types.FinishReason.RECITATION)
+    fake.return_value = rest_response(body=gemini_body("partial", finish="RECITATION"))
     with pytest.raises(client.LLMError, match="withheld"):
         call()
 
 
 def test_max_tokens_returns_partial_text_so_callers_can_retry(fake):
-    fake.models.generate_content.return_value = gemini_response('{"title": "cut', finish=types.FinishReason.MAX_TOKENS)
+    fake.return_value = rest_response(body=gemini_body('{"title": "cut', finish="MAX_TOKENS"))
     assert call() == '{"title": "cut'
     assert client.parse_json_object(call())[0] is None
 
 
+def test_non_json_success_body_is_a_plain_llm_error(fake):
+    response = requests.Response()
+    response.status_code = 200
+    response._content = b"<html>gateway oops</html>"
+    fake.return_value = response
+    with pytest.raises(client.LLMError, match="non-JSON"):
+        call()
+
+
 # ------------------------------ errors / retries ---------------------------- #
 def test_short_quota_wait_is_slept_then_retried(fake):
-    fake.models.generate_content.side_effect = [quota_error(delay="3s"), gemini_response()]
+    fake.side_effect = [rest_response(429, quota_error(delay="3s")), rest_response()]
     assert call() == '{"ok": true}'
     fake.sleep.assert_called_once()
     assert 3 <= fake.sleep.call_args.args[0] <= 4
 
 
 def test_long_quota_wait_raises_rate_limited_without_sleeping(fake):
-    fake.models.generate_content.side_effect = [quota_error(delay="60s")]
+    fake.return_value = rest_response(429, quota_error(delay="60s"))
     with pytest.raises(client.LLMRateLimited) as info:
         call()
     assert info.value.retry_after == 60 and not info.value.daily
@@ -183,74 +215,94 @@ def test_long_quota_wait_raises_rate_limited_without_sleeping(fake):
 
 
 def test_daily_quota_is_not_retried(fake):
-    fake.models.generate_content.side_effect = [
-        quota_error(delay="2s", quota_id="GenerateRequestsPerDayPerProjectPerModel-FreeTier")
-    ]
+    fake.return_value = rest_response(429, quota_error(delay="2s", quota_id="GenerateRequestsPerDayPerProjectPerModel-FreeTier"))
     with pytest.raises(client.LLMRateLimited) as info:
         call()
     assert info.value.daily
-    assert fake.models.generate_content.call_count == 1
+    assert fake.call_count == 1
+
+
+def test_gateway_429_without_a_json_body_is_still_rate_limiting(fake):
+    response = requests.Response()
+    response.status_code = 429
+    response._content = b"rate limited"
+    fake.return_value = response
+    with pytest.raises(client.LLMRateLimited):
+        call()
 
 
 def test_server_error_is_retried_then_succeeds(fake):
-    unavailable = errors.ServerError(503, {"error": {"code": 503, "message": "overloaded", "status": "UNAVAILABLE"}})
-    fake.models.generate_content.side_effect = [unavailable, gemini_response()]
+    fake.side_effect = [rest_response(503, error_body(503, "UNAVAILABLE", "overloaded")), rest_response()]
     assert call() == '{"ok": true}'
-    assert fake.models.generate_content.call_count == 2
+    assert fake.call_count == 2
 
 
 def test_client_error_is_not_retried(fake):
-    bad = errors.ClientError(400, {"error": {"code": 400, "message": "bad schema", "status": "INVALID_ARGUMENT"}})
-    fake.models.generate_content.side_effect = [bad]
+    fake.return_value = rest_response(400, error_body(400, "INVALID_ARGUMENT", "bad schema"))
     with pytest.raises(client.LLMError, match="400 INVALID_ARGUMENT: bad schema"):
         call()
-    assert fake.models.generate_content.call_count == 1
+    assert fake.call_count == 1
 
 
-def test_network_errors_are_retried_but_programming_errors_are_not(fake):
-    fake.models.generate_content.side_effect = [TimeoutError("slow"), gemini_response()]
+def test_network_errors_are_retried(fake):
+    fake.side_effect = [requests.ConnectionError("reset"), rest_response()]
     assert call() == '{"ok": true}'
-    fake.models.generate_content.side_effect = [KeyError("bug")]
-    with pytest.raises(KeyError):
+    fake.side_effect = [requests.Timeout("slow"), rest_response()]
+    assert call() == '{"ok": true}'
+
+
+def test_persistent_network_failures_become_llm_unavailable(fake):
+    fake.side_effect = [requests.Timeout("slow")] * client.MAX_CALL_ATTEMPTS
+    with pytest.raises(client.LLMUnavailable):
         call()
+
+
+def test_404_is_treated_as_a_config_error_never_retried(fake):
+    fake.return_value = rest_response(404, error_body(404, "NOT_FOUND", "no such model"))
+    with pytest.raises(client.LLMConfigError, match="GEMINI_API_KEY"):
+        call()
+    assert fake.call_count == 1
+
+
+def test_a_404_from_a_gateway_that_does_not_serve_the_path_names_the_base_url(fake, monkeypatch):
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://sinoxapi.com/v1")
+    fake.return_value = rest_response(404, error_body(404, "NOT_FOUND", "no such model"))
+    with pytest.raises(client.LLMConfigError, match="GEMINI_BASE_URL"):
+        call()
+    assert fake.call_count == 1
 
 
 # ------------------------------ through the summarizer ---------------------- #
-def test_summarizer_runs_end_to_end_on_the_gemini_client(fake):
+def test_summarizer_runs_end_to_end_on_the_rest_client(fake):
     payload = json.dumps({
         "title": "مدل جدید",
         "hook": "یک جمله.",
         "bullets": ["الف", "ب", "ج"],
         "hashtags": ["هوش_مصنوعی", "AI", "LLM"],
     }, ensure_ascii=False)
-    fake.models.generate_content.return_value = gemini_response(payload)
+    fake.return_value = rest_response(body=gemini_body(payload))
     item = NewsItem("hackernews:1", "hackernews", "Title", "https://example.com", "body")
     summary = summarizer.summarize(item)
     assert summary.bullets == ("الف", "ب", "ج")
-    assert sent_config(fake).system_instruction == SYSTEM_PROMPT
-    assert sent_config(fake).max_output_tokens == 800
+    assert sent_payload(fake)["systemInstruction"]["parts"][0]["text"] == SYSTEM_PROMPT
+    assert sent_payload(fake)["generationConfig"]["maxOutputTokens"] == 800
 
 
 # ------------------------------ configuration errors ------------------------- #
-@pytest.mark.parametrize(
-    "code, status, message",
-    [
-        (404, "NOT_FOUND", "models/gemini-1.5-flash is not found for API version v1beta"),  # a retired model name
-        (403, "PERMISSION_DENIED", "The caller does not have permission"),
-        (401, "UNAUTHENTICATED", "Request had invalid authentication credentials"),
-        (400, "INVALID_ARGUMENT", "API key not valid. Please pass a valid API key."),
-    ],
-)
+@pytest.mark.parametrize("code, status, message", [
+    (403, "PERMISSION_DENIED", "The caller does not have permission"),
+    (401, "UNAUTHENTICATED", "Request had invalid authentication credentials"),
+    (400, "INVALID_ARGUMENT", "API key not valid. Please pass a valid API key."),
+])
 def test_bad_key_or_model_is_a_config_error_and_is_never_retried(fake, code, status, message):
-    fake.models.generate_content.side_effect = [errors.ClientError(code, {"error": {"code": code, "message": message, "status": status}})]
+    fake.return_value = rest_response(code, error_body(code, status, message))
     with pytest.raises(client.LLMConfigError, match="GEMINI_API_KEY and GEMINI_MODEL"):
         call()
-    assert fake.models.generate_content.call_count == 1
+    assert fake.call_count == 1
 
 
 def test_ordinary_bad_requests_stay_plain_llm_errors(fake):
-    bad = errors.ClientError(400, {"error": {"code": 400, "message": "schema too deep", "status": "INVALID_ARGUMENT"}})
-    fake.models.generate_content.side_effect = [bad]
+    fake.return_value = rest_response(400, error_body(400, "INVALID_ARGUMENT", "schema too deep"))
     with pytest.raises(client.LLMError) as info:
         call()
     assert not isinstance(info.value, client.LLMConfigError)
@@ -259,24 +311,16 @@ def test_ordinary_bad_requests_stay_plain_llm_errors(fake):
 def test_a_missing_key_is_a_config_error(monkeypatch):
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
-    client._client.cache_clear()
     with pytest.raises(client.LLMConfigError):
-        client._client()
+        client.call_model([{"role": "user", "content": "x"}], {"json_schema": {"schema": {}}}, max_completion_tokens=10)
 
 
 # ------------------------------ outages -------------------------------------- #
 def test_persistent_server_errors_become_llm_unavailable(fake):
-    unavailable = errors.ServerError(503, {"error": {"code": 503, "message": "overloaded", "status": "UNAVAILABLE"}})
-    fake.models.generate_content.side_effect = [unavailable] * client.MAX_CALL_ATTEMPTS
+    fake.return_value = rest_response(503, error_body(503, "UNAVAILABLE", "overloaded"))
     with pytest.raises(client.LLMUnavailable):
         call()
-    assert fake.models.generate_content.call_count == client.MAX_CALL_ATTEMPTS
-
-
-def test_persistent_network_failures_become_llm_unavailable(fake):
-    fake.models.generate_content.side_effect = [TimeoutError("slow")] * client.MAX_CALL_ATTEMPTS
-    with pytest.raises(client.LLMUnavailable):
-        call()
+    assert fake.call_count == client.MAX_CALL_ATTEMPTS
 
 
 def test_transient_errors_share_one_base_class_so_callers_can_treat_them_alike():

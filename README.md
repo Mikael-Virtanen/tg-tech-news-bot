@@ -18,8 +18,10 @@ cron ─► restore state ─► fetch (skip known ids) ─► pick best N per s
 2. **Telegram.** Talk to [@BotFather](https://t.me/BotFather) → `/newbot` → copy the token. Create a channel, then add the
    bot as an **administrator with the "Post messages" right**. The chat id is `@your_channel_username` for a public channel.
 3. **Gemini.** Create a free key at <https://aistudio.google.com/apikey>. (Using a proxy or gateway
-   that speaks the Gemini API? Set the optional `GEMINI_BASE_URL` variable to its base URL and put
-   the proxy's key in `GEMINI_API_KEY`.)
+   that speaks the Gemini API, e.g. a custom base URL? Set the optional `GEMINI_BASE_URL` variable
+   to the base URL — e.g. `https://sinoxapi.com/v1` — and put the proxy's key in `GEMINI_API_KEY`.
+   Requests then go to `{GEMINI_BASE_URL}/models/{model}:generateContent` with both
+   `x-goog-api-key` and `Authorization: Bearer` headers, so OpenAI-style gateways accept them too.)
 4. **Telegra.ph.** Once, locally: `pip install -r requirements.txt` then
    `python -m src.publishing.telegraph "ShortName" "Channel name" "https://t.me/your_channel"`. It prints an access token.
 5. **Secrets** (Settings → Secrets and variables → Actions → *Secrets*): `GEMINI_API_KEY`, `TELEGRAM_BOT_TOKEN`,
