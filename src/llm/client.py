@@ -221,16 +221,42 @@ def _is_daily_quota(blob: str) -> bool:
 
 
 def _error_fields(response: requests.Response) -> tuple[int, str, str, list]:
-    """(code, status, message, details) from a JSON error body, tolerating non-JSON gateways."""
+    """(code, status, message, details) from an error body, tolerating every shape a gateway emits.
+
+    Seen in the wild: {"error": {code, status, message, details}} (Google), {"error": "text"}
+    (gateways), a bare "text" body, a non-JSON body, or an all-200-but-error envelope. Fields
+    are read defensively; anything unreadable falls back to the HTTP status itself.
+    """
     try:
         data = response.json()
     except ValueError:
-        data = {}
-    error = data.get("error") or {} if isinstance(data, dict) else {}
-    code = int(error.get("code") or response.status_code)
-    status = str(error.get("status") or f"HTTP_{response.status_code}")
-    message = str(error.get("message") or (response.text or "")[:500] or f"HTTP {response.status_code}")
-    details = error.get("details") or []
+        data = None
+    error = data.get("error") if isinstance(data, dict) else None
+    if isinstance(error, dict):
+        raw_code = error.get("code") or response.status_code
+        try:
+            code = int(raw_code)
+        except (TypeError, ValueError):
+            code = response.status_code
+        status = str(error.get("status") or f"HTTP_{response.status_code}")
+        message = str(error.get("message") or (response.text or "")[:500] or f"HTTP {response.status_code}")
+        details = error.get("details") or []
+        if not isinstance(details, list):
+            details = []
+    elif isinstance(error, str) and error.strip():
+        # {"error": "something went wrong"} — a plain string instead of the Google object
+        code = response.status_code
+        status = f"HTTP_{response.status_code}"
+        message = error.strip()[:500]
+        details = []
+    else:
+        # a bare JSON body without an "error" key ({"message": "..."}), non-JSON, or unparseable
+        code = response.status_code
+        status = f"HTTP_{response.status_code}"
+        top_message = data.get("message") if isinstance(data, dict) else None
+        fallback = str(top_message or (response.text or "").strip()[:500] or f"HTTP {response.status_code}")
+        message = fallback
+        details = []
     return code, status, message, details
 
 
@@ -246,15 +272,16 @@ def _first(body: dict[str, Any], *names: str) -> Any:
 
 def _extract_text(body: dict[str, Any]) -> str:
     candidates = body.get("candidates") or []
-    if not candidates:
-        feedback = _first(body, "promptFeedback", "prompt_feedback") or {}
+    if not isinstance(candidates, list) or not candidates:
+        feedback = _first(body, "promptFeedback", "prompt_feedback")
         reason = _first(feedback, "blockReason", "block_reason") if isinstance(feedback, dict) else None
         raise LLMError(f"Gemini blocked the prompt (blockReason={reason})" if reason else "Gemini returned no candidates")
 
-    candidate = candidates[0] or {}
+    candidate = candidates[0] if isinstance(candidates[0], dict) else {}
     finish = str(_first(candidate, "finishReason", "finish_reason") or "")
-    parts = (_first(candidate, "content") or {}).get("parts") or []
-    text = "".join(str(p.get("text", "")) for p in parts if isinstance(p, dict))
+    content = _first(candidate, "content")
+    parts = content.get("parts") if isinstance(content, dict) else None
+    text = "".join(str(p.get("text", "")) for p in (parts or []) if isinstance(p, dict))
     if not text:
         raise LLMError(f"Gemini returned no text (finishReason={finish})")
     if finish in _WITHHELD_FINISH_REASONS:

@@ -272,6 +272,33 @@ def test_a_404_from_a_gateway_that_does_not_serve_the_path_names_the_base_url(fa
     assert fake.call_count == 1
 
 
+# ------------------------------ error-body dialects -------------------------- #
+@pytest.mark.parametrize("body", [
+    {"error": "Invalid API key provided"},          # the crash: a plain string, not a dict
+    {"error": ""},                                  # empty string
+    {"error": 42},                                  # a number
+    {"error": ["a", "b"]},                          # a list
+    {"error": None},                                # explicit null
+    {"message": "model not found"},                 # top-level message, OpenAI style
+    [1, 2, 3],                                      # a JSON array body
+    "null",                                          # JSON null
+])
+def test_every_error_body_shape_is_handled_without_crashing(fake, body):
+    fake.return_value = rest_response(400, body)
+    try:
+        call()
+        assert False, "a 400 must raise"
+    except client.LLMError as exc:
+        assert "400" in str(exc)  # classified, with the HTTP status as the code
+    assert fake.call_count == 1
+
+
+def test_string_code_inside_the_error_dict_is_coerced(fake):
+    fake.return_value = rest_response(200, error_body("429", "RESOURCE_EXHAUSTED", "quota by string code"))
+    with pytest.raises(client.LLMRateLimited):
+        call()
+
+
 # ------------------------------ through the summarizer ---------------------- #
 def test_summarizer_runs_end_to_end_on_the_rest_client(fake):
     payload = json.dumps({
@@ -301,7 +328,47 @@ def test_bad_key_or_model_is_a_config_error_and_is_never_retried(fake, code, sta
     assert fake.call_count == 1
 
 
-def test_ordinary_bad_requests_stay_plain_llm_errors(fake):
+@pytest.mark.parametrize("body, code, expected_in_message", [
+    ({"error": "rate limit exceeded, retry later"}, 429, "rate limit exceeded"),  # error is a plain STRING
+    ({"error": None}, 404, "HTTP 404"),                                           # error is null
+    ({"message": "upstream unavailable"}, 503, "upstream unavailable"),           # no "error" key at all
+    ({"error": {"code": "429", "message": "weird string code"}}, 429, "weird string code"),  # code as a string
+    ({"error": {"code": "not-a-number", "message": "boom"}}, 500, "boom"),        # unparseable code
+])
+def test_gateway_error_shapes_never_crash_the_handler(fake, body, code, expected_in_message):
+    """The original bug: a proxy returned {"error": "text"} and _error_fields called .get on a str."""
+    fake.return_value = rest_response(code, body)
+    try:
+        call()
+    except client.LLMError as exc:  # some of these raise LLMRateLimited / LLMConfigError / LLMUnavailable subclasses
+        assert expected_in_message in str(exc)
+    else:
+        pytest.fail("a non-2xx response must always raise")
+
+
+def test_plain_text_error_body_never_crashes_the_handler(fake):
+    response = requests.Response()
+    response.status_code = 502
+    response._content = b"Bad Gateway"
+    fake.return_value = response
+    with pytest.raises(client.LLMUnavailable, match="Bad Gateway"):
+        call()
+
+
+def test_weird_success_bodies_never_crash_extraction(fake):
+    """candidates/content in shapes the schema never promised: dict, string, null, or a bare part."""
+    fake.return_value = rest_response(body={"candidates": {}})
+    with pytest.raises(client.LLMError, match="no candidates"):
+        call()
+    fake.return_value = rest_response(body={"candidates": ["garbage"]})
+    with pytest.raises(client.LLMError, match="no text"):
+        call()
+    fake.return_value = rest_response(body={"candidates": [{"content": "not-a-dict", "finishReason": "STOP"}]})
+    with pytest.raises(client.LLMError, match="no text"):
+        call()
+    fake.return_value = rest_response(body={"candidates": [{"content": None, "finishReason": "STOP"}]})
+    with pytest.raises(client.LLMError, match="no text"):
+        call()
     fake.return_value = rest_response(400, error_body(400, "INVALID_ARGUMENT", "schema too deep"))
     with pytest.raises(client.LLMError) as info:
         call()
