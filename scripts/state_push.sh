@@ -36,5 +36,23 @@ if git rev-parse -q --verify HEAD >/dev/null; then
   git checkout --quiet --orphan _next
 fi
 git commit --quiet -m "state: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-git push --quiet --force origin "HEAD:refs/heads/$STATE_BRANCH"
+
+# Retry: a push that fails after the bot already posted is the one case where the next run would
+# re-post everything this run sent. Two more attempts cover a flaky runner network.
+pushed=0
+for attempt in 1 2 3; do
+  if git push --quiet --force origin "HEAD:refs/heads/$STATE_BRANCH"; then
+    pushed=1
+    break
+  fi
+  echo "state: push attempt $attempt of 3 failed" >&2
+  if [ "$attempt" -lt 3 ]; then
+    sleep $((attempt * 5))
+  fi
+done
+
+if [ "$pushed" -ne 1 ]; then
+  echo "::error title=State push failed::could not save the state after 3 attempts; the next run may re-post items sent in this run"
+  exit 1
+fi
 echo "state: saved to branch '$STATE_BRANCH' at $(git rev-parse --short HEAD)"

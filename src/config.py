@@ -14,6 +14,10 @@ from dataclasses import dataclass
 PUBLISH_MODES = ("single", "digest")
 KNOWN_SOURCES = ("hackernews", "github", "arxiv")
 
+# Conservative on purpose: arXiv has no popularity signal, so unfiltered it would flood the channel
+# with every new cs.AI/cs.CL/cs.LG paper. "ARXIV_KEYWORDS=none" restores the old keep-everything mode.
+DEFAULT_ARXIV_KEYWORDS = ("LLM", "agent", "reasoning", "RAG", "transformer")
+
 
 class ConfigError(ValueError):
     """A setting has an invalid value. Raised early so the run fails before spending any quota."""
@@ -49,6 +53,14 @@ def _list(env: Mapping[str, str], name: str, default: tuple[str, ...]) -> tuple[
     return tuple(part.strip() for part in raw.split(",") if part.strip()) if raw else default
 
 
+def _arxiv_keywords(env: Mapping[str, str], default: tuple[str, ...]) -> tuple[str, ...]:
+    """`ARXIV_KEYWORDS=none|off` explicitly means "no keyword filter" (keep every paper)."""
+    raw = _get(env, "ARXIV_KEYWORDS", "")
+    if raw.lower() in ("none", "off", "-"):
+        return ()
+    return _list(env, "ARXIV_KEYWORDS", default)
+
+
 @dataclass(frozen=True)
 class Config:
     publish_mode: str = "single"           # single: post each item as it is processed | digest: only summarize, post via `digest`
@@ -62,7 +74,7 @@ class Config:
     sources: tuple[str, ...] = KNOWN_SOURCES
     hn_min_points: int = 100
     arxiv_categories: tuple[str, ...] = ("cs.AI", "cs.CL", "cs.LG")
-    arxiv_keywords: tuple[str, ...] = ()   # empty = keep every paper (usually too many; set a few keywords)
+    arxiv_keywords: tuple[str, ...] = DEFAULT_ARXIV_KEYWORDS  # ARXIV_KEYWORDS=none keeps every paper
     dry_run: bool = False                  # log instead of sending; nothing is saved, nothing is published
 
     @classmethod
@@ -87,6 +99,6 @@ class Config:
             sources=sources,
             hn_min_points=_int(env, "HN_MIN_POINTS", cls.hn_min_points),
             arxiv_categories=_list(env, "ARXIV_CATEGORIES", cls.arxiv_categories),
-            arxiv_keywords=_list(env, "ARXIV_KEYWORDS", cls.arxiv_keywords),
+            arxiv_keywords=_arxiv_keywords(env, cls.arxiv_keywords),
             dry_run=_bool(env, "DRY_RUN", cls.dry_run),
         )

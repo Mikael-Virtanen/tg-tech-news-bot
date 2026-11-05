@@ -35,7 +35,7 @@ def quota_error(message="Quota exceeded.", delay="1s", quota_id="GenerateRequest
 @pytest.fixture
 def fake(monkeypatch):
     """Patch the SDK client and clear env so each test controls its own configuration."""
-    for var in ("GEMINI_MODEL", "GEMINI_THINKING_LEVEL", "GEMINI_TEMPERATURE"):
+    for var in ("GEMINI_MODEL", "GEMINI_THINKING_LEVEL", "GEMINI_TEMPERATURE", "GEMINI_BASE_URL"):
         monkeypatch.delenv(var, raising=False)
     sdk = MagicMock()
     sdk.models.generate_content.return_value = gemini_response()
@@ -105,6 +105,33 @@ def test_invalid_thinking_level_is_reported(fake, monkeypatch):
     monkeypatch.setenv("GEMINI_THINKING_LEVEL", "extreme")
     with pytest.raises(client.LLMError, match="GEMINI_THINKING_LEVEL"):
         call()
+
+
+# ------------------------------ endpoint (proxy) ---------------------------- #
+def test_base_url_defaults_to_google_and_follows_the_environment_variable(fake, monkeypatch):
+    call()
+    assert sent_config(fake).http_options.base_url == client.DEFAULT_BASE_URL
+
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://proxy.example.com/v1beta/")  # trailing slash is noise
+    call()
+    assert sent_config(fake).http_options.base_url == "https://proxy.example.com/v1beta"
+
+    monkeypatch.setenv("GEMINI_BASE_URL", "")  # GitHub passes unset variables as ""
+    call()
+    assert sent_config(fake).http_options.base_url == client.DEFAULT_BASE_URL
+
+
+def test_sdk_client_is_created_with_the_configured_base_url(monkeypatch):
+    monkeypatch.setenv("GEMINI_API_KEY", "proxy-key")
+    monkeypatch.setenv("GEMINI_BASE_URL", "https://proxy.example.com")
+    client._client.cache_clear()
+    try:
+        with patch.object(client.genai, "Client") as ctor:
+            client._client()
+        assert ctor.call_args.kwargs["api_key"] == "proxy-key"
+        assert ctor.call_args.kwargs["http_options"].base_url == "https://proxy.example.com"
+    finally:
+        client._client.cache_clear()
 
 
 def test_missing_api_key_is_a_clear_error(monkeypatch):

@@ -8,7 +8,7 @@ Ingestion plumbing shared by every source.
     collect_items(sources)                     run all sources; one failing source never sinks the run
 
 Sources decide what is worth posting; they do NOT talk to the database. Deduplication
-happens in storage/repository.py so that the rule lives in exactly one place.
+happens in storage/state.py so that the rule lives in exactly one place.
 """
 from __future__ import annotations
 

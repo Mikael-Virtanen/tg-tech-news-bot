@@ -125,6 +125,30 @@ def test_single_mode_posts_the_best_items_and_persists_everything(tmp_path):
     assert saved.get("hn:2").message_id == 1001 and saved.get("hn:1") is None  # unpicked items leave no trace
 
 
+def test_the_same_story_from_two_sources_is_posted_once(tmp_path):
+    """Ids are per source; the same link on HN and GitHub must still produce one post."""
+    hn = FakeSource("hn", [NewsItem("hn:1", "hn", "story", "https://example.com/dup", "body", 50)])
+    gh = FakeSource("gh", [NewsItem("gh:1", "gh", "same story", "http://www.example.com/dup?utm_source=x", "body", 5)])
+    pipeline, store, telegram, fakes = build(tmp_path, [hn, gh])
+
+    stats = pipeline.run()
+
+    assert stats.selected == 1 and fakes.summaries == ["hn:1"]  # the higher-scored copy wins
+    assert store.known_urls() == {"example.com/dup"}
+
+
+def test_a_url_posted_in_an_earlier_run_is_skipped_even_from_another_source(tmp_path):
+    hn = FakeSource("hn", [item("hn", 1, 50)])
+    gh = FakeSource("gh", [NewsItem("gh:1", "gh", "story", "https://example.com/hn/1/", "body", 9)])
+    first = build(tmp_path, [hn])
+    first[0].run()
+
+    second = build(tmp_path, [gh], telegram=first[2])  # new process, same state on disk
+    stats = second[0].run()
+
+    assert stats.selected == 0 and len(first[2].sent) == 1
+
+
 def test_second_run_never_reposts_and_tells_sources_what_to_skip(tmp_path):
     hn = FakeSource("hn", [item("hn", n, 100 - n) for n in range(1, 6)])
     first = build(tmp_path, [hn], config=cfg(items_per_source=2))

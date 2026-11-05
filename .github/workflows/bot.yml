@@ -42,6 +42,7 @@ jobs:
       CHANNEL_HANDLE: ${{ vars.CHANNEL_HANDLE }}
       TELEGRAPH_AUTHOR_NAME: ${{ vars.TELEGRAPH_AUTHOR_NAME }}
       TELEGRAPH_AUTHOR_URL: ${{ vars.TELEGRAPH_AUTHOR_URL }}
+      GEMINI_BASE_URL: ${{ vars.GEMINI_BASE_URL }}   # optional proxy/gateway; empty = Google's endpoint
       GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
       GEMINI_THINKING_LEVEL: ${{ vars.GEMINI_THINKING_LEVEL }}
     steps:

@@ -34,7 +34,7 @@ from src.ingestion.base import Source, collect_items
 from src.llm.article import write_article as default_write_article
 from src.llm.client import LLMConfigError, LLMError, LLMRateLimited, LLMTransientError
 from src.llm.summarizer import summarize as default_summarize
-from src.models import NewsItem
+from src.models import NewsItem, normalize_url
 from src.publishing.telegram import TelegramClient, TelegramError
 from src.publishing.telegraph import TelegraphError
 from src.publishing.telegraph import publish_article as default_publish_article
@@ -117,6 +117,7 @@ class Pipeline:
             return stats
 
         items = collect_items(self._sources, max(2, cfg.items_per_source * 2), store.known_ids())
+        items = self._drop_known_urls(items)
         selected = pick_items(items, cfg.items_per_source)
         stats.fetched, stats.selected = len(items), len(selected)
         logger.info("Fetched %d new candidates, processing %d", len(items), len(selected))
@@ -142,6 +143,24 @@ class Pipeline:
                 store.save()  # after every item, success or not
         store.save()
         return stats
+
+    def _drop_known_urls(self, items: Sequence[NewsItem]) -> list[NewsItem]:
+        """The same story can arrive as hackernews:123 and github:..., with different ids.
+        Ids catch repeated fetches from one source; this catches the same link from another —
+        both against past runs and within this batch (highest score kept first by pick_items)."""
+        known = self._store.known_urls()
+        kept: list[NewsItem] = []
+        seen: set[str] = set()
+        for item in items:
+            key = normalize_url(item.url)
+            if key and (key in known or key in seen):
+                continue
+            if key:
+                seen.add(key)
+            kept.append(item)
+        if len(kept) < len(items):
+            logger.info("Dropped %d duplicate item(s) by URL (cross-source or within batch)", len(items) - len(kept))
+        return kept
 
     def _process(self, item: NewsItem, stats: RunStats) -> bool:
         """Summarize (+ article) one item. Returns False if the whole run should stop."""

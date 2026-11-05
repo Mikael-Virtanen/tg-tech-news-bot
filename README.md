@@ -17,7 +17,9 @@ cron ─► restore state ─► fetch (skip known ids) ─► pick best N per s
    standard runners; *private* repos get 2,000 minutes/month, which is plenty for this bot (estimate: a few minutes per run).
 2. **Telegram.** Talk to [@BotFather](https://t.me/BotFather) → `/newbot` → copy the token. Create a channel, then add the
    bot as an **administrator with the "Post messages" right**. The chat id is `@your_channel_username` for a public channel.
-3. **Gemini.** Create a free key at <https://aistudio.google.com/apikey>.
+3. **Gemini.** Create a free key at <https://aistudio.google.com/apikey>. (Using a proxy or gateway
+   that speaks the Gemini API? Set the optional `GEMINI_BASE_URL` variable to its base URL and put
+   the proxy's key in `GEMINI_API_KEY`.)
 4. **Telegra.ph.** Once, locally: `pip install -r requirements.txt` then
    `python -m src.publishing.telegraph "ShortName" "Channel name" "https://t.me/your_channel"`. It prints an access token.
 5. **Secrets** (Settings → Secrets and variables → Actions → *Secrets*): `GEMINI_API_KEY`, `TELEGRAM_BOT_TOKEN`,
@@ -35,6 +37,13 @@ cron ─► restore state ─► fetch (skip known ids) ─► pick best N per s
 |---|---|
 | `single` (default) | Every processed item is posted right away, up to `MAX_POSTS_PER_RUN` per run. Nothing to configure: the workflows pin it. `digest.yml` is skipped automatically in this mode. |
 | `digest` | `bot.yml` only summarizes; `digest.yml` (daily) posts **one** message with the best items. |
+
+## Deduplication
+
+Two layers, both in the state store: source ids (`hackernews:123…`) catch repeated fetches, and
+normalized URLs (scheme/www/tracking-parameter-less) catch the same story arriving from two sources —
+a repo trending on GitHub *and* HN is posted once. Records expire after 30 days, which also ends the
+dedup window: a repo may trend again a month later.
 
 ## How the state works
 

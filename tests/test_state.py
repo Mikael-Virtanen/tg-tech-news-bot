@@ -60,6 +60,32 @@ def test_known_ids_cover_everything_except_pending_retries(store):
     assert store.known_ids() == {"hackernews:1", "hackernews:2"}  # 3 is offered to ingestion again
 
 
+def test_known_urls_follows_the_same_retry_rule_and_survives_a_round_trip(tmp_path, clock):
+    store.record_ready(item(1), SUMMARY)
+    store.record_failure(item(2, source="github"), "bad json")  # RETRY: its URL stays fetchable
+    assert store.known_urls() == {"https://example.com/1"}  # normalized key, see models.normalize_url
+
+    store.save()
+    reloaded = StateStore(tmp_path, clock=clock)
+    assert reloaded.known_urls() == {"https://example.com/1"}
+
+
+def test_normalize_url_collapses_scheme_www_tracking_and_fragments():
+    from src.models import normalize_url
+
+    assert normalize_url("https://www.Example.com/a/?utm_source=x&fbclid=y#top") == "example.com/a"
+    assert normalize_url("http://example.com/a") == "example.com/a"
+    assert normalize_url("https://example.com/a/") == "example.com/a"
+    assert normalize_url("https://example.com/a?v=2") == "example.com/a?v=2"  # real query params are kept
+    assert normalize_url("") == "" and normalize_url(None) == ""
+
+
+def test_a_record_without_a_url_key_is_tolerated(store):
+    # states written by older versions have no url_key; they must not crash known_urls()
+    store._items["legacy:1"] = {"source": "hackernews", "title": "t", "url": "https://example.com/l", "score": 0, "status": "READY"}
+    assert store.known_urls() == set()
+
+
 def test_failures_retry_then_give_up_and_keep_the_reason(store):
     outcomes = [store.record_failure(item(1), f"error {n}") for n in range(state_mod.MAX_ATTEMPTS)]
     assert outcomes == ["retry", "retry", "failed"]

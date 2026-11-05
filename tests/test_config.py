@@ -6,13 +6,23 @@ from src.config import Config, ConfigError
 def test_defaults_when_nothing_is_set():
     cfg = Config.from_env({})
     assert (cfg.publish_mode, cfg.items_per_source, cfg.write_articles, cfg.dry_run) == ("single", 2, True, False)
-    assert cfg.sources == ("hackernews", "github", "arxiv") and cfg.arxiv_keywords == ()
+    assert cfg.sources == ("hackernews", "github", "arxiv")
+    assert cfg.arxiv_keywords == ("LLM", "agent", "reasoning", "RAG", "transformer")  # conservative by default
+
+
+def test_arxiv_keywords_can_be_turned_off_explicitly():
+    assert Config.from_env({"ARXIV_KEYWORDS": "none"}).arxiv_keywords == ()
+    assert Config.from_env({"ARXIV_KEYWORDS": "OFF"}).arxiv_keywords == ()
+    # an empty string still means "use the default", because GitHub passes unset variables as ""
+    assert Config.from_env({"ARXIV_KEYWORDS": ""}).arxiv_keywords == Config.from_env({}).arxiv_keywords
 
 
 def test_github_passes_unset_variables_as_empty_strings_and_they_mean_default():
     env = {name: "" for name in (
         "PUBLISH_MODE", "ITEMS_PER_SOURCE", "MAX_POSTS_PER_RUN", "WRITE_ARTICLES", "MAX_RUNTIME_SECONDS", "DIGEST_SIZE",
         "DIGEST_MAX_AGE_HOURS", "STATE_DIR", "SOURCES", "HN_MIN_POINTS", "ARXIV_CATEGORIES", "ARXIV_KEYWORDS", "DRY_RUN")}
+    assert Config.from_env(env) == Config.from_env({})
+    assert Config.from_env(env).arxiv_keywords == Config.from_env({}).arxiv_keywords
     assert Config.from_env(env) == Config.from_env({})
     assert Config.from_env({"ITEMS_PER_SOURCE": "   "}).items_per_source == 2  # whitespace too
 

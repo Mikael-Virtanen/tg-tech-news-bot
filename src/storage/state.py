@@ -37,7 +37,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from src.models import NewsItem, Summary
+from src.models import NewsItem, Summary, normalize_url
 
 STATUS_RETRY = "RETRY"
 STATUS_READY = "READY"
@@ -127,6 +127,14 @@ class StateStore:
         """Ids ingestion must not fetch again (everything except items awaiting a retry)."""
         return frozenset(i for i, r in self._items.items() if r["status"] != STATUS_RETRY)
 
+    def known_urls(self) -> frozenset[str]:
+        """Normalized URLs of every known item except pending retries: cross-source dedup keys.
+        The same story trending on two sources must be posted once, not twice."""
+        return frozenset(
+            url for i, r in self._items.items()
+            if r["status"] != STATUS_RETRY and (url := r.get("url_key"))
+        )
+
     def get(self, item_id: str) -> StoredItem | None:
         record = self._items.get(item_id)
         return self._to_stored(item_id, record) if record else None
@@ -154,6 +162,7 @@ class StateStore:
             "source": item.source,
             "title": item.title,
             "url": item.url,
+            "url_key": normalize_url(item.url),
             "score": int(item.score),
             "status": STATUS_READY,
             "attempts": previous.get("attempts", 0),
@@ -193,6 +202,7 @@ class StateStore:
         now = int(self._clock())
         record = self._items.get(item.id) or {
             "source": item.source, "title": item.title, "url": item.url,
+            "url_key": normalize_url(item.url),
             "score": int(item.score), "attempts": 0, "created_at": now,
         }
         record["attempts"] = record.get("attempts", 0) + 1

@@ -18,6 +18,9 @@ later only touches `call_model` below.
 
 Environment:
     GEMINI_API_KEY          free key from https://aistudio.google.com/apikey (GOOGLE_API_KEY also works)
+    GEMINI_BASE_URL         optional: base URL of a proxy/gateway that speaks the Gemini API
+                            (e.g. https://proxy.example.com). Empty = Google's default endpoint.
+                            The key you set in GEMINI_API_KEY must be valid for that endpoint.
     GEMINI_MODEL            optional, defaults to DEFAULT_MODEL
     GEMINI_THINKING_LEVEL   optional: minimal | low | medium | high (Gemini 3.x models)
     GEMINI_TEMPERATURE      optional float; overrides the callers' temperature on every model
@@ -45,6 +48,7 @@ from google.genai import errors, types
 # gemini-1.5-* and gemini-2.0-* have been shut down; verify the current list at
 # https://ai.google.dev/gemini-api/docs/deprecations before changing this.
 DEFAULT_MODEL = "gemini-3.5-flash-lite"
+DEFAULT_BASE_URL = "https://generativelanguage.googleapis.com"
 
 MAX_CALL_ATTEMPTS = 3          # 1 call + 2 retries for transient failures
 MAX_RETRY_WAIT_SECONDS = 20.0  # longer quota waits are raised, not slept (Lambda billing/timeouts)
@@ -90,6 +94,11 @@ class LLMRateLimited(LLMTransientError):
 # --------------------------------------------------------------------------- #
 # Client
 # --------------------------------------------------------------------------- #
+def _base_url() -> str:
+    """Custom endpoint (proxy/gateway) or Google's default. Empty string counts as unset."""
+    return (os.environ.get("GEMINI_BASE_URL") or "").strip().rstrip("/") or DEFAULT_BASE_URL
+
+
 @lru_cache(maxsize=1)
 def _client() -> genai.Client:
     # Cached across warm Lambda invocations. Retries are handled in `call_model` so that
@@ -97,7 +106,10 @@ def _client() -> genai.Client:
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         raise LLMConfigError("GEMINI_API_KEY is not set (create a free key at https://aistudio.google.com/apikey)")
-    return genai.Client(api_key=api_key)
+    return genai.Client(
+        api_key=api_key,
+        http_options=types.HttpOptions(base_url=_base_url()),
+    )
 
 
 # --------------------------------------------------------------------------- #
@@ -141,7 +153,7 @@ def _build_config(
         "system_instruction": system,
         "response_mime_type": "application/json",
         "response_json_schema": _json_schema(response_format),
-        "http_options": types.HttpOptions(timeout=int(timeout * 1000)),  # the SDK expects milliseconds
+        "http_options": types.HttpOptions(timeout=int(timeout * 1000), base_url=_base_url()),
     }
 
     # Google recommends leaving temperature at its default (1.0) on Gemini 3.x models, so the
