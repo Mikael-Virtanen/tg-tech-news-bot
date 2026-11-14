@@ -1,0 +1,3905 @@
+{
+ "items": {
+  "arxiv:2611.06868": {
+   "attempts": 0,
+   "created_at": 1793922020,
+   "message_id": 13,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "چارچوب تولیدکننده-گزیننده در هر نوبت N گزینه تولید و یکی را انتخاب می‌کند.",
+     "دقت ۵ تا ۱۰ درصد و پایداری بیشتر روی وظایف بلندمدت ترمینال نشان می‌دهد.",
+     "می‌توانید از مدل‌های weight‌باز بدون تغییر آموزش برای بهبود عملکرد بهره ببرید."
+    ],
+    "hashtags": [
+     "LLM_Agents",
+     "Best_of_N",
+     "Arxiv"
+    ],
+    "hook": "یک روش ساده مقیاس‌پذیری در حین استنتاج برای Agentهای LLM معرفی می‌شود.",
+    "title": "بهینه‌سازی Agentهای LLM با انتخاب بهترین از N"
+   },
+   "telegraph_url": "https://telegra.ph/بهینه‌سازی-عامل‌های-مبتنی-بر-هوش-مصنوعی-با-نمونه‌برداری-برتر-در-هر-نوبت-11-05",
+   "title": "On Turn-Level Best-of-N Sampling for Scaling LLM Agents",
+   "updated_at": 1793922020,
+   "url": "https://arxiv.org/abs/2611.06868v1",
+   "url_key": "arxiv.org/abs/2611.06868v1"
+  },
+  "arxiv:2611.06876": {
+   "attempts": 0,
+   "created_at": 1793921996,
+   "message_id": 10,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "SpecCompact با تولید مستقل و موازی سرفصل‌های خلاصه، زمان فشرده‌سازی را کاهش می‌دهد.",
+     "این روش تا ۵.۶۳ برابر نسبت به summarization سبک Hermes سریع‌تر عمل می‌کند.",
+     "کاربران می‌توانند با کاهش تأخیر، تعامل طولانی‌تر با agentهای هوشمند داشته باشند."
+    ],
+    "hashtags": [
+     "SpecCompact",
+     "LLMagent",
+     "fastercompactio"
+    ],
+    "hook": "چارچوب جدیدی برای تسریع فشرده‌سازی تاریخچه تعاملات مدل‌های زبانی بزرگ معرفی شد.",
+    "title": "SpecCompact: فشرده‌سازی سریع‌تر متن LLM‌ها"
+   },
+   "telegraph_url": "https://telegra.ph/فراورشی-برای-فشرده‌سازی-تاریخچه-گفتگوهای-عامل‌های-زبانی-11-05",
+   "title": "SpecCompact: Accelerating LLM Agent Context Compaction with Slot-Parallel Semantic Speculative Verification",
+   "updated_at": 1793921997,
+   "url": "https://arxiv.org/abs/2611.06876v1",
+   "url_key": "arxiv.org/abs/2611.06876v1"
+  },
+  "arxiv:2611.06910": {
+   "attempts": 0,
+   "created_at": 1793905834,
+   "message_id": 7,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "FrontierPhysics شامل ۵۶ وظیفه از سوی ۴۲ فیزیک‌دان در نه حوزه است و کل فرآیند پژوهش را می‌سنجد.",
+     "این بنچمارک صحت و قابلیت انتشار یافته‌ها را هم‌زمان با استفاده از تاییدکننده‌های قطعی و روبریک‌های خبره ارزیابی می‌کند.",
+     "ضعف اصلی عوامل پیشرو، استدلال غیرمستحکم و شهود خبره محدود است، نه کمبود دانش فیزیک یا خطاهای اجرا."
+    ],
+    "hashtags": [
+     "FrontierPhysics",
+     "AI_agents",
+     "AI_physics"
+    ],
+    "hook": "بنچمارک جدیدی برای سنجش کیفیت و اعتبار پژوهش‌های عامل‌های هوش مصنوعی در فیزیک معرفی شد.",
+    "title": "FrontierPhysics: ارزیابی عوامل هوش مصنوعی در پژوهش فیزیک"
+   },
+   "telegraph_url": "https://telegra.ph/FrontierPhysics-ارزیابی-عامل‌های-هوش-مصنوعی-تا-مرحله-پایان-تحقیق-فیزیکی-11-05",
+   "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+   "updated_at": 1793905835,
+   "url": "https://arxiv.org/abs/2611.06910v1",
+   "url_key": "arxiv.org/abs/2611.06910v1"
+  },
+  "arxiv:2611.06914": {
+   "attempts": 0,
+   "created_at": 1793905811,
+   "message_id": 4,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "مقاله یک چارچوب غنی‌سازی کنترل‌شده زمینه شامل چهار نوع زیر ارائه می‌دهد.",
+     "معیار «Selective Robustness» معیار اعتبارسنجی است: بی‌تأثیری نسبت به تغییرات معنادار Prompt.",
+     "چارچوب در شبیه‌سازی Prisoner's Dilemma آزمون و الگوهای رفتاری متفاوت بین دو مدل نشان داد."
+    ],
+    "hashtags": [
+     "LLM_Social_Agen",
+     "AI_Validation",
+     "Social_Sim"
+    ],
+    "hook": "تحقیث جدیدی روشی برای افزایش پایایی و اعتبارسنجی agents مبتنی بر LLM در شبیه‌سازی‌های اجتماعی پیشنهاد می‌کند.",
+    "title": "چارچوب غنی‌سازی زمینه برای LLM Social Agents"
+   },
+   "telegraph_url": "https://telegra.ph/چارچوبی-برای-غنی‌سازی-زمینه-و-انتخاب‌گری-مقاومت-در-عامل‌های-مبتنی-بر-LLM-11-05",
+   "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
+   "updated_at": 1793905811,
+   "url": "https://arxiv.org/abs/2611.06914v1",
+   "url_key": "arxiv.org/abs/2611.06914v1"
+  },
+  "arxiv:2611.08414": {
+   "attempts": 0,
+   "created_at": 1794056757,
+   "message_id": 40,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "تحلیل طیف و زیرفضای آپدیت‌های LoRA نشان می‌دهد RL طیف را در همه نرخ‌های یادگیری متمرکز و زیرفضاها را سریع‌تر می‌چرخاند.",
+     "عامل اصلی تفاوت، گروه-میانگین baseline subtraction است که تعادل بین fitting هماهنگ و نویز گرادیانت را تغییر می‌دهد.",
+     "کانفیگ‌های سفارشی LoRA برای SFT و RL روی چندین مدل، در اکثر تنظیمات برتر می‌شوند."
+    ],
+    "hashtags": [
+     "LoRA",
+     "RL",
+     "SFT"
+    ],
+    "hook": "کار روی دینامیک‌های LoRA در تنظیم‌ fine-tuning و یادگیری تقویتی، منبع تفاوت را کاهش میانگین گروهی می‌داند.",
+    "title": "تحلیل طیفی LoRA در SFT و RL"
+   },
+   "telegraph_url": "https://telegra.ph/تفاوت-پویایی‌های-LoRA-در-SFT-و-Reinforcement-Learning-11-07",
+   "title": "Spectral and Subspace Dynamics of LoRA in Supervised Fine-Tuning and Reinforcement Learning",
+   "updated_at": 1794056758,
+   "url": "https://arxiv.org/abs/2611.08414v1",
+   "url_key": "arxiv.org/abs/2611.08414v1"
+  },
+  "arxiv:2611.08417": {
+   "attempts": 0,
+   "created_at": 1793983723,
+   "message_id": 22,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "مفهوم «بدهی نگهداری benchmark» معرفی شد: شکاف فزاینده میان نمره‌ها و قابلیت‌های اندازه‌گیری شده.",
+     "با استفاده از این فرآیند، Terminal-Bench 2.1 منتشر شد و 30 درصد از ارزیابی‌ها نیاز به بازبینی داشتند.",
+     "نتایج دقت بیش از 10 درصد افزایش یافت و حدود سه رتبه تغییر کرد."
+    ],
+    "hashtags": [
+     "TerminalBench",
+     "LLM",
+     "AI_Evaluation"
+    ],
+    "hook": "ارزیابی بازنشسته می‌شود: چگونه اعتبارسنجی مستمر ارزیابی‌های عامل‌های کد را اصلاح می‌کند.",
+    "title": "Benchmark ها به نرم‌افزار تبدیل شدند"
+   },
+   "telegraph_url": "https://telegra.ph/بنچمارک‌ها-هم-نرم‌افزارند-بدهی-نگهداری-و-بنچمارک‌های-پیوسته-11-06",
+   "title": "Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks",
+   "updated_at": 1793983723,
+   "url": "https://arxiv.org/abs/2611.08417v1",
+   "url_key": "arxiv.org/abs/2611.08417v1"
+  },
+  "arxiv:2611.08428": {
+   "attempts": 0,
+   "created_at": 1793947916,
+   "message_id": 19,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Meta Chat دیداری ساختاریافته و با مجوز به رابط می‌دهد تا کاربر در یک نقطه وارد شود.",
+     "این قابلیت خطرات grounding، حریم خصوصی، تزریق پرامپت و اعتماد ایجاد می‌کند.",
+     "IDEها و سیستم‌عامل‌ها باید وضعیت و قابلیت خود را مدل ساختاریافته باز کنند."
+    ],
+    "hashtags": [
+     "meta_access",
+     "chat_ai",
+     "LLM"
+    ],
+    "hook": "دسترسی متا می‌تواند چت را از پنجره‌ای روی یک گفت‌وگو به لایه کنترل کل workspace تبدیل کند.",
+    "title": "دسترسی متا: تبدیل چت به لایه کنترلی workspace"
+   },
+   "telegraph_url": "https://telegra.ph/دسترسی-به-متا-وقتی-گفتگوکننده-به-جابجایی-کل-محیط-مسلط-می‌شود-11-06",
+   "title": "The Power of Meta Access in the Software of the Future --- Demonstrated on LLM Chat UIs and Chat AI",
+   "updated_at": 1793947916,
+   "url": "https://arxiv.org/abs/2611.08428v1",
+   "url_key": "arxiv.org/abs/2611.08428v1"
+  },
+  "arxiv:2611.08433": {
+   "attempts": 0,
+   "created_at": 1794031288,
+   "message_id": 37,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "MedGraph وضعیت بالینی بیمار را با استخراج، انتساب و زنجیره‌کردن واقعیت‌های تاریخی در یک گراف حفظ می‌کند.",
+     "این سیستم خطاهای رایج حافظه پزشکی مانند اطلاعات منسوخ، داده‌های فرد دیگر و کمبود واقعیت ایمنی را هدف می‌گیرد.",
+     "در MedMemoryBench با دو بک‌اند GPT و Qwen بالاترین دقت را نشان داد و نسبت به بهترین پایه حدود ۱۰ امتیاز بهتر عمل کرد."
+    ],
+    "hashtags": [
+     "MedGraph",
+     "MedicalAI",
+     "MedMemoryBench"
+    ],
+    "hook": "محققان MedGraph را معرفی کردند تا LLMها وضعیت بیمار را در گفتگوهای پزشکی طولانی درست نگه دارند.",
+    "title": "MedGraph: حافظه گرافی برای حفظ وضعیت بیمار در گفتگو"
+   },
+   "telegraph_url": "https://telegra.ph/MedGraph-حافظه-گرافی-برای-حفظ-وضعیت-بیماران-در-گفتگوهای-پزشکی-11-07",
+   "title": "MedGraph: Maintaining Patient State with Graph Memory for Long-Term Medical Dialogue",
+   "updated_at": 1794031288,
+   "url": "https://arxiv.org/abs/2611.08433v1",
+   "url_key": "arxiv.org/abs/2611.08433v1"
+  },
+  "arxiv:2611.08438": {
+   "attempts": 0,
+   "created_at": 1794031268,
+   "message_id": 34,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این مرور چارچوبی برای ارزیابی ادعاهای تفسیر مکانیسمی و شش جهت‌گیری پژوهشی آن معرفی می‌کند.",
+     "روش‌های استخراج ویژگی، کشف مدارها، تأیید سببی و نسب‌یابی داده‌های آموزشی بررسی می‌شوند.",
+     "نویسندگان مخزن کدی با Notebook برای بازتولید یافته‌ها منتشر کرده‌اند تا خوانندگان تجربه عملی کسب کنند."
+    ],
+    "hashtags": [
+     "MechInterp",
+     "AISafety",
+     "AIAI"
+    ],
+    "hook": "مقاله‌ای مروری به نقش تفسیر مکانیسمی در ایمنی هوش مصنوعی می‌پردازد.",
+    "title": "تفسیر مکانیسمی: درک درونی مدل‌های AI"
+   },
+   "telegraph_url": "https://telegra.ph/تفسیر-مکانیستی-مدل‌های-زبانی-و-ایمنی-هوش-مصنوعی-11-07",
+   "title": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
+   "updated_at": 1794031268,
+   "url": "https://arxiv.org/abs/2611.08438v1",
+   "url_key": "arxiv.org/abs/2611.08438v1"
+  },
+  "arxiv:2611.08452": {
+   "attempts": 0,
+   "created_at": 1794006814,
+   "message_id": 31,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ReproBridge یک workflow عاملی برای ساخت artifacts منسجم شامل کد تمیز، تنظیم محیط و راهنمای بازتولید است.",
+     "بازتولید با artifacts اصلاح‌شده ۱۹.۷٪ هزینه API کمتر دارد.",
+     "همه چهار مدل ارزیابی‌شده بالای ۹۰٪ موفقیت کسب کردند و شکاف بین آن‌ها از ۲۱.۶ به ۳.۹ درصد کاهش یافت."
+    ],
+    "hashtags": [
+     "ReproBridge",
+     "Reproducibility",
+     "AI_Research"
+    ],
+    "hook": "با ReproBridge موفقیت بازتولید از ۷۶.۴٪ به ۹۲.۶٪ می‌رسد.",
+    "title": "ReproBridge: بازتولید آزمایش‌های ML"
+   },
+   "telegraph_url": "https://telegra.ph/ReproBridge-بازنویسی-کدهای-تحقیقاتی-برای-بازتولید-راحت‌تر-نتایج-ML-11-06",
+   "title": "ReproBridge: Building Reproducibility into ML Research Artifacts",
+   "updated_at": 1794006814,
+   "url": "https://arxiv.org/abs/2611.08452v1",
+   "url_key": "arxiv.org/abs/2611.08452v1"
+  },
+  "arxiv:2611.08472": {
+   "attempts": 0,
+   "created_at": 1794006792,
+   "message_id": 28,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این بنچمارک توانایی عامل‌های هوش مصنوعی در تبدیل مخازن کامل PyTorch به JAX را بر اساس خروجی منتشرشده ارزیابی می‌کند.",
+     "هدف آن آزاد کردن کدهای ML از قید اکوسیستم سخت‌افزاری و سنجش پیشرفت مهاجرت بین‌سازمانی است.",
+     "نتایج نشان می‌دهد Claude Opus 5 با ۷۵٪ موفقیت بهترین عملکرد را داشته و بقیه عوامل زیر ۴۰٪ هستند."
+    ],
+    "hashtags": [
+     "XStack",
+     "ML",
+     "Benchmark"
+    ],
+    "hook": "بنچمارک جدید XStack توانایی مهاجرت خودکار کدهای یادگیری ماشین بین PyTorch و JAX را می‌سنجد.",
+    "title": "XStack: بنچمارک مهاجرت مخازن ML"
+   },
+   "telegraph_url": "https://telegra.ph/XStack-معیاری-برای-سنجش-مهاجرت-مخازن-یادگیری-ماشین-11-06",
+   "title": "XStack: A Benchmark for ML Repo Migration",
+   "updated_at": 1794006792,
+   "url": "https://arxiv.org/abs/2611.08472v1",
+   "url_key": "arxiv.org/abs/2611.08472v1"
+  },
+  "arxiv:2611.08483": {
+   "attempts": 0,
+   "created_at": 1793947893,
+   "message_id": 16,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "SwarmEvolve صدها عامل ارزان را در هر مرحله در خوشه موازی به کار می‌گیرد و بدون متن در فضای پنهان استدلال می‌کند.",
+     "نوآوری از فاصله بردارهای حالت پنهان سنجیده می‌شود و ترکیب ایده‌ها نیز در فضای پنهان رخ می‌دهد.",
+     "این روش میانگین امتیاز بالاتری روی ۲۱ مسئله می‌دهد و در ۳ تا ۸ دقیقه به نتایج می‌رسد که دیگران در ۶۰ دقیقه."
+    ],
+    "hashtags": [
+     "SwarmEvolve",
+     "LLM",
+     "ScientificCompu"
+    ],
+    "hook": "چگونه خوشه‌های عامل با استدلال فضایی پنهان، جستجوی برنامه را برای مسائل علمی ده برابر سریع‌تر می‌کنند.",
+    "title": "SwarmEvolve: کشف و بهینه‌سازی با خوشه‌های عامل پنهان"
+   },
+   "telegraph_url": "https://telegra.ph/SwarmEvolve-جستجوی-تکاملی-با-عملگرهای-کم‌هزینه-در-فضای-پنهان-11-06",
+   "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+   "updated_at": 1793947893,
+   "url": "https://arxiv.org/abs/2611.08483v1",
+   "url_key": "arxiv.org/abs/2611.08483v1"
+  },
+  "arxiv:2611.08487": {
+   "attempts": 0,
+   "created_at": 1793983750,
+   "message_id": 25,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "User Embeddings به‌عنوان ترکیب‌های متراکم از الگوهای رفتاری تفسیر‌پذیر در نظر گرفته می‌شوند.",
+     "روش SAE قادر به بازیابی خودکار این الگوها و نام‌گذاری آن‌ها به زبان طبیعی است.",
+     "برچسب‌های طبیعی امکان بازیابی و توصیف مخاطبان بدون آموزش متن مستقیم را فراهم می‌کنند."
+    ],
+    "hashtags": [
+     "User_Embeddings",
+     "interpretable",
+     "SAE"
+    ],
+    "hook": "روش جدیدی که الگوهای رفتاری کاربران را در User Embeddings کشف می‌کند.",
+    "title": "الگوهای رفتاری قابل‌تفسیر در User Embeddings"
+   },
+   "telegraph_url": "https://telegra.ph/رمزگشایی-پنهان-رفتاری-در-امبی‌دینگ-کاربران-11-06",
+   "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
+   "updated_at": 1793983750,
+   "url": "https://arxiv.org/abs/2611.08487v1",
+   "url_key": "arxiv.org/abs/2611.08487v1"
+  },
+  "arxiv:2611.09872": {
+   "attempts": 0,
+   "created_at": 1794253988,
+   "message_id": 72,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "برچسب‌های تقلبی در یادگیری تقویتی تست-تایم (TTRL) ناپایدارند و خطاها به دلیل تغییرپذیری محدود در اجرا ناشی از prompt رخ می‌دهند.",
+     "روش پیشنهادی PC-Dr.DPO با توجه به اطمینان رأی، به‌روزرسانی‌ها را برای promptهای حساس به نمونه‌برداری محافظه‌کارانه‌تر می‌کند.",
+     "نویسه‌ها نشان می‌دهد این روش در ۲۴ از ۳۰ تنظیم در شش مبنای استدلال ریاضی و دانشی بهبود یا برابری با baseline دارد."
+    ],
+    "hashtags": [
+     "TTRL",
+     "PC_Dr_DPO",
+     "یادگیری_تقویتی"
+    ],
+    "hook": "تحلیل جدیدی درباره چگونگی تأثیر اطمینان از برچسب‌های تقلبی بر یادگیری تقویتی در تست.",
+    "title": "اعتبار برچسب‌های تقلبی در یادگیری تقویتی تست-تایم"
+   },
+   "telegraph_url": "https://telegra.ph/چالش-برچسب‌های-کاذب-رایج-در-یادگیری-تقویتی-زمان-آزمایش-11-09",
+   "title": "On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning",
+   "updated_at": 1794253988,
+   "url": "https://arxiv.org/abs/2611.09872v1",
+   "url_key": "arxiv.org/abs/2611.09872v1"
+  },
+  "arxiv:2611.09882": {
+   "attempts": 0,
+   "created_at": 1794206197,
+   "message_id": 66,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "FlowMoP از تطابق جریان شرطی برای تولید حرکت‌های متنوع چند نفره سه بعدی استفاده می‌کند.",
+     "ترکیب حرکت مشاهده‌شده همسایگان، پیش‌بینی تعاملات را دقیق‌تر می‌کند.",
+     "این روش در benchmarkهای CMU-Mocap، 3DPW و WorldPose خطای کمتری دارد."
+    ],
+    "hashtags": [
+     "FlowMoP",
+     "motion",
+     "AI_cv"
+    ],
+    "hook": "روش جدید FlowMoP برای پیش‌بینی حرکت گروهی، حالت تصادفی آن را دقیقاً مدل می‌کند.",
+    "title": "FlowMoP: پیش‌بینی تصادفی حرکت گروهی"
+   },
+   "telegraph_url": "https://telegra.ph/FlowMoP-پیش‌بینی-تصادفی-حرکت-چند-نفره-11-09",
+   "title": "FlowMoP: Stochastic Multi-Person Motion Prediction",
+   "updated_at": 1794206197,
+   "url": "https://arxiv.org/abs/2611.09882v1",
+   "url_key": "arxiv.org/abs/2611.09882v1"
+  },
+  "arxiv:2611.09891": {
+   "attempts": 0,
+   "created_at": 1794206183,
+   "message_id": 64,
+   "score": 3,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "روش CPU-ARC ردپای استدلال مدل‌های زبانی را به کش‌های اجراشدنی روی CPU تبدیل می‌کند.",
+     "این روش عملکردی برابر با مدل‌های پیشرفته و هزینه‌ای ۱۶ تا ۲۹۱ برابر کمتر دارد.",
+     "مناسب توسعه‌دهندگانی است که به پاسخ‌های شفاف، قابل آموزش و مقاوم در برابر تغییرات ورودی نیاز دارند"
+    ],
+    "hashtags": [
+     "CPU-ARC",
+     "Reasoning",
+     "AI"
+    ],
+    "hook": "روش جدیدی برای به‌کارگیری مجدد استدلال مدل‌های زبانی با کاهش هزینه.",
+    "title": "سیستم کش استدلال CPU-ARC"
+   },
+   "telegraph_url": "https://telegra.ph/CPU-ARC-بازنشانی-استدلال-مدل‌های-زبانی-روی-پردازنده-11-09",
+   "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+   "updated_at": 1794206183,
+   "url": "https://arxiv.org/abs/2611.09891v1",
+   "url_key": "arxiv.org/abs/2611.09891v1"
+  },
+  "arxiv:2611.09892": {
+   "attempts": 0,
+   "created_at": 1794253943,
+   "message_id": 69,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "AMP1 بدون آموزش ویژه، روی RoboLab-120 نرخ موفقیت 85.6 درصدی ثبت کرد.",
+     "Agent خودش یاد می‌گیرد و می‌تواند از اشیا به عنوان ابزار استفاده کند.",
+     "با حافظه پایدار، نرخ شکست روی RoboDojo 4.6 برابر کاهش می‌یابد."
+    ],
+    "hashtags": [
+     "Robotics",
+     "Agentic",
+     "Memory"
+    ],
+    "hook": "مدل‌های عمومی می‌توانند دست‌سازها را بهتر از مدل‌های متخصص کنترل کنند.",
+    "title": "کنترل مستقیم دست‌سازها توسط مدل‌های عمومی"
+   },
+   "telegraph_url": null,
+   "title": "On Agentic Manipulation Policies",
+   "updated_at": 1794253943,
+   "url": "https://arxiv.org/abs/2611.09892v1",
+   "url_key": "arxiv.org/abs/2611.09892v1"
+  },
+  "arxiv:2611.10926": {
+   "attempts": 0,
+   "created_at": 1794281799,
+   "message_id": 79,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "DeepFinance ۲۱ وظیفه پایان‌به‌پایان PE و IB با اتاق داده متوسط ۱۹ فایل و ۸۴ معیار ارزیابی است.",
+     "بهترین پیکربندی (GPT-6 Astra با max reasoning) تنها ۵۷.۶٪ معیارها را برآورده می‌کند.",
+     "مدل‌های پیشرفته اغلب محاسبات درست اما روی ورودی‌های نادرست انجام می‌دهند و شواهد تصمیم‌ساز را نادیده می‌گیرند."
+    ],
+    "hashtags": [
+     "DeepFinance",
+     "AI_Diligence",
+     "PE_IB"
+    ],
+    "hook": "تست جدید DeepFinance عملکرد مدل‌های زبانی در وظایف واقعی سرمایه‌گذاری خصوصی را می‌سنجد.",
+    "title": "DeepFinance: ارزیابی هوش مصنوعی در معاملات ۱۰۰ میلیونی"
+   },
+   "telegraph_url": "https://telegra.ph/DeepFinance-آیا-هوش-مصنوعی-می‌تواند-یک-معامله-۱۰۰-میلیون-دلاری-را-بررسی-کند-11-10",
+   "title": "DeepFinance: Can AI Diligence a $100MM Deal?",
+   "updated_at": 1794281799,
+   "url": "https://arxiv.org/abs/2611.10926v1",
+   "url_key": "arxiv.org/abs/2611.10926v1"
+  },
+  "arxiv:2611.10958": {
+   "attempts": 0,
+   "created_at": 1794281772,
+   "message_id": 76,
+   "score": 3,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "دو واریانت katIA-SP و katIA-MA اثر تغییرات ۱۹۳۱ موجودیت کد در ۲۶۳ کامیت پروژه‌های جاوا را تحلیل می‌کنند.",
+     "واریانت چندعامله katIA-MA با Gemini 2.5 Flash بالاترین امتیاز F1 را به دست می‌دهد و ۲.۰٪ از بهترین روش‌های موجود جلوتر است.",
+     "برای توسعه‌دهندگان، این روش می‌تواند خطاهای پنهان ناشی از تغییرات کد را زودتر شناسایی کند."
+    ],
+    "hashtags": [
+     "katIA",
+     "change_impact",
+     "ai_engineering"
+    ],
+    "hook": "کاتیا (katIA) با ترکیب تحلیل ایستا و مدل‌های زبانی، دقت تحلیل اثر تغییرات کد را بهبود می‌بخشد.",
+    "title": "تحلیل اثر تغییرات کد با ترکیب تحلیل ایستا و LLM"
+   },
+   "telegraph_url": "https://telegra.ph/تحلیل-هوشمند-اثر-تغییرات-کد-با-ترکیب-تحلیل-ایستا-و-مدل‌های-زبانی-11-10",
+   "title": "Hybrid Source Code Change Impact Analysis",
+   "updated_at": 1794281772,
+   "url": "https://arxiv.org/abs/2611.10958v1",
+   "url_key": "arxiv.org/abs/2611.10958v1"
+  },
+  "arxiv:2611.12835": {
+   "attempts": 0,
+   "created_at": 1794322585,
+   "message_id": 85,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "نویسندگان شکست در راستایی بودن مدل‌ها را به مشاهده‌ناپذیری در ارزیابی‌ها نسبت می‌دهند.",
+     "چهارچوب پیشنهادی یک بازی ماکزیمم-مینیمم بین عامل، ناظر و تأییدکننده است.",
+     "آزمایش‌ها روی Gemma3 و Qwen3 نشان می‌دهند این روش ۲۶ درصد فریب را کاهش می‌دهد."
+    ],
+    "hashtags": [
+     "hoshi_ensi_ai",
+     "deception",
+     "arxiv"
+    ],
+    "hook": "تحقیثی جدید راهکاری برای کاهش رفتارهای فریب‌کارانه مدل‌های زبانی پیشنهاد می‌دهد.",
+    "title": "کاهش فریب‌دهی عامل‌های هوشمند"
+   },
+   "telegraph_url": "https://telegra.ph/جلوگیری-از-فریب-عامل‌های-هوش-مصنوعی-با-بازی‌های-عدم-قطعیت-ارزیابی-11-10",
+   "title": "Mitigating Agentic Deception via Evaluation-Side Partially Observable Games",
+   "updated_at": 1794322585,
+   "url": "https://arxiv.org/abs/2611.12835v1",
+   "url_key": "arxiv.org/abs/2611.12835v1"
+  },
+  "arxiv:2611.12856": {
+   "attempts": 0,
+   "created_at": 1794322555,
+   "message_id": 82,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "نویسندگان معیار WorkflowArena را معرفی می‌کنند تا توانایی سازماندهی خودکار گردش کار اجرایی توسط عامل‌های زبانی بزرگ را بسنجند.",
+     "این آزمون شامل ۱۴۵ وظیفه درازمدت در هشت حوزه از مهندسی نرم‌افزار تا ریاضیات رسمی و طراحی سه‌بعدی است و توسط بررسی‌گر مخفی…",
+     "نتایج نشان می‌دهد هیچ پیکربندی واحدی در همه حوزه‌ها برتر نیست و کیفیت گردش کار نوشته‌شده توسط مدل، تعیین‌کننده مستقلی از موفقیت…"
+    ],
+    "hashtags": [
+     "WorkflowArena",
+     "MultiAgentAI",
+     "LLMBenchmark"
+    ],
+    "hook": "مقاله‌ای جدید قابلیت جدیدی را در سیستم‌های چندعامله بر پایه مدل‌های زبانی می‌سنجد: برنامه‌ریزی خودکار گردش کار.",
+    "title": "آزمون ارکستراسیون کارها با WorkflowArena"
+   },
+   "telegraph_url": "https://telegra.ph/آزمایشگاه-سنجش-ارکستراسیون-workflow-در-سیستم‌های-چندعاملی-مدل‌های-زبانی-11-10",
+   "title": "WorkflowArena: Benchmarking Executable Workflow Orchestration in LLM-Based Multi-Agent Systems",
+   "updated_at": 1794322555,
+   "url": "https://arxiv.org/abs/2611.12856v1",
+   "url_key": "arxiv.org/abs/2611.12856v1"
+  },
+  "arxiv:2611.12872": {
+   "attempts": 0,
+   "created_at": 1794345600,
+   "message_id": 90,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "HiVe-Mem خاطرات را در یک گراف رابطه‌ای سازماندهی و با همسایگان مرتبط آن‌ها را گسترش می‌دهد.",
+     "برای هر حافظه، شواهد چندگانه شامل خلاصه، تصویر و تاریخچه تعامل انتخاب و ترکیب می‌شوند.",
+     "این روش در سه معیار ارزیابی عملکرد را افزایش داد و مصرف توکن را حدود ۹۰٪ کاهش داد."
+    ],
+    "hashtags": [
+     "HiVe-Mem",
+     "Multimodal",
+     "Memory"
+    ],
+    "hook": "چارچوب HiVe-Mem با ترکیب گسترش حافظه و ترکیب شواهد، عملکرد عوامل چندوجهی را بهبود می‌دهد.",
+    "title": "HiVe-Mem: حافظه‌ی چندوجهی برای عوامل هوشمند"
+   },
+   "telegraph_url": "https://telegra.ph/HiVe-Mem-ترکیب-گسترش-افقی-حافظه-و-ترکیب-عمودی-شواهد-برای-عامل‌های-چندوجهی-11-10",
+   "title": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
+   "updated_at": 1794345600,
+   "url": "https://arxiv.org/abs/2611.12872v1",
+   "url_key": "arxiv.org/abs/2611.12872v1"
+  },
+  "arxiv:2611.12878": {
+   "attempts": 0,
+   "created_at": 1794345585,
+   "message_id": 88,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "یک الگوریتم جدید یعنی BAQ-TD با کمّیه‌سازی تطبیقی و دسته‌بندی داده‌ها برای یادگیری TD پیشنهاد شده است.",
+     "نویسندگان نشان داده‌اند که انتقال O(d log(T)) بیت برای دستیابی به نرخ مرتبه‌بهینه کافی است که بهبودی نمایی محسوب می‌شود.",
+     "برای کانال‌های با ظرفیت بالاتر از یک آستانه مشخص، نرخ همگرایی یادگیری TD نامحدود حفظ می‌شود."
+    ],
+    "hashtags": [
+     "TD_learning",
+     "BAQ-TD",
+     "هوش_مصنوعی"
+    ],
+    "hook": "پیشنهاد الگوریتم جدیدی به نام BAQ-TD برای یادگیری TD روی کانال‌های با ظرفیت محدود.",
+    "title": "محدودیت ارتباطی را با کمّیه‌سازی سازگار می‌شکنید"
+   },
+   "telegraph_url": "https://telegra.ph/کوانتیزه‌ی-سازگار-سرعت-همگرایی-TD-را-در-کانال‌های-محدود-حفظ-می‌کند-11-10",
+   "title": "Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels",
+   "updated_at": 1794345585,
+   "url": "https://arxiv.org/abs/2611.12878v1",
+   "url_key": "arxiv.org/abs/2611.12878v1"
+  },
+  "arxiv:2611.14477": {
+   "attempts": 0,
+   "created_at": 1794513468,
+   "message_id": 118,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "FERN سه retriever یخ‌زده را به 100 نامزد فشرده می‌کند و با LightGBM آن‌ها را بر اساس 120 ویژگی مرتب می‌کند.",
+     "روی Spider بدون آموزش، نرخ complete@5 را از 83.9٪ به 95.6٪ می‌رساند و در ده جدول از RASL عقب نیست.",
+     "در یک A100 میانگین تأخیر آن 208 میلی‌ثانیه است و نیازی به فراخوانی APIهای LLM ندارد."
+    ],
+    "hashtags": [
+     "TextToSQL",
+     "FERN",
+     "TableRetrieval"
+    ],
+    "hook": "FERN با ترکیب سه retriever غیر مولد و LightGBM، عملکردی نزدیک به RASL روی BIRD و Spider ارائه می‌دهد.",
+    "title": "FERN: رتبه‌بندی جدول در Text-to-SQL بدون LLM مولد"
+   },
+   "telegraph_url": "https://telegra.ph/FERN-بازیابی-جدول-برای-Text-to-SQL-بدون-مدل-زبانی-11-12",
+   "title": "FERN: Cross-Benchmark Table Retrieval for Text-to-SQL with Frozen Retrievers and Learned Ranking",
+   "updated_at": 1794513469,
+   "url": "https://arxiv.org/abs/2611.14477v1",
+   "url_key": "arxiv.org/abs/2611.14477v1"
+  },
+  "arxiv:2611.14480": {
+   "attempts": 0,
+   "created_at": 1794513443,
+   "message_id": 115,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این سیستم مخصوص پیش‌بینی امتیاز کیفیت قطعات و تشخیص قطعات بدون خطا طراحی شده است.",
+     "هزینه اجرای آن بسیار پایین است و برای طبقه‌بندی دوتایی در غربالگری ترجمه بهینه شده است.",
+     "مهندسی پرامپت و انتخاب مدل با تحلیل ROC هدایت شده است."
+    ],
+    "hashtags": [
+     "LLM_as_a_judge",
+     "ترجمه_ماشینی",
+     "ارزیابی_کیفیت"
+    ],
+    "hook": "سیستم Pterodactyl بر پایه LLM-as-a-judge برای ارزیابی کیفیت ترجمه طراحی شده است.",
+    "title": "Pterodactyl: ارزیابی ارزان ارزیابی خودکار ترجمه"
+   },
+   "telegraph_url": "https://telegra.ph/Pterodactyl-ارزیابی-خودکار-ترجمه-با-هزینه-فوق‌العاده-کم-11-12",
+   "title": "Pterodactyl: Pushing the Limits of Efficient Automated Translation Evaluation",
+   "updated_at": 1794513443,
+   "url": "https://arxiv.org/abs/2611.14480v1",
+   "url_key": "arxiv.org/abs/2611.14480v1"
+  },
+  "arxiv:2611.14487": {
+   "attempts": 0,
+   "created_at": 1794482249,
+   "message_id": 112,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Re-Search بازی بیست سوالی را به ایده‌پردازی پژوهشی ترجمه و از ۲۰۰ مقاله ICML 2026 استفاده می‌کند.",
+     "در ۶ LLM تست‌شده، تقریبا تمام پیشرفت در ۳۰ سوال اول از ۱۰۰ رخ می‌دهد و پس از آن مدل‌ها به نقطه پایانی می‌رسند.",
+     "گلوگاه اصلی «تولید» است نه تشخیص: مدل ایده خوب را می‌شناسد اما خودش نمی‌تواند آن را بسازد."
+    ],
+    "hashtags": [
+     "LLM",
+     "AI_Research",
+     "ReSearch"
+    ],
+    "hook": "تحقیق جدید ارزیابی چگونگی تولید ایده با LLM را با بازی پرسش‌وپاسخ دو نفره بازتعریف می‌کند.",
+    "title": "بازی «بیشتر بگرد» برای کشف ایده پژوهشی با LLM"
+   },
+   "telegraph_url": "https://telegra.ph/بازی-دو-نفره‌ی-سوال-و-جواب-برای-کالبدشکافی-ایده‌پردازی-LLMها-11-12",
+   "title": "Re-Search: Dissecting LLM Ideation Through a Two-Player Questioning Game",
+   "updated_at": 1794482250,
+   "url": "https://arxiv.org/abs/2611.14487v1",
+   "url_key": "arxiv.org/abs/2611.14487v1"
+  },
+  "arxiv:2611.14491": {
+   "attempts": 0,
+   "created_at": 1794482228,
+   "message_id": 109,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "TimeSeek الگویی انتخابی برای اشتراک اطلاعات بین دامنه‌ها و وظایف مختلف طراحی شده است.",
+     "یک استخراج‌کننده ویژگی چنددامنه، وابستگی‌های زمانی و همبستگی کانال‌ها را بر اساس ویژگی‌های هر دامنه به‌طور تطبیقی می‌گیرد.",
+     "این مدل در پیش‌بینی، تشخیص ناهنجاری و طبقه‌بندی، هم در حالت few-shot و هم zero-shot، به نتایج state-of-the-art می‌رسد."
+    ],
+    "hashtags": [
+     "TimeSeries",
+     "MachineLearning",
+     "FoundationModel"
+    ],
+    "hook": "محققان TimeSeek را معرفی کردند که با آموزش پیش‌ساخته چندوظیفه، عملکردی بهتر در تحلیل سری‌های زمانی ارائه می‌دهد.",
+    "title": "TimeSeek: مدلی فراگیر برای تحلیل سری‌های زمانی"
+   },
+   "telegraph_url": "https://telegra.ph/TimeSeek-یک-مدل-پایه-عمومی-برای-تحلیل-سری‌های-زمانی-11-12",
+   "title": "TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics",
+   "updated_at": 1794482228,
+   "url": "https://arxiv.org/abs/2611.14491v1",
+   "url_key": "arxiv.org/abs/2611.14491v1"
+  },
+  "arxiv:2611.14492": {
+   "attempts": 0,
+   "created_at": 1794378478,
+   "message_id": 94,
+   "score": 3,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ReTrace SOP را همراه با چند اجرای agent به workflow قابل استفاده تبدیل می‌کند.",
+     "قوانین استخراج شده فقط در مرحله آخر به پلتفرم بستگی دارند و قابل بازتولید هستند.",
+     "روی ۷۹ رویه واقعی هزینه هر کار ۲۴٪ کاهش و سرعت اجرا تا ۱۳۰ برابر افزایش یافت."
+    ],
+    "hashtags": [
+     "LLM",
+     "automation",
+     "AI"
+    ],
+    "hook": "روش ReTrace تصمیم‌گیری LLM را با کد جایگزین می‌کند تا SOPها سریع‌تر و ارزان‌تر اجرا شوند.",
+    "title": "ReTrace: ساخت workflow برای agents استفاده از tool"
+   },
+   "telegraph_url": "https://telegra.ph/ReTrace-تبدیل-عامل‌های-LLM-به-گردش-کار-بدون-برنامه‌ریز-11-11",
+   "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+   "updated_at": 1794378479,
+   "url": "https://arxiv.org/abs/2611.14492v1",
+   "url_key": "arxiv.org/abs/2611.14492v1"
+  },
+  "arxiv:2611.14493": {
+   "attempts": 0,
+   "created_at": 1794417102,
+   "message_id": 100,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "نسخه trace-based بهترین تعادل precision-recall با F1=0.90 دارد.",
+     "روش text-only ۵ برابر هشدار کاذب بیشتری تولید می‌کند.",
+     "ترکیب ارزیابی عملکردی و red-teaming ۲۴ شکست جدید کشف می‌کند."
+    ],
+    "hashtags": [
+     "Agent_Evalu",
+     "Enterprise_AI",
+     "Analytics_Agent"
+    ],
+    "hook": "مقاله جدید سه روش ارزیابی عامل‌های LLM تحلیلی را در محیط کنترل‌شده مقایسه می‌کند.",
+    "title": "مقایسه ابزارهای ارزیابی عامل‌های تحلیلی"
+   },
+   "telegraph_url": "https://telegra.ph/مقایسه-چارچوب‌های-ارزیابی-Agentهای-تحلیلی-شرکتی-11-11",
+   "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+   "updated_at": 1794417102,
+   "url": "https://arxiv.org/abs/2611.14493v1",
+   "url_key": "arxiv.org/abs/2611.14493v1"
+  },
+  "arxiv:2611.14505": {
+   "attempts": 0,
+   "created_at": 1794444399,
+   "message_id": 106,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Continual-ARC یک جریان کاری مادام‌العمر از سه ویرایش ARC-AGI است که دانش تخصصی نمی‌طلبد.",
+     "سیستم‌های حافظه‌محور و وزن‌محور در یک مقیاس یکسان و روی نمونه‌های تازه سنجیده می‌شوند.",
+     "یادگیری وزن‌محور روی وظایف ناشناخته پیشرفت داشت، اما روش‌های Harness همچنان ضعف دارند."
+    ],
+    "hashtags": [
+     "continual_learn",
+     "arc_agi",
+     "ai_hardware"
+    ],
+    "hook": "معیاری جدید برای سنجش کسب مهارت عامل‌های هوش مصنوعی معرفی شد.",
+    "title": "Continual-ARC: یادگیری مهارت در طول عمر کاری عامل‌ها"
+   },
+   "telegraph_url": "https://telegra.ph/مسابقات-یادگیری-مداوم-Continual-ARC-چطور-مهارت-را-در-یک-عمر-کاری-می‌سنجد-11-12",
+   "title": "Continual-ARC: Measuring Skill Acquisition over a Working Lifetime",
+   "updated_at": 1794444399,
+   "url": "https://arxiv.org/abs/2611.14505v1",
+   "url_key": "arxiv.org/abs/2611.14505v1"
+  },
+  "arxiv:2611.14511": {
+   "attempts": 0,
+   "created_at": 1794378465,
+   "message_id": 92,
+   "score": 3,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "معیار Pyrite شامل 1500 جفت حالت در پیچیده‌های متنوع پروتئین-لیگاند است و رتبه‌بندی را به چالشی بزرگ تبدیل کرده است.",
+     "دو عامل مبتنی بر LLM یعنی PyriteReasoner و PyriteFeaturizer دقت تا 67٪ و 74٪ کسب کردند که از عملکرد شیمیدانان خبره بالاتر است.",
+     "کشف ویژگی‌های هدایت‌شده توسط LLM با بهینه‌سازی GRPO بهتر از استدلال مستقیم عمل می‌کند و در مدل‌های متن‌باز نتایج برجسته‌ای دارد."
+    ],
+    "hashtags": [
+     "Pyrite",
+     "LLM",
+     "DrugDiscovery"
+    ],
+    "hook": "پروژه Pyrite معیاری برای ارزیابی رتبه‌بندی حالت‌های پیوند لیگاند به پروتئین ارائه می‌دهد.",
+    "title": "Pyrite: رتبه‌بندی مدل‌های مولکولی با عامل‌های LLM"
+   },
+   "telegraph_url": "https://telegra.ph/Pyrite-رتبه‌بندی-چیدمان‌های-مولکول-لیگاند-با-عامل‌های-مبتنی-بر-LLM-11-11",
+   "title": "Pyrite: Building and Benchmarking Protein-Ligand Pose Ranking Agents",
+   "updated_at": 1794378465,
+   "url": "https://arxiv.org/abs/2611.14511v1",
+   "url_key": "arxiv.org/abs/2611.14511v1"
+  },
+  "arxiv:2611.14514": {
+   "attempts": 0,
+   "created_at": 1794417079,
+   "message_id": 97,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Konsep-e 'contrast set' be jay-e hipotez-e fardi, az chehel-e moqablane 'LLM agent' pasandak mikonad.",
+     "Bar-e sabt-e tahavol-e 'belief' dar 'contrast set' va tanzim-e 'experiment' istefadeh mishavad.",
+     "Dar shash do'main 67% sahel-tar az 'pointwise surprisal' be 'answer' mil-yanidh."
+    ],
+    "hashtags": [
+     "Contrastive_Dis",
+     "AI_Research",
+     "Kashf_e_Elmi"
+    ],
+    "hook": "Contrastive Discovery az peyvast-e 'LLM agent' dar kashf-e elmi estefadeh migardad.",
+    "title": "Kashf-e elmi ta'id-e moqablane az LLM"
+   },
+   "telegraph_url": "https://telegra.ph/کشف-علمی-با-مقایسه-توضیحات-رقیب-11-11",
+   "title": "Contrastive Discovery: Open-Ended Scientific Discovery over Competing Explanations",
+   "updated_at": 1794417079,
+   "url": "https://arxiv.org/abs/2611.14514v1",
+   "url_key": "arxiv.org/abs/2611.14514v1"
+  },
+  "arxiv:2611.14515": {
+   "attempts": 0,
+   "created_at": 1794444377,
+   "message_id": 103,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "AutoScaffold دانشمندی یخ‌زده تجربه آموزش را بررسی، گلوگاه‌ها را تشخیص و اسکافولد طراحی می‌کند.",
+     "در چهار دامنه از ALFWorld تا GPU kernel generation بر پایه‌های RL پیشی می‌گیرد.",
+     "اسکافولدها هنگام ارزیابی حذف می‌شوند و دانش‌آموز با یک‌سوم گام از QuestA سبقت می‌گیرد."
+    ],
+    "hashtags": [
+     "AutoScaffold",
+     "ReinforcementLe",
+     "AI4AI"
+    ],
+    "hook": "AutoScaffold تجربه آموزش RLVR دانش‌آموز را به اسکافولد تطبیقی تبدیل می‌کند.",
+    "title": "AutoScaffold: هوشمندسازی ساختاردهی RL زبان‌مدل‌ها"
+   },
+   "telegraph_url": "https://telegra.ph/AutoScaffold-آموزش-تقویتی-با-راهنمای-تطبیقی-هوش-مصنوعی-11-12",
+   "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
+   "updated_at": 1794444377,
+   "url": "https://arxiv.org/abs/2611.14515v1",
+   "url_key": "arxiv.org/abs/2611.14515v1"
+  },
+  "arxiv:2611.17267": {
+   "attempts": 0,
+   "created_at": 1794599154,
+   "message_id": 131,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "GeoWorld محیطی کنترل‌پذیر و در حال تکامل برای LLM agentهاست که وضعیت‌های جهان بیرونی را طبق فرآیندهای زمانی واقعی تغییر می‌دهد.",
+     "LiveGeo بر پایه همین پلتفرم، توانایی تصمیم‌گیری پایدار عامل‌ها را حتی وقتی داده‌های پیشین دیگر معتبر نیستند می‌سنجد.",
+     "آزمایش‌ها نشان می‌دهند مدل‌های پیشرفته نیز در این کار چالش دارند و هیچ مدلی در تمام ماموریت‌ها عملکردی یکدست و عالی ندارد."
+    ],
+    "hashtags": [
+     "LiveGeo",
+     "GeoWorld",
+     "LLM_Agent"
+    ],
+    "hook": "پلتفرم GeoWorld و بنچمارک LiveGeo امکان ارزیابی تصمیم‌گیری عامل‌های LLM در محیط‌های جغرافیایی واقعی و پویا را فراهم…",
+    "title": "LiveGeo: ارزیابی عامل‌های جغرافیایی در دنیاهای در حال تغییر"
+   },
+   "telegraph_url": "https://telegra.ph/LiveGeo-ارزیابی-عامل‌های-جغرافیایی-در-دنیاهای-در-حال-تغییر-11-13",
+   "title": "LiveGeo: Benchmarking Geographic Agents in Continuously Evolving Worlds",
+   "updated_at": 1794599154,
+   "url": "https://arxiv.org/abs/2611.17267v1",
+   "url_key": "arxiv.org/abs/2611.17267v1"
+  },
+  "arxiv:2611.17297": {
+   "attempts": 0,
+   "created_at": 1794567775,
+   "message_id": 128,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "محققان نشان داده‌اند که یک مجموعه‌ی کوچک از heads توجه، حاوی رمزگذاری هدف بعدی است.",
+     "این رمزگذاری برای اقدام بعدی علت‌شناختی و منعطف است و حتی به محیط‌های جدید منتقل می‌شود.",
+     "مقاله پیشنهاد می‌کند مدل بدون بازگشت، مدام هدف را از مشخصات وظیفه بازمی‌خواند و پیشرفت را بررسی می‌کند."
+    ],
+    "hashtags": [
+     "LLM",
+     "AI",
+     "DeepLearning"
+    ],
+    "hook": "مقاله‌ای جدید نشان می‌دهد الگوهای زبانی چگونه هدف‌های داخلی خود را رمزگذاری می‌کنند.",
+    "title": "نحو رمزگذاری هدف در LLMها"
+   },
+   "telegraph_url": "https://telegra.ph/چگونه-مدل‌های-زبانی-اهداف-خود-را-رمزگذاری-می‌کنند-11-13",
+   "title": "Goal Encoding in LLMs",
+   "updated_at": 1794567775,
+   "url": "https://arxiv.org/abs/2611.17297v1",
+   "url_key": "arxiv.org/abs/2611.17297v1"
+  },
+  "arxiv:2611.17309": {
+   "attempts": 0,
+   "created_at": 1794652203,
+   "message_id": 146,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "CRAM نسخه‌ی یادگرفته‌شده‌ی انرژی Hopfield & Tank است و حل مسائلی مثل Sudoku-Extreme و Maze-Unique را یاد می‌گیرد.",
+     "این مدل بدون نیاز به Backpropagation از طریق solver آموزش می‌بیند و وزن‌های قابل‌تفسیری دارد.",
+     "در تست‌ها دقت کامل تا چند برابر سریع‌تر از مدل‌های حلقه‌ای محقق شد که برای استدلال مقیاس‌پذیر امیدوارکننده است."
+    ],
+    "hashtags": [
+     "CRAM",
+     "یادگیری_ماشین",
+     "هوش_مصنوعی"
+    ],
+    "hook": "مدل CRAM انرژی کلاسیک را آموزش می‌دهد و هزار برابر سریع‌تر از مدل‌های حلقه‌ای استدلال می‌کند.",
+    "title": "مدل انرژی CRAM هزار برابر سریع‌تر استدلال می‌کند"
+   },
+   "telegraph_url": "https://telegra.ph/مدل‌های-انرژی-کلاسیک-۱۰۰۰-برابر-سریع‌تر-از-مدل‌های-تکراری-استدلال-می‌کنند-11-14",
+   "title": "Classical Energies Learn to Reason 1,000x Faster than Looped Models",
+   "updated_at": 1794652203,
+   "url": "https://arxiv.org/abs/2611.17309v1",
+   "url_key": "arxiv.org/abs/2611.17309v1"
+  },
+  "arxiv:2611.17316": {
+   "attempts": 0,
+   "created_at": 1794652178,
+   "message_id": 143,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "CoReMem ارزش آینده‌ی هر بخش حافظه را با مقایسه‌ی اجراها با و بدون آن محاسبه می‌کند.",
+     "عملگر هوشمندانه تصمیم می‌گیرد که استفاده از حافظه در حین پیشرفت کار چقدر صرفه‌جویی می‌کند.",
+     "در مجموعه ChainSWE نرخ حل را از ۲۱٪ به ۲۵/۷٪ رساند و گام‌ها و توکن‌ها را کاهش داد."
+    ],
+    "hashtags": [
+     "CoReMem",
+     "AI_Coding",
+     "Memory_Agents"
+    ],
+    "hook": "چارچوب جدیدی که ارزش نوشتن و خواندن حافظه را در کارهای متوالی کدنویسی می‌سنجد.",
+    "title": "CoReMem: حافظه‌ای برای هزینه‌ی واقعی در برنامه‌نویسی"
+   },
+   "telegraph_url": "https://telegra.ph/CoReMem-حافظه‌ای-با-هزینه‌سنجی-برای-وظایف-پشت‌سرهم-کدنویسی-11-14",
+   "title": "CoReMem: Cost-Internalizing Memory for Successive Coding Tasks with Prospective Valuation",
+   "updated_at": 1794652178,
+   "url": "https://arxiv.org/abs/2611.17316v1",
+   "url_key": "arxiv.org/abs/2611.17316v1"
+  },
+  "arxiv:2611.17320": {
+   "attempts": 0,
+   "created_at": 1794619710,
+   "message_id": 140,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "DiVR یک Verifier است که پیش‌بینی می‌کند آیا دنباله‌ی ناتمام تولید به پاسخ صحیح می‌رسد یا خیر.",
+     "حالات نهفته (Hidden States) حاوی اطلاعات خطا هستند، در حالی که confidence توکن این موضوع را نشان نمی‌دهد.",
+     "در پنج benchmark استدلالی روی LLaDA-8B-Base دقت را از ۳۵.۳٪ به ۴۳.۴٪ رساند و با سایر Generatorها هم سازگار است."
+    ],
+    "hashtags": [
+     "Diffusion_Model",
+     "LLM",
+     "AI_Research"
+    ],
+    "hook": "روش جدیدی به نام DiVR به مدل‌های Diffusion می‌آموزد چه زمانی متن تولیدشده را اصلاح کند.",
+    "title": "مدلی برای تشخیص زمان بازنویسی در Diffusion LMs"
+   },
+   "telegraph_url": "https://telegra.ph/یادگیری-زمان-بازتولید-در-مدل‌های-دیفیوژن-زبانی-11-14",
+   "title": "Learning When Diffusion Language Models Should Regenerate",
+   "updated_at": 1794619710,
+   "url": "https://arxiv.org/abs/2611.17320v1",
+   "url_key": "arxiv.org/abs/2611.17320v1"
+  },
+  "arxiv:2611.17323": {
+   "attempts": 0,
+   "created_at": 1794619686,
+   "message_id": 137,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "AgentSSL یادگیری نیمه‌نظارتی را به عنوان یک مسئله جستجوی برنامه توصیف می‌کند.",
+     "عامل‌ها حتی با فیدبک ضعیف و محاسبات برابر، در ۸ از ۱۲ مورد تا ۲۱.۸٪ بهتر از پایه‌های انسانی عمل کردند.",
+     "انتخاب برنامه گلوگاه بحرانی است و عملکرد تا ۴۷٪ کاهش می‌یابد؛ ProgramSelectBench برای بررسی آن ارائه شد."
+    ],
+    "hashtags": [
+     "AgentSSL",
+     "MachineLearning",
+     "UnlabeledData"
+    ],
+    "hook": "تحقیق جدید نشان می‌دهد عامل‌های یادگیری ماشین چگونه از داده‌های بدون برچسب بهره ببرند و عملکردی فراتر از انسان ارائه…",
+    "title": "AgentSSL: عامل‌های MLE و داده‌های بدون برچسب"
+   },
+   "telegraph_url": "https://telegra.ph/AgentSSL-آیا-عوامل-هوش-مصنوعی-می‌توانند-از-داده‌های-برچسب‌خورده-استفاده-کنند-11-14",
+   "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+   "updated_at": 1794619687,
+   "url": "https://arxiv.org/abs/2611.17323v1",
+   "url_key": "arxiv.org/abs/2611.17323v1"
+  },
+  "arxiv:2611.17329": {
+   "attempts": 0,
+   "created_at": 1794599190,
+   "message_id": 134,
+   "score": 1,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "یک روش تقویت‌نمادین پیوسته برای تخصیص پرتفوی معرفی شده که احتمال انطباق اقدامات را پیش از آموزش ارزیابی می‌کند.",
+     "نرخ نقض شش قاعده اختصاص‌یافته از ۹۶-۹۸٪ در RL بی‌قید به ۴.۸٪ کاهش یافته است.",
+     "این روش برای توسعه‌دهندگان حوزه یادگیری ماشین و فین‌تک قابل اتکا است زیرا اعمال پسین را حذف می‌کند."
+    ],
+    "hashtags": [
+     "neuro_rl",
+     "portfolio",
+     "fintech"
+    ],
+    "hook": "روش جدید، انطباق با قوانین سرمایه‌گذاری را به جای اجرای پسین، در خود یادگیری نهادینه می‌کند.",
+    "title": "تقویت‌نمادین برای تخصیص دارایی"
+   },
+   "telegraph_url": "https://telegra.ph/یادگیری-تقویتی-عصبی-سمبولیک-برای-رعایت-دستورالعمل-سرمایه‌گذاری-11-13",
+   "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+   "updated_at": 1794599190,
+   "url": "https://arxiv.org/abs/2611.17329v1",
+   "url_key": "arxiv.org/abs/2611.17329v1"
+  },
+  "arxiv:2611.17332": {
+   "attempts": 0,
+   "created_at": 1794567753,
+   "message_id": 125,
+   "score": 2,
+   "source": "arxiv",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ثبت پیشنهادها همراه با آزمایش‌ها و استدلال‌ها، بازبینی توسط جامعه و ارجاع توسط کارهای بعدی.",
+     "پیش‌بینی loss مدل در مقیاس بزرگ از آزمایش‌های کوچک با استفاده از scaling laws برای صرفه‌جویی در هزینه آموزش.",
+     "ارائه باسلاین Qwen3.5 و OLMo3، قوانین فیت شده و recipe آموزش قابل استفاده برای توسعه‌دهندگان."
+    ],
+    "hashtags": [
+     "LLM",
+     "ArchSpace",
+     "architecture"
+    ],
+    "hook": "آرکی‌اسپیس شکاف بین پژوهش صنعتی و دانشگاهی درباره معماری مدل‌ها را با ثبت، بازبینی و ارجاع پر می‌کند.",
+    "title": "ArchSpace: پلتفرم ثبت و بازبینی معماری‌های مدل زبانی"
+   },
+   "telegraph_url": "https://telegra.ph/آرچ‌اسپیس-پلتفرمی-برای-ثبت-بازبینی-و-ارجاع-به-معماری‌های-مدل-زبانی-11-13",
+   "title": "ArchSpace: Recording, Reviewing, and Referencing LLM Architecture Research",
+   "updated_at": 1794567753,
+   "url": "https://arxiv.org/abs/2611.17332v1",
+   "url_key": "arxiv.org/abs/2611.17332v1"
+  },
+  "github:addyosmani/agent-skills": {
+   "attempts": 0,
+   "created_at": 1794322546,
+   "message_id": 81,
+   "score": 465,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این ابزار گردش کار، استانداردها و بهترین تجربه مهندسان ارشد را به زبان دستورات کد هوش مصنوعی درمی‌آورد.",
+     "نه دستور (/spec، /plan، /build و غیره) چرخه کامل ساخت نرم‌افزار را پوشش می‌دهند و نصب آن‌ها برای بیش از ۷۰ ابزار ممکن است.",
+     "نسخه CLI و ادغام بومی Claude Code آن رایگان است و به طور خودکار مهارت مناسب را فعال می‌کند."
+    ],
+    "hashtags": [
+     "AI_Agents",
+     "Coding_Aids",
+     "DeveloperTools"
+    ],
+    "hook": "مجموعه مهارت‌های حرفه‌ای بهینه شده برای عوامل کدنویس هوش مصنوعی.",
+    "title": "ابزار Agent Skills برای هوش مصنوعی"
+   },
+   "telegraph_url": "https://telegra.ph/agent-skills-مهارت‌های-مهندسی-آماده-برای-عامل‌های-کدنویسی-هوش-مصنوعی-11-10",
+   "title": "addyosmani/agent-skills: Production-grade engineering skills for AI coding agents.",
+   "updated_at": 1794322546,
+   "url": "https://github.com/addyosmani/agent-skills",
+   "url_key": "github.com/addyosmani/agent-skills"
+  },
+  "github:alibaba/open-code-review": {
+   "attempts": 0,
+   "created_at": 1794567769,
+   "message_id": 127,
+   "score": 206,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ابزار CLI باز‌بینی کد هوشمند که ابتدا سرویس داخلی علی‌بابا و اکنون متن‌باز شده است.",
+     "معماری ترکیبی: خط‌های قطعی مهندسی به همراه عامل LLM برای نظارت دقیق و کم‌هزینه روی تغییرات.",
+     "در بنچمارک نسبت به عامل‌های عمومی دقت بالاتر و مصرف توکن نزدیک به یک‌نهم نشان می‌دهد."
+    ],
+    "hashtags": [
+     "OpenCodeReview",
+     "AI_code_review",
+     "Alibaba"
+    ],
+    "hook": "OpenCodeReview ابزار CLI باز‌بینی کد است که از معماری ترکیبی مهندسی قطعی و عامل هوش مصنوعی بهره می‌برد.",
+    "title": "ابزار باز‌بینی کد هوشمند Alibaba در گیت‌هاب"
+   },
+   "telegraph_url": "https://telegra.ph/OpenCodeReview-ترکیب-مهندسی-قطعی-با-عامل-هوش-مصنوعی-برای-بررسی-کد-در-مقیاس-علی‌بابا-11-13",
+   "title": "alibaba/open-code-review: Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in mu",
+   "updated_at": 1794567769,
+   "url": "https://github.com/alibaba/open-code-review",
+   "url_key": "github.com/alibaba/open-code-review"
+  },
+  "github:alishahryar1/free-claude-code": {
+   "attempts": 0,
+   "created_at": 1794482222,
+   "message_id": 108,
+   "score": 636,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این ابزار رایگان، ۱۲ هارنس کدنویسی از جمله Claude Code و Codex را به بیش از ۶۱ ارائه‌دهنده متصل می‌کند.",
+     "بیش از ۱.۳ میلیارد توکن رایگان در ماه می‌دهد و مصرف توکن را تا ۹۰٪ با بهینه‌سازی کاهش می‌دهد.",
+     "از ترمینال، اپلیکیشن، افزونه VSCode، موبایل و حالا از طریق مرورگر با پشتیبانی از دستورات صوتی اجرا می‌شود."
+    ],
+    "hashtags": [
+     "ai_coding",
+     "ابزار_رایگان",
+     "پروژه_متن_باز"
+    ],
+    "hook": "پروژه متن‌باز اجازه می‌دهد هوش مصنوعی کدنویس را از ترمینال، IDE و مرورگر رایگان به کار بگیرید.",
+    "title": "ابزار رایگان هوش مصنوعی کدنویسی"
+   },
+   "telegraph_url": "https://telegra.ph/دسترسی-رایگان-به-۱۳-مدل-هوش-مصنوعی-از-طریق-ترمینال-و-مرورگر-11-12",
+   "title": "Alishahryar1/free-claude-code: Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from t",
+   "updated_at": 1794482222,
+   "url": "https://github.com/Alishahryar1/free-claude-code",
+   "url_key": "github.com/alishahryar1/free-claude-code"
+  },
+  "github:anthropics/claude-quickstarts": {
+   "attempts": 0,
+   "created_at": 1794175754,
+   "message_id": 62,
+   "score": 28,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "تک‌ست‌های آماده‌ای برای مشتری، تحلیلگر مالی و عامل نوشتن کد شامل الگوهای دو‌عاملی.",
+     "قابلیت Computer Use با ابزار `computer_toolset_20260801` و Best Practices برای مک‌اواس.",
+     "نمونه‌های مینیمال Browser و Computer Toolset در پایتون و TypeScript برای آشنایی با رابط‌ها."
+    ],
+    "hashtags": [
+     "ClaudeAPI",
+     "Anthropic",
+     "Developer"
+    ],
+    "hook": "Anthropic مجموعه‌ای از پروژه‌های آماده برای ساخت اپلیکیشن با Claude API را منتشر کرده است.",
+    "title": "آشپزخانه‌ای از نمونه‌کدهای Claude"
+   },
+   "telegraph_url": "https://telegra.ph/آشنایی-سریع-با-ساخت-برنامه-با-Claude-API-11-08",
+   "title": "anthropics/claude-quickstarts: A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+   "updated_at": 1794175755,
+   "url": "https://github.com/anthropics/claude-quickstarts",
+   "url_key": "github.com/anthropics/claude-quickstarts"
+  },
+  "github:anthropics/skills": {
+   "attempts": 0,
+   "created_at": 1794079615,
+   "message_id": 44,
+   "score": 386,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "مهارت‌ها پوشه‌های دستورات و اسکریپت‌هایی هستند که Claude آن‌ها را پویا بارگذاری می‌کند.",
+     "برای خلق محتوا، تست وب و اتوماسیون سازمانی استفاده می‌شوند و اکثر آن‌ها Apache 2.0 هستند.",
+     "می‌توان آن‌ها را در Claude Code به‌عنوان افزونه نصب کرد یا از طریق Claude API بارگذاری و سفارشی کرد."
+    ],
+    "hashtags": [
+     "Claude",
+     "Agent_Skills",
+     "Open_Source"
+    ],
+    "hook": "آنتروپیک مخزن عمومی GitHub با مهارت‌های از پیش ساخته برای Claude منتشر کرد.",
+    "title": "مخزن عمومی مهارت‌های Agent برای Claude"
+   },
+   "telegraph_url": "https://telegra.ph/انتشار-مخزن-عمومی-مهارت‌های-Agent-توسط-آنتروپیک-11-07",
+   "title": "anthropics/skills: Public repository for Agent Skills",
+   "updated_at": 1794079615,
+   "url": "https://github.com/anthropics/skills",
+   "url_key": "github.com/anthropics/skills"
+  },
+  "github:astral-sh/ruff": {
+   "attempts": 0,
+   "created_at": 1794079631,
+   "message_id": 46,
+   "score": 350,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Ruff یک ابزار لینگ و فرمت‌کننده پایتون است که با Rust نوشته شده.",
+     "این ابزار بسیار سریع‌تر از Flake8 و Black عمل می‌کند.",
+     "توسعه‌دهندگان می‌توانند آن را با pip یا uv نصب و استفاده کنند."
+    ],
+    "hashtags": [
+     "Python",
+     "Rust",
+     "Ruff"
+    ],
+    "hook": "Ruff ابزاری بهینه برای لینت و فرمت‌دهی کد پایتون است.",
+    "title": "Ruff: linting و formatting سریع پایتون"
+   },
+   "telegraph_url": "https://telegra.ph/راف-لینتر-و-فرمت‌کننده-پایتون-با-سرعت-سرسام‌آور-11-07",
+   "title": "astral-sh/ruff: An extremely fast Python linter and code formatter, written in Rust.",
+   "updated_at": 1794079632,
+   "url": "https://github.com/astral-sh/ruff",
+   "url_key": "github.com/astral-sh/ruff"
+  },
+  "github:backnotprop/plannotator": {
+   "attempts": 0,
+   "created_at": 1794619678,
+   "message_id": 136,
+   "score": 108,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این ابزار یک سطح مرور محلی و مبتنی بر مرورگر برای بازخورد به عامل‌های کدنویس و دستیارهای شخصی است.",
+     "قابلیت حاشیه‌نویسی طرح‌ها، اسناد، پیام‌ها و HTML و بازبینی دیف و PR وجود دارد و بازخوردها مستقیماً به عامل بازمی‌گردند.",
+     "راهکارهای مختلفی دارد، از جمله پلاگین برای Claude Code و Codex و ارتباط از طریق پروتکل MCP."
+    ],
+    "hashtags": [
+     "Plannotator",
+     "AI_Agent",
+     "کدنویسی"
+    ],
+    "hook": "پلتفرم Plannotator لایه بازخورد بین توسعه‌دهنده و عامل‌های کدنویس چندگانه را برقرار می‌کند.",
+    "title": "Plannotator: بستر مرور تعاملی برای بازخورد به عامل‌های…"
+   },
+   "telegraph_url": "https://telegra.ph/Plannotator-مرور-و-بازخورد-هوشمند-به-عامل‌های-کدنویسی-در-یک-پنجره-11-14",
+   "title": "backnotprop/plannotator: The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+   "updated_at": 1794619678,
+   "url": "https://github.com/backnotprop/plannotator",
+   "url_key": "github.com/backnotprop/plannotator"
+  },
+  "github:block/buzz": {
+   "attempts": 0,
+   "created_at": 1794619704,
+   "message_id": 139,
+   "score": 97,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "فضایی خودمیزبان بر پایه پروتکل Nostr که در آن انسان‌ها و عامل‌ها در یک اتاق و یک روزنه رویداد مشترک کار می‌کنند.",
+     "عامل‌ها کلیدهای اختصاصی، عضویت کانال و ردپای حسابرسی جداگانه دارند و فقط تا همان سطح دسترسی مجاز می‌شوند.",
+     "همه رویدادها — از تغییرات Git و تایید بررسی‌ها تا هوش مصنوعی — در یک جستجوی واحد قابل پیگیری و بازیابی هستند."
+    ],
+    "hashtags": [
+     "Buzz",
+     "Nostr",
+     "AI_Agents"
+    ],
+    "hook": "Buzz پلتفرمی برای همکاری انسان‌ها و عامل‌های هوش مصنوعی در یک فضا با مالکیت کامل شماست.",
+    "title": "Buzz: فضایی برای کار جمعی انسان‌ها و عامل‌های هوش مصنوعی"
+   },
+   "telegraph_url": "https://telegra.ph/Buzz-پلتفرم-گفت‌وگوی-ذهن‌سهمی-برای-انسان-و-عامل-11-14",
+   "title": "block/buzz: A hive mind communication platform",
+   "updated_at": 1794619704,
+   "url": "https://github.com/block/buzz",
+   "url_key": "github.com/block/buzz"
+  },
+  "github:chromedevtools/chrome-devtools-mcp": {
+   "attempts": 0,
+   "created_at": 1794599179,
+   "message_id": 133,
+   "score": 145,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "به شکل سرور Model-Context-Protocol (MCP) و یک CLI عرضه شده و برای خودکارسازی از puppeteer استفاده می‌کند.",
+     "قابلیت‌ها: ضبط Trace برای تحلیل پرفورمنس، بررسی درخواست‌های شبکه، اسکرین‌شات و مشاهده پیام‌های کنسول با ردپای منبع‌نمایی شده.",
+     "ارسال آمار استفاده و بررسی به‌روزرسانی به‌طور پیش‌فرض فعال است و با فگ یا متغیرهای محیطی قابل خاموش کردن است."
+    ],
+    "hashtags": [
+     "chrome_devtools",
+     "MCP",
+     "AI_Automation"
+    ],
+    "hook": "پروژه chrome-devtools-mcp دسترسی ابزارهای دیباگ و تحلیل پرفورمنس کروم را به عامل‌های هوشمند کدنویسی می‌دهد.",
+    "title": "chrome-devtools-mcp: DevTools برای عامل‌های کدنویسی"
+   },
+   "telegraph_url": "https://telegra.ph/ابزار-chrome-devtools-mcp-کنترل-کروم-توسط-هوش-مصنوعی-11-13",
+   "title": "ChromeDevTools/chrome-devtools-mcp: Chrome DevTools for coding agents",
+   "updated_at": 1794599179,
+   "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+   "url_key": "github.com/chromedevtools/chrome-devtools-mcp"
+  },
+  "github:cloudflare/security-audit-skill": {
+   "attempts": 0,
+   "created_at": 1793983711,
+   "message_id": 21,
+   "score": 2524,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این مهارت فرآیند audit را در شش فاز از شناسایی معماری تا تولید گزارش خودکار هماهنگ می‌کند.",
+     "یافته‌ها در قالب machine-readable و با اعتبارسنجی مستقل، در فایل‌های JSON و Markdown ثبت می‌شوند.",
+     "توسعه‌دهندگان می‌توانند آن را مستقیماً در پروژه‌های خود به‌کار بگیرند یا به‌عنوان پایه‌ای برای هارنس کشف آسیب‌پذیری توسعه دهند."
+    ],
+    "hashtags": [
+     "cloudflare",
+     "security",
+     "AI"
+    ],
+    "hook": "Cloudflare مهارتی به‌نام security-audit-skill را منتشر کرده است که عامل‌های کدنویسی را به بازرس امنیت تبدیل می‌کند.",
+    "title": "ابزار امنیتی خودکار Cloudflare"
+   },
+   "telegraph_url": null,
+   "title": "cloudflare/security-audit-skill: A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+   "updated_at": 1793983711,
+   "url": "https://github.com/cloudflare/security-audit-skill",
+   "url_key": "github.com/cloudflare/security-audit-skill"
+  },
+  "github:copilotkit/openbot": {
+   "attempts": 0,
+   "created_at": 1794513437,
+   "message_id": 114,
+   "score": 291,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "OpenBot یک فضای کاری ماژولار و قابل نصب شخصی برای همکاران هوش مصنوعی است.",
+     "هر عامل به مرورگر، فایل‌ها و ابزارها دسترسی دارد و هر اقدام پیش از اجرا تأیید می‌شود.",
+     "با AG-UI هر عاملی را متصل کنید و روی وب، موبایل و پیام‌رسان‌ها از آن استفاده کنید."
+    ],
+    "hashtags": [
+     "OpenBot",
+     "AI_Agents",
+     "CopilotKit"
+    ],
+    "hook": "CopilotKit ابزاری منتشر کرده که به هر عامل هوش مصنوعی یک رایانه اختصاصی می‌دهد.",
+    "title": "OpenBot: همکاران هوش مصنوعی با دسترسی مستقل به رایانه"
+   },
+   "telegraph_url": "https://telegra.ph/OpenBot-همکاران-هوشمند-متن‌باز-با-رایانه-و-مرورگر-اختصاصی-11-12",
+   "title": "CopilotKit/OpenBot: Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+   "updated_at": 1794513437,
+   "url": "https://github.com/CopilotKit/OpenBot",
+   "url_key": "github.com/copilotkit/openbot"
+  },
+  "github:d4vinci/scrapling": {
+   "attempts": 0,
+   "created_at": 1793922014,
+   "message_id": 12,
+   "score": 1661,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Scrapling درخواست‌های HTTP سریع، رندر JavaScript و استخراج از APIها را در یک کتابخانه پایتونی جمع کرده است.",
+     "مدیریت Cloudflare Turnstile، Proxy Rotation، crawls concurrent، pause/resume و خروجی‌های JSON/CSV را پشتیبانی می‌کند.",
+     "توسعه‌دهندگان از آن در پایتون، ترمینال یا از طریق MCP Server برای Agents هوش مصنوعی استفاده می‌کنند."
+    ],
+    "hashtags": [
+     "Web_Scraping",
+     "Python",
+     "Scrapling"
+    ],
+    "hook": "چهارچوب Scrapling برای پایتون همه‌جانبه‌ترین ابزار استخراج داده از وب است.",
+    "title": "Scrapling: فریم‌ورک قدرتمند Scraping برای پایتون"
+   },
+   "telegraph_url": "https://telegra.ph/Scrapling-چارچوب-قدرتمند-جدید-پایتونی-برای-وب‌اسکرپینگ-11-05",
+   "title": "D4Vinci/Scrapling: 🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for da",
+   "updated_at": 1793922014,
+   "url": "https://github.com/D4Vinci/Scrapling",
+   "url_key": "github.com/d4vinci/scrapling"
+  },
+  "github:dsx-ai-factory/nvke": {
+   "attempts": 0,
+   "created_at": 1794175740,
+   "message_id": 60,
+   "score": 345,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "NVKE نقشه مدیریت (management plane) است که روی زیرساخت GPU شخصی شما نصب می‌شود و کلسترهای ایزوله ایجاد می‌کند.",
+     "هر کلستر مشتریان کنترل‌پلی و etcd مستقل دارد و فقط از طریق NVIDIA Infra Controller (NICo) قابل تأمین است.",
+     "این ابزار فعلاً در وضعیت Preview است و برای بارهای کاری واقعی (production) توصیه نمی‌شود."
+    ],
+    "hashtags": [
+     "NVKE",
+     "GPU_Kubernetes",
+     "NVIDIA"
+    ],
+    "hook": "ان‌وی‌دیکس NVKE یک لایه مدیریت برای ایجاد و نگهداری کلسترهای کوبرنیتس روی سخت‌افزار اختصاصی NVIDIA است.",
+    "title": "NVKE: کانتینر GPU را روی سرورهای خودتان مدیریت کنید"
+   },
+   "telegraph_url": "https://telegra.ph/NVKE-NVKE-NVKE-NVIDIA-Kubernetes-Engine-برای-مدیریت-GPU-روی-سرورهای-اختصاصی-11-08",
+   "title": "dsx-ai-factory/nvke: NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+   "updated_at": 1794175740,
+   "url": "https://github.com/dsx-ai-factory/nvke",
+   "url_key": "github.com/dsx-ai-factory/nvke"
+  },
+  "github:floci-io/floci": {
+   "attempts": 0,
+   "created_at": 1793947908,
+   "message_id": 18,
+   "score": 779,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "floci شبیه‌ساز رایگان و سبک AWS برای توسعه، تست و CI است که نیازی به حساب یا Auth Token ندارد.",
+     "با تغییر image به floci/floci می‌توانید از LocalStack به صورت drop-in جایگزین استفاده کنید.",
+     "با CLI floci start و env export، ابزارهای AWS SDK، CLI و Terraform را به صورت محلی اجرا کنید."
+    ],
+    "hashtags": [
+     "floci",
+     "AWS",
+     "localstack"
+    ],
+    "hook": "ابزار متن‌باز floci امکان اجرای سرویس‌های شبیه‌AWS را بدون حساب ابری فراهم می‌کند.",
+    "title": "floci: جایگزین سبک و رایگان LocalStack برای شبیه‌سازی AWS"
+   },
+   "telegraph_url": "https://telegra.ph/Floci-جایگزین-رایگان-و-سبک-برای-LocalStack-11-06",
+   "title": "floci-io/floci: Light, fluffy, and always free - The AWS Local Emulator alternative",
+   "updated_at": 1793947908,
+   "url": "https://github.com/floci-io/floci",
+   "url_key": "github.com/floci-io/floci"
+  },
+  "github:garrytan/gbrain": {
+   "attempts": 0,
+   "created_at": 1794281765,
+   "message_id": 75,
+   "score": 216,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "GBrain واقعیت‌های مستند، اصلاح و بازخوانی می‌کند و آن را در TypeScript با مجوز MIT عرضه می‌کند.",
+     "دریافت کلیدواژه‌ای رایگان است و جستجوی معنایی، ترکیب مستند و تحلیل شکاف دانش اضافه می‌شود.",
+     "مهندسان عامل‌های خود را با GBrain به‌روزرسانی می‌کنند، از طریق MCP به‌اشتراک می‌گذارند و گاهی gbrain.io را استفاده می‌کنند."
+    ],
+    "hashtags": [
+     "GBrain",
+     "harness_agent",
+     "open_source"
+    ],
+    "hook": "گاری تان، مدیرعامل Y Combinator، حافظه شفاف و قابل‌انتقال برای عامل‌های هوشمندش را منتشر کرده است.",
+    "title": "GBrain: حافظه کنترل‌شده برای عامل‌های AI"
+   },
+   "telegraph_url": "https://telegra.ph/GBrain-حافظه‌ای-قابل-حمل-و-کنترل‌شده-برای-هوش-مصنوعی-شما-11-10",
+   "title": "garrytan/gbrain: Garry's Opinionated OpenClaw/Hermes Agent Brain",
+   "updated_at": 1794281765,
+   "url": "https://github.com/garrytan/gbrain",
+   "url_key": "github.com/garrytan/gbrain"
+  },
+  "github:ggml-org/llama.cpp": {
+   "attempts": 0,
+   "created_at": 1794513462,
+   "message_id": 117,
+   "score": 287,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "پیاده‌سازی ساده C/C++ بدون وابستگی برای اجرای LLM و VLM روی سخت‌افزارهای متنوع",
+     "پشتیبانی از کوانتایزهای 1.5 تا 8 بیتی برای کاهش مصرف حافظه و افزایش سرعت استنباط",
+     "سازگاری با CUDA، Metal، Vulkan، SYCL و معماری‌های x86، RISC-V و Apple Silicon"
+    ],
+    "hashtags": [
+     "llama.cpp",
+     "LLM",
+     "OpenSource"
+    ],
+    "hook": "کتابخانه llama.cpp اجرای مدل‌های زبانی بزرگ را در C/C++ و بدون وابستگی فراهم می‌کند.",
+    "title": "llama.cpp: inference LLM در C/C++"
+   },
+   "telegraph_url": "https://telegra.ph/llamacpp-اجرای-LLM-با-CC-در-هر-سخت‌افزاری-11-12",
+   "title": "ggml-org/llama.cpp: LLM inference in C/C++",
+   "updated_at": 1794513462,
+   "url": "https://github.com/ggml-org/llama.cpp",
+   "url_key": "github.com/ggml-org/llama.cpp"
+  },
+  "github:google-deepmind/mujoco": {
+   "attempts": 0,
+   "created_at": 1794206178,
+   "message_id": 63,
+   "score": 41,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "MuJoCo یک موتور شبیه‌سازی فیزیک با هسته C++ برای رباتیک و یادگیری ماشین است.",
+     "این ابزار بهینه‌سازی عملکردی برای شبیه‌سازی سریع و دقیق سازه‌های مفصلی دارد.",
+     "نسخه‌های باینری آماده برای لینوکس، ویندوز و مک در دسترس و نصب با pip نیز ممکن است."
+    ],
+    "hashtags": [
+     "MuJoCo",
+     "رباتیک",
+     "فیزیک"
+    ],
+    "hook": "گیت‌هاب جدیدترین نسخه موتور شبیه‌سازی فیزیک MuJoCo منتشر شده است.",
+    "title": "معرفی موتور فیزیک MuJoCo"
+   },
+   "telegraph_url": "https://telegra.ph/موتوکو-شبیه‌ساز-فیزیک-گوگل-دیپ‌مایند-برای-رباتیک-و-یادگیری-ماشین-11-09",
+   "title": "google-deepmind/mujoco: Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+   "updated_at": 1794206178,
+   "url": "https://github.com/google-deepmind/mujoco",
+   "url_key": "github.com/google-deepmind/mujoco"
+  },
+  "github:google/skills": {
+   "attempts": 0,
+   "created_at": 1793983743,
+   "message_id": 24,
+   "score": 532,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "نصب از طریق نپک و انتخاب مهارت‌ها برای اهداف مختلف",
+     "مهارت‌ها دسته‌بندی‌های گسترده ابری، هوش مصنوعی و زیرساخت را پوشش می‌دهند",
+     "به توسعه‌دهندگان کمک می‌کنند کار با GCP و مدل‌های Gemini را سریع‌تر یاد بگیرند"
+    ],
+    "hashtags": [
+     "GoogleCloud",
+     "AI",
+     "AgentSkills"
+    ],
+    "hook": "گوگل مخزن عمومی مهارت‌های Agent برای محصولات خودش را منتشر کرد.",
+    "title": "مجموعه مهارت‌های هوش مصنوعی گوگل منتشر شد"
+   },
+   "telegraph_url": "https://telegra.ph/مهارت‌های-عاملی-گوگل-برای-توسعه‌دهندگان-کلود-و-AI-11-06",
+   "title": "google/skills: Agent Skills for Google products and technologies",
+   "updated_at": 1793983743,
+   "url": "https://github.com/google/skills",
+   "url_key": "github.com/google/skills"
+  },
+  "github:googlechrome/modern-web-guidance-src": {
+   "attempts": 0,
+   "created_at": 1794417094,
+   "message_id": 99,
+   "score": 133,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این مخزن منبع مهارت‌هایی است که دانش وب، بهترین شیوه‌ها و داده سازگاری مرورگر را به عامل‌های کدنویسی تزریق می‌کند.",
+     "با راهکارهای مبتنی بر APIهای بومی، از تولید کدهای JavaScript حجیم ناشی از الگوهای فرسوده جلوگیری می‌کند.",
+     "شامل ۲۵۰ ویژگی مدرن در حوزه CSS، پرفورمنس، دسترسی‌پذیری و هوش مصنوعی داخلی مرورگر با دستور npx install است."
+    ],
+    "hashtags": [
+     "ModernWeb",
+     "GoogleChrome",
+     "TypeScript"
+    ],
+    "hook": "گوگل راهنمای مدرن وب را منتشر کرد که الگوهای کدنویسی را با قابلیت‌های پلتفرم مدرن جایگزین می‌کند.",
+    "title": "راهنمای مدرن وب گوگل برای عامل‌های کدنویسی"
+   },
+   "telegraph_url": "https://telegra.ph/راهنمای-مدرن-وب-گوگل-مسیر-درست-برای-کدنویسی-هوشمند-11-11",
+   "title": "GoogleChrome/modern-web-guidance-src",
+   "updated_at": 1794417094,
+   "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+   "url_key": "github.com/googlechrome/modern-web-guidance-src"
+  },
+  "github:homeassistant-ai/ha-mcp": {
+   "attempts": 0,
+   "created_at": 1794281786,
+   "message_id": 78,
+   "score": 31,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "کتابخانه ha-mcp با مدل‌هایی مانند Claude و ChatGPT کار می‌کند و تنظیمات Home Assistant را ساده می‌کند.",
+     "نصب آن از HACS یا مارکت‌پلیس Home Assistant 2026.11 امکان سرور درون‌فرآیندی و تمام ویژگی‌ها را فراهم می‌کند.",
+     "برای امنیت، ساخت حساب جداگانه و استفاده از تیکن بلندمدت توصیه می‌شود."
+    ],
+    "hashtags": [
+     "ha_mcp",
+     "home_assistant",
+     "ai"
+    ],
+    "hook": "برنامه ha-mcp از دستورات هوش مصنوعی برای مدیریت خانه هوشمند پشتیبانی می‌کند.",
+    "title": "مدیریت خانه هوشمند با مدل‌های هوش مصنوعی"
+   },
+   "telegraph_url": "https://telegra.ph/اتصال-خانه-هوشمند-به-دستیاران-هوشمند-با-ha-mcp-11-10",
+   "title": "homeassistant-ai/ha-mcp: Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+   "updated_at": 1794281787,
+   "url": "https://github.com/homeassistant-ai/ha-mcp",
+   "url_key": "github.com/homeassistant-ai/ha-mcp"
+  },
+  "github:jiafeimiao-k-cat/discimagestudio": {
+   "attempts": 0,
+   "created_at": 1793947886,
+   "message_id": 15,
+   "score": 984,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "تصویر را به داده‌های لایه فیزیکی دیسک تبدیل و روی هر DVD/CD/BD-R حک می‌کند.",
+     "پشتیبانی از CD با WAV+CUE، DVD با ISO و BD-R با UDF 2.01؛ خط فرمان روی لینوکس و مک.",
+     "کالیبراسیون با عکس و گزینه حک مستقیم که فقط روی دیسک آزمایشی کار می‌کند."
+    ],
+    "hashtags": [
+     "DiscImageStudio",
+     "CSharp",
+     "Burning"
+    ],
+    "hook": "ابزار همه‌کاره برای حک عکس قابل رویت روی CD و DVD و BD.",
+    "title": "Disc Image Studio: عکس روی دیسک حک کنید"
+   },
+   "telegraph_url": "https://telegra.ph/کتابخانه‌ای-که-عکس-را-روی-سطح-دیسک-حک-می‌کند-11-06",
+   "title": "JiaFeiMiao-K-Cat/DiscImageStudio",
+   "updated_at": 1793947886,
+   "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+   "url_key": "github.com/jiafeimiao-k-cat/discimagestudio"
+  },
+  "github:kkkkhazix/agent-autoloop": {
+   "attempts": 0,
+   "created_at": 1794133586,
+   "message_id": 52,
+   "score": 4034,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "اجرای خودکار دستورات Agent بدون نیاز به نگهداری مداوم",
+     "ارسال کارت تصمیم‌گیری هنگام نیاز به تأیید نهایی",
+     "سازگار با پلتفرم‌های مختلف و ابزارهای نظارتی موجود"
+    ],
+    "hashtags": [
+     "AgentAutoloop",
+     "Automation",
+     "CLI"
+    ],
+    "hook": "Agent Autoloop یک ابزار سبک برای اجرای خودکار دستورات Agent در پس‌زمینه است.",
+    "title": "Agent Autoloop: فرمان‌دهی به Agentها در پس‌زمینه"
+   },
+   "telegraph_url": "https://telegra.ph/agent-autoloop-فرمان‌دهی‌گر-سبک-برای-Agent‌های-خط-فرمان-11-08",
+   "title": "KKKKhazix/agent-autoloop: 让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。",
+   "updated_at": 1794133586,
+   "url": "https://github.com/KKKKhazix/agent-autoloop",
+   "url_key": "github.com/kkkkhazix/agent-autoloop"
+  },
+  "github:likely7/veyra-nrvideo": {
+   "attempts": 0,
+   "created_at": 1794567746,
+   "message_id": 124,
+   "score": 245,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Veyra پلیر پیشرفته ویندوزی برای بهبود بلادرنگ ویدیو، تصاویر و منابع کارت کپچر است.",
+     "قابلیت‌های آن شامل Super Resolution، DLSS 5، Frame Generation و پردازش GPU بلادرنگ برای PS5، Xbox و PC است.",
+     "این ابزار بر پایه C++ و DirectX 12 نوشته شده و روی کارت‌های NVIDIA و AMD اجرا می‌شود."
+    ],
+    "hashtags": [
+     "AI",
+     "DLSS",
+     "Veyra"
+    ],
+    "hook": "ابزار متن‌باز Veyra ویدیو و منابع کپچر را با قدرت DLSS 5 و مولدهای فریم به 120 فریم بر ثانیه می‌رساند.",
+    "title": "Veyra: افزایش FPS بازی‌ها با DLSS 5 و هوش مصنوعی"
+   },
+   "telegraph_url": "https://telegra.ph/ابزار-متن‌باز-Veyra-افزایش-فریم-و-کیفیت-تصویر-در-ویندوز-11-13",
+   "title": "Likely7/Veyra-NRVideo: Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Com",
+   "updated_at": 1794567746,
+   "url": "https://github.com/Likely7/Veyra-NRVideo",
+   "url_key": "github.com/likely7/veyra-nrvideo"
+  },
+  "github:louislam/uptime-kuma": {
+   "attempts": 0,
+   "created_at": 1794652171,
+   "message_id": 142,
+   "score": 71,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "پشتیبانی از پایش HTTP(s)، TCP، Ping، DNS، Docker و 90+ سرویس اطلاع‌رسانی از جمله Telegram و Discord",
+     "نصب آسان با Docker Compose یا Docker command روی لینوکس و ویندوز؛ نسخه مستقر روی پورت 3001",
+     "پشتیبانی از چند زبان، صفحه وضعیت چندگانه، 2FA و نمودار Ping برای توسعه‌دهندگان و مهندسان زیرساخت"
+    ],
+    "hashtags": [
+     "uptime-kuma",
+     "monitoring",
+     "devops"
+    ],
+    "hook": "Uptime Kuma ابزاری سبک و خودمیزبانی برای پایش uptime سرویس‌ها با رابط کاربری واکنشی است.",
+    "title": "Uptime Kuma، ابزار مانیتورینگ میزبانی‌شده"
+   },
+   "telegraph_url": "https://telegra.ph/Uptime-Kuma-ابزار-مانیتورینگ-با-رابط-کاربری-زیبا-11-14",
+   "title": "louislam/uptime-kuma: A fancy self-hosted monitoring tool",
+   "updated_at": 1794652172,
+   "url": "https://github.com/louislam/uptime-kuma",
+   "url_key": "github.com/louislam/uptime-kuma"
+  },
+  "github:lz4/lz4": {
+   "attempts": 0,
+   "created_at": 1794031260,
+   "message_id": 33,
+   "score": 315,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "نسخه 1.11.0 با فاکتور فشرده‌سازی 2.112 سرعت کامپرس 770 مگابایت بر ثانیه و دیکامپر 4950 مگابایت بر ثانیه ارائه می‌دهد.",
+     "پشتیبانی از دیکشنری در هر دو سطح API و CLI و سازگاری با Zstandard Dictionary Builder برای فایل‌های کوچک.",
+     "کتابخانه با مجوز BSD و ابزار CLI با GPL و ساخت با Make، CMake، Meson یا vcpkg."
+    ],
+    "hashtags": [
+     "lz4",
+     "compression",
+     "open_source"
+    ],
+    "hook": "LZ4 نسخه 1.11.0 با سرعت کامپرس بیش از 500 مگابایت بر ثانیه و دیکامپر چند گابایت بر ثانیه منتشر شد.",
+    "title": "LZ4: الگوریتم فشرده‌سازی بسیار سریع"
+   },
+   "telegraph_url": "https://telegra.ph/LZ4-فشرده‌سازی-فوق‌سریع-با-قابلیت-مقیاس‌پذیری-چند-هسته‌ای-11-07",
+   "title": "lz4/lz4: Extremely Fast Compression algorithm",
+   "updated_at": 1794031260,
+   "url": "https://github.com/lz4/lz4",
+   "url_key": "github.com/lz4/lz4"
+  },
+  "github:mattpocock/skills": {
+   "attempts": 0,
+   "created_at": 1793921989,
+   "message_id": 9,
+   "score": 2053,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ابزار mattpocock/skills مهارت‌های کوچکی است که روی هر مدل زبانی اجرا می‌شود و کنترل را به دست مهندس بازمی‌گرداند.",
+     "با دستورهای /grill-me و /grill-with-docs قبل از شروع، شکاف ارتباطی بین شما و عامل هوشمند پر می‌شود.",
+     "نصب خودکار برای Claude Code، Codex، Copilot و Gemini CLI دارد و برای سایر عوامل به‌صورت دستی انجام می‌شود."
+    ],
+    "hashtags": [
+     "AI_Development",
+     "Agent_Skills",
+     "mattpocock"
+    ],
+    "hook": "مجموعه‌ای از مهارت‌های آماده برای هماهنگی بهتر بین توسعه‌دهنده و عامل‌های کدنویسی هوشمند.",
+    "title": "مجموعه مهارت‌های مهندسی برای کدنویسی با AI"
+   },
+   "telegraph_url": "https://telegra.ph/Skills-مهارت‌های-مهندسی-واقعی-برای-توسعه-با-عامل‌های-کدنویسی-11-05",
+   "title": "mattpocock/skills: Skills for Real Engineers. Straight from my .agents directory.",
+   "updated_at": 1793921990,
+   "url": "https://github.com/mattpocock/skills",
+   "url_key": "github.com/mattpocock/skills"
+  },
+  "github:meta/astryx": {
+   "attempts": 0,
+   "created_at": 1794160624,
+   "message_id": 56,
+   "score": 863,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "متحرک باز Astryx پس از 8 سال در Meta برای React 19+ و StyleX.",
+     "150+ کامپوننت قابل دسترسی با امکان سفارشی‌سازی بدون قفل استایل.",
+     "CLI برای تولید کامپوننت و قالب‌های آماده برای توسعه‌دهنده و عامل‌های AI."
+    ],
+    "hashtags": [
+     "Astryx",
+     "React19",
+     "DesignSystems"
+    ],
+    "hook": "متحرک باز Meta برای React 19+ معرفی شد.",
+    "title": "Astryx: متحرک باز سفارشی و آماده AI"
+   },
+   "telegraph_url": "https://telegra.ph/Astryx-طراحی-سیستم-باز-و-عامل‌محور-از-متا-11-08",
+   "title": "meta/astryx: An open source design system that's fully customizable and agent ready",
+   "updated_at": 1794160624,
+   "url": "https://github.com/meta/astryx",
+   "url_key": "github.com/meta/astryx"
+  },
+  "github:microsoft/vscode": {
+   "attempts": 0,
+   "created_at": 1794006786,
+   "message_id": 27,
+   "score": 295,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "VS Code ترکیبی از یک ادیتور سبک با ابزارهای لازم برای چرخه edit-build-debug توسعه‌دهندگان است.",
+     "این محصول ماهانه با ویژگی‌ها و رفع باگ‌ها به‌روزرسانی می‌شود و با نصب نسخه Insiders آپدیت روزانه دریافت می‌کند.",
+     "توسعه‌دهندگان می‌توانند در رفع issues، بازبینی کد، و بهبود مستندات مشارکت کنند."
+    ],
+    "hashtags": [
+     "VSCode",
+     "TypeScript",
+     "Open_Source"
+    ],
+    "hook": "ویژگی‌های اصلی و نحوه مشارکت در پروژه منبع باز VS Code را بررسی می‌کنیم.",
+    "title": "Visual Studio Code: ویژگی‌ها و مشارکت در پروژه منبع باز"
+   },
+   "telegraph_url": "https://telegra.ph/چگونه-با-مخزن-اصلی-VS-Code-مشارکت-کنیم-11-06",
+   "title": "microsoft/vscode: Visual Studio Code",
+   "updated_at": 1794006786,
+   "url": "https://github.com/microsoft/vscode",
+   "url_key": "github.com/microsoft/vscode"
+  },
+  "github:milind-soni/openmausbot": {
+   "attempts": 0,
+   "created_at": 1794056748,
+   "message_id": 39,
+   "score": 1986,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "OpenMausBot نسخه متن‌باز و local-first برای مدیریت چندین عامل AI در قالب یک اپلیکیشن چت است.",
+     "هر عامل می‌تواند از مدل دلخواه، ماشین مجازی ایزوله یا دسکتاپ Linux ابری و بیش از ۵۰۰ اپ از طریق Composio استفاده کند.",
+     "کدها، کلیدها و گفتگوها در کامپیوتر کاربر ذخیره می‌شوند و بسترها را خودتان انتخاب می‌کنید."
+    ],
+    "hashtags": [
+     "OpenMausBot",
+     "AI_Agents",
+     "OpenSource"
+    ],
+    "hook": "اپلیکیشنی پیام‌رسان‌مانند برای چندین عامل هوش مصنوعی با قدرت پردازشی در کامپیوتر خودتان.",
+    "title": "جانشین متن‌باز Grok Bot با ماشین مجازی"
+   },
+   "telegraph_url": "https://telegra.ph/OpenMausBot-جایگزین-متن‌باز-گروک‌بات-با-ماشین‌مجازی-برای-هر-بات-11-07",
+   "title": "milind-soni/OpenMausBot: Open-source Grok Bot alternative with a virtual machine that bots can use",
+   "updated_at": 1794056749,
+   "url": "https://github.com/milind-soni/OpenMausBot",
+   "url_key": "github.com/milind-soni/openmausbot"
+  },
+  "github:nvidia/auto-ontology": {
+   "attempts": 0,
+   "created_at": 1793905803,
+   "message_id": 3,
+   "score": 2707,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "چهار مرحله‌ی کشف، مستندسازی، اعتبارسنجی و انتشار را برای ساخت گراف دانش سازمانی فراهم می‌کند",
+     "پرسش‌های طبیعی را به SQL تبدیل می‌کند و ردپای هر پاسخ را ارائه می‌دهد تا پاسخ‌های LLM قابل اعتماد شوند",
+     "از طریق MCP، CLI و API به هر چارچوب عاملی سرو می‌شود و با Postgres و pgvector اجرا می‌شود"
+    ],
+    "hashtags": [
+     "NVIDIA",
+     "AutoOntology",
+     "AI"
+    ],
+    "hook": "فریم‌ورک پایتونی نوییدیا، لایه‌ی معنایی گراف‌محور برای پرسش دقیق از داده‌های سازمانی می‌سازد.",
+    "title": "Auto Ontology: لایه‌ای برای پرسش قطعی از داده‌ها"
+   },
+   "telegraph_url": "https://telegra.ph/Auto-Ontology-لایه-معناشناختی-برای-داده‌ها-با-NVIDIA-11-05",
+   "title": "NVIDIA/auto-ontology: Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more e",
+   "updated_at": 1793905803,
+   "url": "https://github.com/NVIDIA/auto-ontology",
+   "url_key": "github.com/nvidia/auto-ontology"
+  },
+  "github:nvm-sh/nvm": {
+   "attempts": 0,
+   "created_at": 1794534699,
+   "message_id": 122,
+   "score": 63,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "نسخه‌های گوناگون Node.js را روی یک سیستم به راحتی نصب و فعال می‌کند.",
+     "روی همه شل‌های POSIX و پلتفرم‌های Unix، macOS و WSL کار می‌کند.",
+     "با فایل .nvmrc می‌توان نسخهٔ پیش‌فرض هر پروژه را به صورت خودکار تنظیم کرد."
+    ],
+    "hashtags": [
+     "nvm",
+     "NodeJS",
+     "DeveloperTools"
+    ],
+    "hook": "nvm ابزار سبک و پرکاربردی برای نصب و جابجایی میان نسخه‌های مختلف Node.js است.",
+    "title": "nvm: مدیریت نسخه‌های مختلف Node.js"
+   },
+   "telegraph_url": "https://telegra.ph/مدیریت-نسخه‌های-نود-با-nvm-11-13",
+   "title": "nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+   "updated_at": 1794534700,
+   "url": "https://github.com/nvm-sh/nvm",
+   "url_key": "github.com/nvm-sh/nvm"
+  },
+  "github:openai/codex-security": {
+   "attempts": 0,
+   "created_at": 1794444370,
+   "message_id": 102,
+   "score": 52,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این ابزار کدها را اسکن می‌کند، یافته‌ها را اعتبارسنجی کرده و وصله امنیتی تولید می‌کند.",
+     "می‌تواند یافته‌ها را به Linear، Jira یا GitHub منتقل کند و گزارش‌ها را به صورت SARIF، JSON یا CSV صادر نماید.",
+     "نصب آن نیازمند Node.js نسخه ۲۲، ۲۴ یا ۲۶ به همراه Python ۳.۱۰ است."
+    ],
+    "hashtags": [
+     "AI",
+     "OpenAI",
+     "امنیت_کد"
+    ],
+    "hook": "OpenAI ابزار CLI و SDK برای یافتن و رفع حفره‌های امنیتی در کد را منتشر کرد.",
+    "title": "ابزار امنیتی جدید OpenAI منتشر شد"
+   },
+   "telegraph_url": "https://telegra.ph/ابزار-جدید-اوپن‌ای‌آی-برای-یافتن-و-رفع-حفره‌های-امنیتی-در-کد-11-12",
+   "title": "openai/codex-security: OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+   "updated_at": 1794444370,
+   "url": "https://github.com/openai/codex-security",
+   "url_key": "github.com/openai/codex-security"
+  },
+  "github:pookjw/hermesenabler": {
+   "attempts": 0,
+   "created_at": 1794482241,
+   "message_id": 111,
+   "score": 390,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ابزار HermesEnabler2 اجازه می‌دهد صفحات ساعت Hermès را روی هر Apple Watch اجرا کنید.",
+     "این ابزار فقط در نسخه‌های beta ۲۷.۰ تا ۲۷.۳ watchOS پشتیبانی می‌شود.",
+     "با Sideloadly قابل نصب است و مراحل آن درون اپلیکیشن توضیح داده شده است."
+    ],
+    "hashtags": [
+     "Apple_Watch",
+     "watchOS",
+     "Hermes"
+    ],
+    "hook": "اپلیکیشنی برای فعال‌سازی صفحات ساعت Hermès روی تمام دستگاه‌های Apple Watch منتشر شد.",
+    "title": "اجرای وال‌پیپرهای Hermès روی هر Apple Watch"
+   },
+   "telegraph_url": "https://telegra.ph/فعال-کردن-طرح‌ساعت‌های-Hermès-روی-هر-اپل-واچ-11-12",
+   "title": "pookjw/HermesEnabler: Enable Hermès Watch Faces on any Apple Watch devices",
+   "updated_at": 1794482241,
+   "url": "https://github.com/pookjw/HermesEnabler",
+   "url_key": "github.com/pookjw/hermesenabler"
+  },
+  "github:prometheus/prometheus": {
+   "attempts": 0,
+   "created_at": 1794098380,
+   "message_id": 48,
+   "score": 322,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "مدل داده‌ای چندبعدی و زبان پرس‌وجوی PromQL از ویژگی‌های متمایز آن است.",
+     "نودهای سرور مستقل هستند و نیاز به ذخیره‌سازی توزیع‌شده ندارند.",
+     "پشتیبانی از کشف خدمات، فدراسیون سلسله‌مراتبی و داشبورد گرافیکی دارد."
+    ],
+    "hashtags": [
+     "prometheus",
+     "monitoring",
+     "time-series"
+    ],
+    "hook": "سامانه مانیتورینگ و پایگاه داده سری‌های زمانی Prometheus از کدنویسی Go بهره می‌برد.",
+    "title": "دسترسی به کد منبع Prometheus"
+   },
+   "telegraph_url": "https://telegra.ph/سیستم-مانیتورینگ-و-پایگاه-داده-سری‌زمانی-Prometheus-چیست-11-08",
+   "title": "prometheus/prometheus: The Prometheus monitoring system and time series database.",
+   "updated_at": 1794098380,
+   "url": "https://github.com/prometheus/prometheus",
+   "url_key": "github.com/prometheus/prometheus"
+  },
+  "github:qwenlm/qwen-code": {
+   "attempts": 0,
+   "created_at": 1794534677,
+   "message_id": 120,
+   "score": 151,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "قابلیت‌های عامل‌مانند خودکار مثل Auto-Memory و زیرعامل‌ها بدون نیاز به تنظیمات اولیه.",
+     "چارچوب و مدل‌های آن متن‌باز هستند و از APIهای متعدد شامل Ollama پشتیبانی می‌کنند.",
+     "از طریق ترمینال، افزونه IDE یا رابط وب قابل استفاده است و روی ویندوز و مک/لینوکس نصب می‌شود."
+    ],
+    "hashtags": [
+     "QwenCode",
+     "هوش_مصنوعی",
+     "توسعه_نرم_افزار"
+    ],
+    "hook": "Qwen Code یک عامل هوشمند کدنویسی متن‌باز است که مستقیماً در ترمینال اجرا می‌شود.",
+    "title": "عامل کدنویسی هوشمند Qwen Code منتشر شد"
+   },
+   "telegraph_url": "https://telegra.ph/Qwen-Code-نمایه-یک-عامل-هوش-مصنوعی-متن‌باز-پایانی-11-13",
+   "title": "QwenLM/qwen-code: An open-source AI coding agent that lives in your terminal.",
+   "updated_at": 1794534677,
+   "url": "https://github.com/QwenLM/qwen-code",
+   "url_key": "github.com/qwenlm/qwen-code"
+  },
+  "github:ranxianglei/billion-context": {
+   "attempts": 0,
+   "created_at": 1794098393,
+   "message_id": 50,
+   "score": 191,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این ابزار گفتگوهای مصرف‌شده را به خلاصه‌های لایه‌ای فشرده می‌کند تا جلسات چندماهه با یک پنجره context کوچک ممکن شود",
+     "برای هر 100K context، مصرف توکن حدود 5 برابر کاهش می‌یابد و رتبه اول در ContextBench را کسب کرده است",
+     "با نصب و تغییر base URL به این proxy، در هر محیط Agent بدون نیاز به تغییر کد قابل استفاده است"
+    ],
+    "hashtags": [
+     "billion_context",
+     "AI",
+     "توسعه_نرم_افزار"
+    ],
+    "hook": "billion-context یک پلاگین فشرده‌سازی context است که اجازه می‌دهد جلسات طولانی با میلیون‌ها توکن داشته باشید.",
+    "title": "فشرده‌سازی context برای جلسات ماهانه"
+   },
+   "telegraph_url": "https://telegra.ph/بازنویسی-هوشمند-سشن‌های-طولانی-با-billion-context-11-08",
+   "title": "ranxianglei/billion-context: A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文",
+   "updated_at": 1794098393,
+   "url": "https://github.com/ranxianglei/billion-context",
+   "url_key": "github.com/ranxianglei/billion-context"
+  },
+  "github:react/react": {
+   "attempts": 0,
+   "created_at": 1794031283,
+   "message_id": 36,
+   "score": 248,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "React با رویکرد declarative و component-based، ساخت رابط‌های کاربری تعاملی را آسان‌تر می‌کند.",
+     "این کتابخانه می‌تواند روی سرور با Node و برای اپلیکیشن‌های موبایل با React Native استفاده شود.",
+     "مستندات کامل و راهنمای مشارکت در GitHub برای توسعه‌دهندگان در دسترس است."
+    ],
+    "hashtags": [
+     "react",
+     "javascript",
+     "frontend"
+    ],
+    "hook": "React یک کتابخانه جاوااسکریپتی برای ساخت رابط کاربری وب و Native است که با رویکرد component-based طراحی شده.",
+    "title": "React: کتابخانه جاوااسکریپتی برای رابط‌های کاربری"
+   },
+   "telegraph_url": "https://telegra.ph/معرفی-کتابخانه-React-برای-ساخت-رابط‌های-کاربری-11-07",
+   "title": "react/react: The library for web and native user interfaces.",
+   "updated_at": 1794031283,
+   "url": "https://github.com/react/react",
+   "url_key": "github.com/react/react"
+  },
+  "github:ruvnet/ruview": {
+   "attempts": 0,
+   "created_at": 1794253969,
+   "message_id": 71,
+   "score": 245,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "کتابخانه Rust با سیگنال‌های وای‌فای، حضور و علائم حیاتی را از درون دیوار و در تاریکی تشخیص می‌دهد.",
+     "به دلیل نبود دوربین، حریم خصوصی حفظ شده و برای مراقبت از سالمندان بسیار مناسب است.",
+     "توسعه‌دهندگان می‌توانند RuView را با یک پرچم به Home Assistant متصل کنند."
+    ],
+    "hashtags": [
+     "WiFi",
+     "AIoT",
+     "HomeAssistant"
+    ],
+    "hook": "RuView با امواج وای‌فای معمولی، حضور و علائم حیاتی را بدون دوربین ردیابی می‌کند.",
+    "title": "پلتفرم RuView: هوش فضایی با امواج وای‌فای"
+   },
+   "telegraph_url": "https://telegra.ph/RuView-شبکه‌ای-از-سنسورهای-ESP32-که-با-امواج-وای‌فای-تنفس-و-ضربان-قلب-را-می‌سنجند-11-09",
+   "title": "ruvnet/RuView: π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+   "updated_at": 1794253969,
+   "url": "https://github.com/ruvnet/RuView",
+   "url_key": "github.com/ruvnet/ruview"
+  },
+  "github:shadcn/improve": {
+   "attempts": 0,
+   "created_at": 1794417071,
+   "message_id": 96,
+   "score": 333,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "shadcn/improve یک Agent Skill است که سیستم‌کد را بررسی می‌کند و برنامه‌های اجرایی جداگانه می‌نویسد.",
+     "مدل گران‌قیمت فقط کد را تحلیل می‌کند و برنامه می‌نویسد، در حالی که مدل‌های ارزان اجرا می‌کنند.",
+     "می‌توانید با /improve سریع یا عمیق بررسی کنید و برنامه‌ها را به هر Agent دیگری بدهید اجرا کند."
+    ],
+    "hashtags": [
+     "shadcn",
+     "AI_Agent",
+     "برنامه_نویسی"
+    ],
+    "hook": "ابزار Agent Skill جدید شادسی‌ان برای بازرسی سیستم‌کد و نوشتن برنامه‌های اجرایی.",
+    "title": "improve: بررسی کد با مدل گران و اجرای ارزان"
+   },
+   "telegraph_url": "https://telegra.ph/improve-نقشه‌ی-اجرایی-برای-اصلاح-کد-توسط-مدل‌های-ارزان‌تر-11-11",
+   "title": "shadcn/improve: Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+   "updated_at": 1794417071,
+   "url": "https://github.com/shadcn/improve",
+   "url_key": "github.com/shadcn/improve"
+  },
+  "github:sherlock-project/sherlock": {
+   "attempts": 0,
+   "created_at": 1794056784,
+   "message_id": 42,
+   "score": 1761,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ابزار متن‌باز sherlock نام‌کاربری را در بیش از ۴۰۰ شبکه اجتماعی بررسی می‌کند.",
+     "نصب راحت با pipx یا Docker و امکان جست‌وجوی هم‌زمان چند نام‌کاربری.",
+     "خروجی در فرمت‌های txt، csv و xlsx ذخیره می‌شود و با فیلتر --site محدود به سایت‌های خاص می‌شود."
+    ],
+    "hashtags": [
+     "sherlock",
+     "open_source",
+     "cybersecurity"
+    ],
+    "hook": "Sherlock ابزار پایتونی برای شناسایی وجود یک نام‌کاربری در ۴۰۰+ شبکه اجتماعی است.",
+    "title": "sherlock: جست‌وجوی نام‌کاربری در ۴۰۰+ شبکه اجتماعی"
+   },
+   "telegraph_url": "https://telegra.ph/sherlock-جست‌وجوی-نام-کاربری-در-بیش-از-۴۰۰-شبکه-اجتماعی-11-07",
+   "title": "sherlock-project/sherlock: Hunt down social media accounts by username across social networks",
+   "updated_at": 1794056784,
+   "url": "https://github.com/sherlock-project/sherlock",
+   "url_key": "github.com/sherlock-project/sherlock"
+  },
+  "github:tailscale/tailcat": {
+   "attempts": 0,
+   "created_at": 1794599140,
+   "message_id": 130,
+   "score": 324,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Tailcat ابزاری متن‌باز بر پایه Go است که ارتباط point-to-point رمزنگاری‌شده با WireGuard را بدون نیاز به Tailscale فراهم می‌کند.",
+     "اتصال اولیه از DERP شروع شده و با magicsock به مستقیم peer-to-peer UDP ارتقا می‌یابد.",
+     "می‌توانید stdin/stdout را بین دو ماشین جابه‌جا کنید یا پورت‌های محلی را از طریق تونل در دسترس قرار دهید."
+    ],
+    "hashtags": [
+     "Tailscale",
+     "Tailcat",
+     "OpenSource"
+    ],
+    "hook": "ابزاری شبیه netcat که از لایه داده Tailscale برای ایجاد تونل امن استفاده می‌کند.",
+    "title": "Tailcat: netcat روی زیرساخت Tailscale"
+   },
+   "telegraph_url": "https://telegra.ph/Tailcat-ابزاری-شبیه-netcat-با-تونل‌های-Tailscale-بدون-نیاز-به-حساب-کاربری-11-13",
+   "title": "tailscale/tailcat: like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+   "updated_at": 1794599140,
+   "url": "https://github.com/tailscale/tailcat",
+   "url_key": "github.com/tailscale/tailcat"
+  },
+  "github:thealgorithms/java": {
+   "attempts": 0,
+   "created_at": 1794444391,
+   "message_id": 105,
+   "score": 51,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این مخزن شامل پیاده‌سازی‌های کامل الگوریتم‌ها در جاوا برای اهداف آموزشی است.",
+     "کدها ممکن است کم‌کارآمدتر از کتابخانه استاندارد جاوا باشند، چون صرفا آموزشی هستند.",
+     "امکان اجرا، ویرایش و مشارکت از طریق Gitpod.io با یک کلیک فراهم است."
+    ],
+    "hashtags": [
+     "Java",
+     "Algorithms",
+     "آموزشی"
+    ],
+    "hook": "مجموعه‌ای از الگوریتم‌ها که فقط برای یادگیری به زبان Java پیاده‌سازی شده‌اند.",
+    "title": "مجموعه‌ای از الگوریتم‌ها به زبان جاوا"
+   },
+   "telegraph_url": "https://telegra.ph/مجموعه‌ای-از-الگوریتم‌های-پیاده‌سازی‌شده-در-Java-11-12",
+   "title": "TheAlgorithms/Java: All Algorithms implemented in Java",
+   "updated_at": 1794444391,
+   "url": "https://github.com/TheAlgorithms/Java",
+   "url_key": "github.com/thealgorithms/java"
+  },
+  "github:tokio-rs/topcoat": {
+   "attempts": 0,
+   "created_at": 1794322577,
+   "message_id": 84,
+   "score": 192,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Topcoat فریم‌ورک تمام‌اسکله Rust با اولویت بر سادگی و بهره‌وری است و در مرحله آزمایشی قرار دارد.",
+     "کامپوننت‌ها در سرور رندر می‌شوند و عبارت‌های $(...) به صورت نوع‌چک‌شده هم در سرور و هم مرورگر اجرا می‌شوند.",
+     "مسیردهی ماژول‌محور می‌تواند ساختار پوشه‌ای اپ را بدون مرحله build به route tree تبدیل کند."
+    ],
+    "hashtags": [
+     "rust",
+     "topcoat",
+     "webdev"
+    ],
+    "hook": "tokio-rs Topcoat یک فریم‌ورک باکامل برای ساخت اپ‌های وب Rust است.",
+    "title": "Topcoat: فریم‌ورک تمام‌اسکله Rust"
+   },
+   "telegraph_url": "https://telegra.ph/Topcoat-یک-فریم‌ورک-کامل‌مدل-برای-ساخت-اپلیکیشن‌های-تحت-وب-به-زبان-Rust-11-10",
+   "title": "tokio-rs/topcoat: A batteries-included framework for building web apps",
+   "updated_at": 1794322577,
+   "url": "https://github.com/tokio-rs/topcoat",
+   "url_key": "github.com/tokio-rs/topcoat"
+  },
+  "github:tradermonty/claude-trading-skills": {
+   "attempts": 0,
+   "created_at": 1794652194,
+   "message_id": 145,
+   "score": 69,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این مخزن مجموعه‌ای از Skills برای Claude Code است که تحلیل بازار، نمودار، اسکرینر و تدوین استراتژی معاملاتی را پوشش می‌دهد.",
+     "هدف جایگزینی تصمیم‌گیری با AI نیست، بلکه ساخت فرایند مرور بازار، مدیریت ریسک و ثبت معاملات برای یادگیری است.",
+     "برای سرمایه‌گذاران خرد با زمان محدود طراحی شده و مسیرهای آماده‌ای برای بررسی روزانه تا مرور ماهانه ارائه می‌دهد."
+    ],
+    "hashtags": [
+     "ClaudeCode",
+     "معاملات_سهام",
+     "ابزار_متن‌باز"
+    ],
+    "hook": "یک جعبه‌ابزار متن‌باز برای سرمایه‌گذاران و معامله‌گران سهام با Claude Code.",
+    "title": "ابزار Claude برای تحلیل بازار و معاملات سهام"
+   },
+   "telegraph_url": "https://telegra.ph/ابزارهای-Claude-برای-تحلیل-بازار-و-مدیریت-ریسک-معامله‌گران-11-14",
+   "title": "tradermonty/claude-trading-skills: Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+   "updated_at": 1794652195,
+   "url": "https://github.com/tradermonty/claude-trading-skills",
+   "url_key": "github.com/tradermonty/claude-trading-skills"
+  },
+  "github:vercel-labs/agent-browser": {
+   "attempts": 0,
+   "created_at": 1794160641,
+   "message_id": 58,
+   "score": 812,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "یک CLI بومی Rust است که دستوراتی مانند snapshot و click را برای تعامل با صفحات مرورگر ارائه میدهد.",
+     "قابلیت اتصال به Chrome DevTools Protocol و استفاده از موتورهای مختلف مانند Lightpanda و Obscura را دارد.",
+     "توانایی نصب مهارت‌های از پیش تعریف شده و ارائه سرور MCP برای یکپارچه‌سازی راحت در هاست‌های عامل هوش مصنوعی را دارد."
+    ],
+    "hashtags": [
+     "agent-browser",
+     "automation",
+     "AI"
+    ],
+    "hook": "ابزار agent-browser امکان کنترل مرورگر توسط دستورات ساده CLI را برای هوش مصنوعی فراهم میکند.",
+    "title": "ابزار CLI برای اتوماسیون مرورگر با هوش مصنوعی"
+   },
+   "telegraph_url": "https://telegra.ph/ابزاری-برای-اتوماسیون-مرورگر-به‌دست-AI-اژانس‌ها-11-08",
+   "title": "vercel-labs/agent-browser: Browser automation CLI for AI agents",
+   "updated_at": 1794160641,
+   "url": "https://github.com/vercel-labs/agent-browser",
+   "url_key": "github.com/vercel-labs/agent-browser"
+  },
+  "github:vercel-labs/agent-desktop": {
+   "attempts": 0,
+   "created_at": 1793905829,
+   "message_id": 6,
+   "score": 2173,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "agent-desktop درخت دسترسی سیستم عامل را می‌خواند و UI را به JSON با شناسه عمل (ref) برمی‌گرداند",
+     "عوامل هوش مصنوعی می‌توانند کلیک و تایپ کنند و نتیجه را دوباره بررسی کنند بدون نیاز به پیکسل‌شناسی",
+     "با npm یا brew نصب می‌شود، بومی برای macOS، Windows و Linux و بدون مدل داخلی"
+    ],
+    "hashtags": [
+     "AI_agents",
+     "Vercel",
+     "CLI"
+    ],
+    "hook": "ابزار جدید Vercel به عوامل هوش مصنوعی اجازه می‌دهد بدون اسکرین‌شات، روی برنامه‌های دسکتاپ نظارت و عمل کنند.",
+    "title": "agent-desktop: کنترل دسکتاپ از راه CLI برای AI"
+   },
+   "telegraph_url": "https://telegra.ph/agent-desktop-ابزار-CLI-برای-کنترل-رابط-کاربری-دسکتاپ-توسط-هوش-مصنوعی-11-05",
+   "title": "vercel-labs/agent-desktop: Computer use CLI for AI agents",
+   "updated_at": 1793905829,
+   "url": "https://github.com/vercel-labs/agent-desktop",
+   "url_key": "github.com/vercel-labs/agent-desktop"
+  },
+  "github:we-promise/sure": {
+   "attempts": 0,
+   "created_at": 1794345575,
+   "message_id": 87,
+   "score": 184,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "برنامه کامل مدیریت مالی شخصی که به‌راحتی با Docker بومی‌سازی می‌شود",
+     "زبان اصلی Ruby با پشتیبانی از PostgreSQL، Redis و API برای کلاینت‌های مختلف",
+     "منبع‌باز تحت AGPLv3؛ امکان بومی‌سازی رایگان یا استفاده نسخه میزبانی‌شده"
+    ],
+    "hashtags": [
+     "مدیریت_مالی",
+     "منبع_باز",
+     "Ruby"
+    ],
+    "hook": "فورک جامعه‌ای از پروژه رهاشده Maybe Finance برای مدیریت شخصی مالی.",
+    "title": "Sure: برنامه‌ای شخصی برای مدیریت مالی"
+   },
+   "telegraph_url": "https://telegra.ph/Sure-نسخه‌ی-زنده‌ی-فورک-شده‌ی-Maybe-Finance-11-10",
+   "title": "we-promise/sure: The personal finance app for everyone (by everyone)",
+   "updated_at": 1794345576,
+   "url": "https://github.com/we-promise/sure",
+   "url_key": "github.com/we-promise/sure"
+  },
+  "github:worldonlyu/google_ai_pro_2year_zerocost_auto": {
+   "attempts": 0,
+   "created_at": 1794133600,
+   "message_id": 54,
+   "score": 3167,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این ابزار خودکار با افزودن سه لایه طرح رایگان، اشتراک Google AI Pro را تا ۲۴ ماه به US$0.00 می‌رساند.",
+     "برای اجرا به ویندوز، پایتون ۳.۱۰+ و کروم نیاز است و ترافیک باید به آمریکا هدایت شود.",
+     "کاربر کارت دلاری واقعی وارد می‌کند و اسکریپت پس از تایید ۰ دلار، تمدید خودکار را در Google Play لغو می‌کند."
+    ],
+    "hashtags": [
+     "Google_AI_Pro",
+     "اتوماسیون",
+     "تست_امنیت"
+    ],
+    "hook": "ابزاری ادعا می‌کند با پروکسی US و کارت دلاری، حساب Google AI Pro را تا ۲۴ ماه رایگان می‌کند.",
+    "title": "اسکریپت اتوماتیک ۲ سال رایگان Google AI Pro"
+   },
+   "telegraph_url": "https://telegra.ph/پروژه‌ای-برای-فعال‌سازی-رایگان-دو-ساله-Google-AI-Pro-با-اسکریپت-خودکار-11-08",
+   "title": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto: Google_AI_Pro_2Year_ZeroCost_Auto",
+   "updated_at": 1794133600,
+   "url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+   "url_key": "github.com/worldonlyu/google_ai_pro_2year_zerocost_auto"
+  },
+  "github:zed-industries/zed": {
+   "attempts": 0,
+   "created_at": 1794006807,
+   "message_id": 30,
+   "score": 292,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "زد یک ویرایشگر کد چندکاربره با عملکرد بالا از سازندگان Atom و Tree-sitter است که به زبان Rust نوشته شده.",
+     "این ابزار هم‌اکنون برای macOS، Linux و Windows در دسترس است و نسخه وب آن در دست بررسی است.",
+     "کد منبع آن تحت مجوز GPL-3.0-or-later منتشر شده و پروژه پذیرای کمک و حمایت مالی است."
+    ],
+    "hashtags": [
+     "zed_editor",
+     "rust",
+     "code_editor"
+    ],
+    "hook": "زد، یک ویرایشگر کد پرسرعت و چندکاربره با زبان اصلی Rust است.",
+    "title": "Zed: ویرایشگر کد سریع و چندکاربره از سازندگان Atom"
+   },
+   "telegraph_url": "https://telegra.ph/ویرایشگر-Zed-از-سازندگان-Atom-و-Tree-sitter-11-06",
+   "title": "zed-industries/zed: Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+   "updated_at": 1794006807,
+   "url": "https://github.com/zed-industries/zed",
+   "url_key": "github.com/zed-industries/zed"
+  },
+  "github:zhulinsen/daily_stock_analysis": {
+   "attempts": 0,
+   "created_at": 1794253931,
+   "message_id": 68,
+   "score": 505,
+   "source": "github",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "پوشش چند بازار شامل A-Sinox API، هنگ‌کنگ، آمریکا، ژاپن، کره و تایوان با تحلیل روزانه خودکار",
+     "گزارش شامل نقاط خرید و فروش، ریسک، و شاخص‌های فنی برای سهام‌های منتخب",
+     "اجرای رایگان با GitHub Actions یا Docker و ارسال نتایج به تلگرام، دیسکورد و ایمیل"
+    ],
+    "hashtags": [
+     "هوش_مصنوعی",
+     "سهم",
+     "معامله_گر"
+    ],
+    "hook": "یک پروژه پایتونی که با LLM گزارش‌های سرمایه‌گذاری تولید می‌کند.",
+    "title": "سیستم هوشمند تحلیل سهام با هوش مصنوعی"
+   },
+   "telegraph_url": "https://telegra.ph/سیستم-تحلیل-هوشمند-سهام-مبتنی-بر-LLM-با-پشتیبانی-از-چند-بازار-11-09",
+   "title": "ZhuLinsen/daily_stock_analysis: LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, auto",
+   "updated_at": 1794253931,
+   "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+   "url_key": "github.com/zhulinsen/daily_stock_analysis"
+  },
+  "hackernews:50368481": {
+   "attempts": 0,
+   "created_at": 1794206191,
+   "message_id": 65,
+   "score": 459,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "طراح صرفا حالت‌های آینده را مشخص می‌کند و موتور به صورت خودکار رفتار Drag-and-drop را می‌سازد.",
+     "با ترکیب رفتارهای ساده و افزودن ویژگی‌هایی مانند Floating و Snapping می‌توان تعاملات پیچیده‌تری ساخت.",
+     "کتابخانه‌ی Dragology برای رابط‌های SVG روی وب است و برای ابزارهای تعاملی بصری مناسب است."
+    ],
+    "hashtags": [
+     "Dragging",
+     "Dragology",
+     "UI_Design"
+    ],
+    "hook": "Declarative Dragging به جای کدنویسی جزئیات، صرفاً حالت‌های آینده‌ی یک عنصر را مشخص می‌کند.",
+    "title": "کشیدن اشیاء با توصیف حالت‌ها"
+   },
+   "telegraph_url": "https://telegra.ph/کشتی-و-رها-کردن-اشیاء-در-رابط‌ها-با-رویکرد-اعلان‌محور-11-09",
+   "title": "Declarative Dragging",
+   "updated_at": 1794206191,
+   "url": "https://declarative-dragging.github.io/",
+   "url_key": "declarative-dragging.github.io"
+  },
+  "hackernews:50378228": {
+   "attempts": 0,
+   "created_at": 1793905784,
+   "message_id": 2,
+   "score": 1679,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "بازنشانی پسوند * در فیلد رمز عبور در musl به‌عنوان پسورد معتبر تفسیر می‌شود.",
+     "حساب‌های سیستمی مثل daemon از ۲۰۱۶ در خطر دسترسی بدون رمز قرار دارند.",
+     "مالکان سرورهای musl باید پسورد اکانت‌های خود را تنظیم کنند."
+    ],
+    "hashtags": [
+     "OpenSSH",
+     "musl_linux",
+     "امنیت"
+    ],
+    "hook": "OpenSSH در سیستم‌های musl از سال ۲۰۱۶ اجازه ورود به حساب‌های بدون رمز را می‌دهد.",
+    "title": "ضعف امنیتی SSH در سیستم‌های musl از ۲۰۱۶"
+   },
+   "telegraph_url": "https://telegra.ph/sshole-ورود-امنیتی-OpenSSH-در-لینوکس-musl-از-سال-۲۰۱۶-11-05",
+   "title": "sshole",
+   "updated_at": 1793905787,
+   "url": "https://sshhole.com",
+   "url_key": "sshhole.com"
+  },
+  "hackernews:50379704": {
+   "attempts": 0,
+   "created_at": 1793905821,
+   "message_id": 5,
+   "score": 373,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "حساب‌های بدون رمز عبور با داشتن یک کاربر با پسورد الگوی $5$ یا $6$ همه حساب‌ها را در معرض نفوذ می‌گذارند.",
+     "نسخه‌های ۳.۲۱.۱۰، ۳.۲۲.۸، ۳.۲۳.۸ و ۳.۲۴.۴ مشکل را رفع کرده‌اند؛ پس از آپدیت sshd را restart کنید.",
+     "اگر امکان آپدیت نیست، PasswordAuthentication را no کنید و sshd را restart کنید تا حفره بسته شود."
+    ],
+    "hashtags": [
+     "Alpine_Linux",
+     "OpenSSH",
+     "Security"
+    ],
+    "hook": "حمله‌ای بدون نیاز به رمز عبور برای دسترسی SSH؛ با آپدیت یا غیرفعال کردن احراز هویت رمز عبور رفع می‌شود.",
+    "title": "دور زدن احراز هویت رمز عبور در OpenSSH Alpine"
+   },
+   "telegraph_url": "https://telegra.ph/شکاف-امنیتی-OpenSSH-در-Alpine-ورود-بدون-رمز-عبور-11-05",
+   "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
+   "updated_at": 1793905821,
+   "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+   "url_key": "alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass"
+  },
+  "hackernews:50380810": {
+   "attempts": 0,
+   "created_at": 1793922004,
+   "message_id": 11,
+   "score": 371,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "دوربین پیشرفته، نمایشگر Extreme AMOLED Duo با روشنایی تا ۱۲۰۰۰ نیت و پردازنده Snapdragon 8 Elite Extreme Gen 6",
+     "اولین گوشی موتورولا با پشتیبانی از GrapheneOS، سیستم‌عامل امن‌محور",
+     "باتری 7000mAh و Audio by Bang & Olufsen برای Gemini Intelligence"
+    ],
+    "hashtags": [
+     "Motorola",
+     "GrapheneOS",
+     "Mobile"
+    ],
+    "hook": "پرچمدار جدید موتورولا از سیستم‌عامل امنیتی گرافن‌اواس پشتیبانی می‌کند.",
+    "title": "موتورولا سینیچری ۲۷ با پشتیبانی GrapheneOS"
+   },
+   "telegraph_url": "https://telegra.ph/Motorola-Signature-27-پرچمدار-جدید-با-پشتیبانی-از-GrapheneOS-11-05",
+   "title": "Motorola Signature 27 with GrapheneOS support",
+   "updated_at": 1793922004,
+   "url": "https://motorolanews.com/motorola-signature-27-2/",
+   "url_key": "motorolanews.com/motorola-signature-27-2"
+  },
+  "hackernews:50383739": {
+   "attempts": 0,
+   "created_at": 1793947900,
+   "message_id": 17,
+   "score": 544,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Salon از نوامبر ۱۹۹۵ فعالیت کرد و نوعی روزنامه‌نگاری دیجیتال مستقل را شکل داد.",
+     "توقف به دلیل تغییر واقعیت‌های اقتصادی و ناپایداری مدل انتشار تصمیم گرفته شد.",
+     "کارکنان و مخاطبان پیشین، ساختن این رسانه و جامعه پیرامون آن را به رسمیت می‌شناسند."
+    ],
+    "hashtags": [
+     "روزنامه_دیجیتال",
+     "تغییر_صنعت",
+     "میراث_اینترنت"
+    ],
+    "hook": "وبسایت خبری Salon پس از سه دهه فعالیت به دلیل ناپایداری مدل درآمدی تعطیل می‌شود.",
+    "title": "Salon پس از ۳۱ سال تعطیل شد"
+   },
+   "telegraph_url": "https://telegra.ph/سایت-خبری-سالون-پس-از-۳۱-سال-فعالیت-تعطیل-شد-11-06",
+   "title": "Goodbye from Salon",
+   "updated_at": 1793947900,
+   "url": "https://www.salon.com/2026/11/05/goodbye-from-salon/",
+   "url_key": "salon.com/2026/11/05/goodbye-from-salon"
+  },
+  "hackernews:50383740": {
+   "attempts": 0,
+   "created_at": 1793921982,
+   "message_id": 8,
+   "score": 388,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "کسانی که هنوز اکانت ندارند، می‌توانند بدون ثبت‌نام تا ۵۰ جستجو انجام دهند.",
+     "برنامه اندروید با جستجوی صوتی، ویجت‌ها و صفحه اصلی بازنویسی‌شده به‌روزرسانی شد.",
+     "گوگل فعال‌سازی هوش مصنوعی را برای مدارس به‌طور پیش‌فرض غیرفعال می‌کند، اما جستجو هم خاموش می‌شود."
+    ],
+    "hashtags": [
+     "Kagi",
+     "جستجوی_امن",
+     "Android"
+    ],
+    "hook": "Kagi بدون نیاز به حساب کاربری، ۵۰ جستجوی رایگان ارائه می‌دهد.",
+    "title": "بروزرسانی موتور جستجوی Kagi"
+   },
+   "telegraph_url": "https://telegra.ph/Kagi-جستجوی-بدون-نیاز-به-حساب-کاربری-و-به‌روزرسانی‌های-گسترده-11-05",
+   "title": "Search for everyone",
+   "updated_at": 1793921982,
+   "url": "https://kagi.com/changelog#11820",
+   "url_key": "kagi.com/changelog"
+  },
+  "hackernews:50385272": {
+   "attempts": 0,
+   "created_at": 1793947876,
+   "message_id": 14,
+   "score": 874,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "نسخه‌های جدید از پلاگین داخلی cc-plugin-privacy برای جلوگیری از این رفتار استفاده می‌کنند.",
+     "برخی کاربران همچنان ایمیل خود را به دامنه‌های دیگر ارسال می‌بینند، بخصوص روی macOS.",
+     "تیم Anthinic حذف ایمیل حساب کاربری از بستر مدل را در نسخه آینده اعلام کرده است."
+    ],
+    "hashtags": [
+     "ClaudeCode",
+     "حریم_خصوصی",
+     "امنیت"
+    ],
+    "hook": "گزارش آسیب‌پذیری فاش کرد که آدرس ایمیل کاربران در هدر User-Agent ارسال می‌شود.",
+    "title": "نشتن ایمیل شما از سوی Claude Code"
+   },
+   "telegraph_url": "https://telegra.ph/نشت-ایمیل-حساب‌کاربری-در-کلاد-کد-چرا-و-چه-کرد-11-06",
+   "title": "Claude Code sends your email address to websites",
+   "updated_at": 1793947877,
+   "url": "https://github.com/anthropics/claude-code/issues/107757",
+   "url_key": "github.com/anthropics/claude-code/issues/107757"
+  },
+  "hackernews:50389333": {
+   "attempts": 0,
+   "created_at": 1793983683,
+   "message_id": 20,
+   "score": 503,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "BUI هسته‌ای کوچک C دارد که درخت ویجت، چیدمان، ورودی و نقاشی را با موتور بلندر مدیریت می‌کند.",
+     "این پروژه باعث می‌شود برنامه‌ها در هر زبانی حس و کارایی رابط بلندر را تجربه کنند بدون نصب بلندر یا موتور مرورگر.",
+     "بایندیگ‌های آماده برای Python، Rust، JavaScript، React، C و C++ وجود دارد و استفاده از Dear ImGui با یک فلگ ممکن است."
+    ],
+    "hashtags": [
+     "Blender",
+     "BUI",
+     "open_source"
+    ],
+    "hook": "کتابخانه BUI رابط کاربری بلندر را به عنوان یک کتابخانه مستقل در آورده است.",
+    "title": "کتابخانه BUI، رابط کاربری بلندر برای همه زبان‌ها"
+   },
+   "telegraph_url": "https://telegra.ph/کتابخانه-BUI-رابط-کاربری-Blender-برای-همه‌ی-زبان‌ها-11-06",
+   "title": "Blender's UI and Runtime: Much Faster Than GPUI",
+   "updated_at": 1793983684,
+   "url": "https://github.com/ppmpreetham/BUI",
+   "url_key": "github.com/ppmpreetham/bui"
+  },
+  "hackernews:50390124": {
+   "attempts": 0,
+   "created_at": 1793983732,
+   "message_id": 23,
+   "score": 502,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "اپلیکیشن بانکی ASN به Google Play Services وابسته است و بدون آن نمی‌توان به حساب وارد شد.",
+     "کاربران سیستم‌های حریم‌خصوصی‌محور مانند GrapheneOS برای استفاده از این بانک محدود می‌شوند.",
+     "گزارش‌های ناسازگاری در مخزن GitHub برای پیگیری تأثیر این محدودیت بر زیرساخت پرداخت ثبت شده‌اند."
+    ],
+    "hashtags": [
+     "ASN",
+     "GrapheneOS",
+     "حریم_خصوصی"
+    ],
+    "hook": "بانک ASN هلند احراز هویت با Google Play Services را اجباری کرده و سیستم‌های بدون سرویس‌های گوگل را مسدود می‌کند.",
+    "title": "بانک هلندی ASN از اندروید غیرگوگل حمایت نمی‌کند"
+   },
+   "telegraph_url": "https://telegra.ph/بانک-ایده‌آل-Dutch-ASN-قید-اندروید-بدون-Google-Play-را-بست-11-06",
+   "title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
+   "updated_at": 1793983732,
+   "url": "https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105",
+   "url_key": "github.com/privsec-dev/banking-apps-compat-report/issues/105"
+  },
+  "hackernews:50391456": {
+   "attempts": 0,
+   "created_at": 1794006773,
+   "message_id": 26,
+   "score": 762,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     ": ایلان ماسک اعلام کرد تولید Cybertruck در کارخانه تگزاس حدود میانه 2027 متوقف می‌شود.",
+     ": فروش این وانت در آمریکا سال گذشته با 48 درصد کاهش به 20,237 دستگاه رسید؛ بسیار کمتر از پیش‌بینی 250 هزار دستگاهی ماسک.",
+     ": ظرفیت خط تولید به Cybercab، خودروی بدون فرمان و پدال برای شبکه روبوتاکسی‌های تسلا، اختصاص می‌یابد."
+    ],
+    "hashtags": [
+     "تسلا",
+     "Cybertruck",
+     "خودرو_برقی"
+    ],
+    "hook": "تسلا پس از فروش ضعیف، تولید وانت برقی خود را در کارخانه تگزاس متوقف می‌کند تا ظرفیت آن به Cybercab اختصاص یابد.",
+    "title": "تولید Cybertruck تسلا تا 2027 متوقف می‌شود"
+   },
+   "telegraph_url": "https://telegra.ph/تولید-سایبرتراک-تسلا-تا-میانه-۲۰۲۷-متوقف-می‌شود-11-06",
+   "title": "Tesla to wind down Cybertruck production",
+   "updated_at": 1794006773,
+   "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+   "url_key": "nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817"
+  },
+  "hackernews:50392118": {
+   "attempts": 0,
+   "created_at": 1794056741,
+   "message_id": 38,
+   "score": 346,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "مدل Gemini Omni 1.2 Flash ویدیوهای بومی ۱۵ ثانیه‌ای با ادیت چندمرحله‌ای در چت تولید می‌کند.",
+     "قیمت تولید ویدیو ۳۰٪ کاهش یافته و از $۰.۰۷ برای کیفیت 720p شروع می‌شود.",
+     "هماهنگی بهتر با تصاویر مرجع برای ثابت نگه داشتن چهره، لباس و برند در طول کل کلیپ."
+    ],
+    "hashtags": [
+     "GeminiOmni",
+     "AI_Video",
+     "GoogleCloud"
+    ],
+    "hook": "گوگل مدل ویدیویی جدیدش را با قابلیت‌های ویرایش گفتگومحور و ۳۰٪ قیمت کمتر معرفی کرد.",
+    "title": "Gemini Omni 1.2 Flash: ویدیو ۱۵ ثانیه‌ای با قیمت کمتر"
+   },
+   "telegraph_url": "https://telegra.ph/Gemini-Omni-12-Flash-کلیپ-۱۵-ثانیه‌ای-ویرایش-گفتگومحور-و-۳۰-کاهش-قیمت-11-07",
+   "title": "Gemini Omni 1.2 Flash",
+   "updated_at": 1794056742,
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+   "url_key": "blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash"
+  },
+  "hackernews:50393758": {
+   "attempts": 0,
+   "created_at": 1794006801,
+   "message_id": 29,
+   "score": 314,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "بررسی بازخوردهای منتقدان پس از انتشار Deus Ex و تأثیر آن بر نسل‌های بعد",
+     "نقل‌قول‌های بی‌پایه و اساس درباره پیش‌بینی آینده توسط این بازی",
+     "روایت واقعی پشت نام شخصیت اصلی داستان J.C. Denton"
+    ],
+    "hashtags": [
+     "DeusEx",
+     "کلاسیک",
+     "بازی_کامپیوتری"
+    ],
+    "hook": "بررسی بازخوردها و روایت‌های اغراق‌آمیز پیرامون بازی کلاسیک Deus Ex",
+    "title": "Deus Ex: افسانه یا اثر تحلیلی؟"
+   },
+   "telegraph_url": "https://telegra.ph/Deus-Ex-بیست-و-پنج-سال-بعد-افسانه-در-برابر-واقعیت-11-06",
+   "title": "Deus Ex",
+   "updated_at": 1794006801,
+   "url": "https://www.filfre.net/2026/11/deus-ex/",
+   "url_key": "filfre.net/2026/11/deus-ex"
+  },
+  "hackernews:50397429": {
+   "attempts": 0,
+   "created_at": 1794031277,
+   "message_id": 35,
+   "score": 407,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ترکیب Jev با Claude Opus دقت مرز را با هزینه بیش از ۴ برابر کمتر ارائه می‌کند.",
+     "Luna بیرون از جعبه بهتر از Jev عمل می‌کند اما شکاف در موارد سخت‌تر از بین می‌رود.",
+     "مدل‌های تصمیم‌گیری ۹۰ برابر ارزان‌تر و ۱۰ برابر سریع‌تر و ۰.۱۵ ثانیه پاسخ می‌دهند."
+    ],
+    "hashtags": [
+     "Jev",
+     "Opus",
+     "AI"
+    ],
+    "hook": "تست Jev و GPT-6 Luna در رزولوشن هویت نشان می‌دهد مدل ترکیبی آن‌ها با هزینه ۴ برابر ارزان‌تر به دقت مرز می‌رسد.",
+    "title": "ترکیب Jev و Opus دقت مرز را با هزینه کمتر ارائه می‌دهد"
+   },
+   "telegraph_url": "https://telegra.ph/ترکیب-Jev-و-Opus-دقت-مرزfrontier-با-هزینه-۴-برابر-کمتر-11-07",
+   "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+   "updated_at": 1794031277,
+   "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+   "url_key": "hightouch.com/blog/llm-judges-identity-resolution"
+  },
+  "hackernews:50397994": {
+   "attempts": 0,
+   "created_at": 1794056773,
+   "message_id": 41,
+   "score": 331,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "بر اساس شاخص داخلی AECI، پیشرفت قابلیت‌ها در آنتروپیک دو برابر نرخ قبلی شده است.",
+     "دلیل اصلی این شتاب، اتوماسیون پژوهش AI به وسیله خود AI ارزیابی می‌شود.",
+     "اگر این روند تداوم یابد، زمان‌بندی رسیدن به هوش برتر از پیش‌بینی‌های بیرونی کوتاه‌تر می‌شود."
+    ],
+    "hashtags": [
+     "AI_research",
+     "Anthropic",
+     "AI_safety"
+    ],
+    "hook": "گزارش جدید نشان می‌دهد سرعت پیشرفت قابلیت‌های مدل‌های بزرگ در آنتروپیک دو برابر شده است.",
+    "title": "سرعت پژوهش‌های AI با خود AI چند برابر شد"
+   },
+   "telegraph_url": "https://telegra.ph/شتاب-خودکار-پژوهش-هوش-مصنوعی-آیا-شتاب‌های-مرکب-فاصله-تا-ابرتیزمانی-را-کوتاه-می‌کنند-11-07",
+   "title": "AI is dramatically accelerating AI research",
+   "updated_at": 1794056773,
+   "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+   "url_key": "planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai"
+  },
+  "hackernews:50399933": {
+   "attempts": 0,
+   "created_at": 1794031252,
+   "message_id": 32,
+   "score": 441,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "لیبراسیون C با عملکرد بالا مستقیماً از هسته Ghostty استخراج شده و از نسخه ۱.۰ پایدار است.",
+     "محصولاتی مانند IntelliJ، Neovim، OrbStack و Turborepo هم‌اکنون از آن استفاده می‌کنند.",
+     "ABI پایدار امکان لینک پویا و بسته‌بندی آسان در توزیع‌های لینوکس را فراهم می‌کند."
+    ],
+    "hashtags": [
+     "libghostty",
+     "terminal",
+     "C"
+    ],
+    "hook": "نسخه ۱.۰ libghostty پایداری C ABI را برای شبیه‌ساز ترمینال فراهم کرد.",
+    "title": "رابطه libghostty نسخه ۱.۰ منتشر شد"
+   },
+   "telegraph_url": "https://telegra.ph/انتشار-نسخه-۱۰-کتابخانه-Libghostty-برای-شبیه‌سازی-ترمینال-11-07",
+   "title": "Libghostty 1.0",
+   "updated_at": 1794031252,
+   "url": "https://mitchellh.com/writing/libghostty-1-0",
+   "url_key": "mitchellh.com/writing/libghostty-1-0"
+  },
+  "hackernews:50401867": {
+   "attempts": 0,
+   "created_at": 1794133593,
+   "message_id": 53,
+   "score": 381,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "درایورهای macaudio و AVD همراه با درخت دستگاه برای M4 Pro/Max و M5 به هسته اصلی لینوکس ارسال شدند.",
+     "پشتیبانی از M3 به‌صورت عمومی (GA) فعال شد و ویژگی‌هایی مانند DCP و خواب دستگاه کار می‌کنند.",
+     "با m1n1 حالا می‌توان macOS را روی M4 و M5 مجازی و معکوس‌سازی کرد."
+    ],
+    "hashtags": [
+     "AsahiLinux",
+     "AppleSilicon",
+     "m1n1"
+    ],
+    "hook": "ورژن 7.3 منتشر شد: پشتیبانی کامل M3، درخت‌های اولیه M5 و مجازی‌سازی macOS.",
+    "title": "گزارش پیشرفت Asahi Linux 7.3"
+   },
+   "telegraph_url": "https://telegra.ph/گزارش-پیشرفت-اساهی-لینوکس-درگاه-M5-DCP-روی-M3-و-بازی‌های-ویندوزی-11-08",
+   "title": "Asahi Linux Progress Linux 7.3",
+   "updated_at": 1794133593,
+   "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+   "url_key": "asahilinux.org/2026/11/progress-report-7-3"
+  },
+  "hackernews:50403052": {
+   "attempts": 0,
+   "created_at": 1794079607,
+   "message_id": 43,
+   "score": 592,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "بازی سال ۲۰۰۴ با WebGPU روی Chrome و Firefox و پشتیبانی از تا ۱۲۰ فریم بر ثانیه اجرا می‌شود.",
+     "قابلیت رقابت آنلاین با دوستان، گشت و گذار آزاد و پشتیبانی از کنترلر، دسته‌های رانندگی و لمسی.",
+     "این یک پروژه طرفداری است و سازنده‌ها از Electronic Arts ارتباط رسمی ندارند."
+    ],
+    "hashtags": [
+     "NFSU2",
+     "WebGPU",
+     "PlayStation"
+    ],
+    "hook": "نسخه آنلاین Need for Speed: Underground 2 با WebGPU و پشتیبانی از رقابت آنلاین دوستانه در دسترس است.",
+    "title": "نیپد فور اسپید: آندرگراوند 2 در مرورگر"
+   },
+   "telegraph_url": "https://telegra.ph/Need-for-Speed-Underground-2-در-مرورگر-مسابقه-آنلاین-تا-۱۲۰-فریم-بر-ثانیه-11-07",
+   "title": "Need for Speed Underground 2 online in the browser",
+   "updated_at": 1794079608,
+   "url": "https://nfsu2.xyz/",
+   "url_key": "nfsu2.xyz"
+  },
+  "hackernews:50403097": {
+   "attempts": 0,
+   "created_at": 1794079624,
+   "message_id": 45,
+   "score": 468,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "دو دِمون در مک از ۲۰۲۲، با مخاطبین، تقویم، عکس‌ها، پیام‌ها، مکان و زمان، گرافی از شما و اطرافیانتان می‌سازند.",
+     "گراف با TCC محافظت شده و یک store قابل‌پرس‌وجو است که گفته می‌شود LLMهای Apple Intelligence از آن استفاده می‌کنند.",
+     "مقاله ابزار متن‌باز iKnow را برای خواندن گراف شخصی منتشر کرد و به ریسک دسترسی غیرمجاز به آن اشاره می‌کند."
+    ],
+    "hashtags": [
+     "AppleAI",
+     "Privacy",
+     "macOS"
+    ],
+    "hook": "اپل از ۲۰۲۲ در همه مک‌ها یک پایگاه دانش شخصی می‌سازد.",
+    "title": "هر مک یک گرافی شخصی از زندگی شما دارد"
+   },
+   "telegraph_url": "https://telegra.ph/گراف-دانش-شخصی-یک-سیستم-ناشناس-در-همه-مک‌ها-11-07",
+   "title": "Every Mac comes with an (undocumented) family member classifier",
+   "updated_at": 1794079625,
+   "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
+   "url_key": "8rank.ai/game/apple-intelligence-personal-knowledge-graph"
+  },
+  "hackernews:50403507": {
+   "attempts": 0,
+   "created_at": 1794160636,
+   "message_id": 57,
+   "score": 413,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "دیوار سرد کلاینت جدید دیسکورد، که «Phoenix» نام دارد، قبل از پایان صفحه لودینگ کلاینت Electron، لیست دوستان را بارگذاری کرد.",
+     "با دو اکانت هم‌زمان، مصرف رم ۲۹۰.۲ مگابایت است که نسبت به ۱ گیگابایت معمول، حدود ۷۰٪ کاهش مصرف رم محسوب می‌شود.",
+     "بروزرسانی در پس‌زمینه انجام می‌شود و دیگر صفحه «Starting» یا بررسی آپدیت هنگام باز شدن برنامه نمایش داده نمی‌شود."
+    ],
+    "hashtags": [
+     "Discord",
+     "Electron",
+     "Rust"
+    ],
+    "hook": "کلاینت جدید Rust دیسکورد در بوت شدن و مصرف رم، دیسکورد فعلی را پشت سر گذاشت.",
+    "title": "کلاینت Rust دیسکورد، چراغ سبز برای حذف Electron"
+   },
+   "telegraph_url": "https://telegra.ph/دیسکورد-کلاینت-جدید-Rust-را-معرفی-کرد-۷۰-رم-کمتر-و-شروع-فوری-11-08",
+   "title": "Every Windows 11 app should kill Electron, and Discord just showed why",
+   "updated_at": 1794160636,
+   "url": "https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/",
+   "url_key": "windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in"
+  },
+  "hackernews:50406111": {
+   "attempts": 0,
+   "created_at": 1794098385,
+   "message_id": 49,
+   "score": 330,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "تحقیق‌کننده مستقل Derik Kauffman جدولی رمزگذاری‌شده در سیستم‌عامل را کشف کرد که بیش از 100,000 عبارت را شامل می‌شود.",
+     "لیست شامل کلمات مرتبط با مواد مخدر، اعمال جنسی و عبارات سیاسی مانند «Dictator Trump» و «male chauvinist pig» است.",
+     "اپل اعلام کرده کیبورد برای پرهیز از پیشنهادهای نامناسب طراحی شده و کاربران می‌توانند پیش‌بینی را نادیده بگیرند."
+    ],
+    "hashtags": [
+     "Apple",
+     "Autocorrect",
+     "FreeSpeech"
+    ],
+    "hook": "تحقیق جدید افشا می‌کند اپل بیش از 100,000 کلمه و عبارت را از تکمیل خودکار پیش‌بینی‌کننده مسدود کرده است.",
+    "title": "لیست خاکستری اپل: کلماتی که iPhone درست‌نویسی نمی‌کند"
+   },
+   "telegraph_url": "https://telegra.ph/لیست-خاکستری-اپل-هزاران-واژه-که-iPhone-پیشنهاد-خودکار-نمی‌دهد-11-08",
+   "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+   "updated_at": 1794098386,
+   "url": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
+   "url_key": "theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you"
+  },
+  "hackernews:50406563": {
+   "attempts": 0,
+   "created_at": 1794098372,
+   "message_id": 47,
+   "score": 343,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "گروهی حدود ۵۰ نفره روی agents و قابلیت‌های بنیادی مثل Autogen و Next Latent کار می‌کرد که پایان یافت.",
+     "پس از جابجایی به Microsoft AI، فلسفه‌ی scaling به جای پژوهش برگزیده شد.",
+     "این تغییر برای پژوهشگران علاقه‌مند به مدل‌های کارآمد و agents مهم است."
+    ],
+    "hashtags": [
+     "AI",
+     "Microsoft",
+     "Research"
+    ],
+    "hook": "گروه تحقیقاتی AI Frontiers پس از ادغام با Microsoft AI منحل شد و تمرکز به مقیاس‌دهی تغییر کرد.",
+    "title": "پایان گروه AI Frontiers در Microsoft Research"
+   },
+   "telegraph_url": "https://telegra.ph/پایان-گروه-AI-Frontiers-در-Microsoft-Research-11-08",
+   "title": "The end of Microsoft Research's AI Frontiers group",
+   "updated_at": 1794098373,
+   "url": "https://hunch.net/?p=13764006",
+   "url_key": "hunch.net/?p=13764006"
+  },
+  "hackernews:50406670": {
+   "attempts": 0,
+   "created_at": 1794133577,
+   "message_id": 51,
+   "score": 589,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "اجرای Debian با systemd و Podman برای کانتینر",
+     "AdGuard Home برای مسدودسازی DNS و Zeroclaw",
+     "Beszel برای پایش منابع و هشدار و Cloudflare Tunnel برای دسترسی امن"
+    ],
+    "hashtags": [
+     "AI",
+     "homelab",
+     "selfhosting"
+    ],
+    "hook": "نویسنده نشان می‌دهد که چگونه با یک OpenStick ۱۰ دلاری سرور خانگی کم‌مصرف بسازد.",
+    "title": "خودمیزبانی با یک دستگاه ۱۰ دلاری"
+   },
+   "telegraph_url": "https://telegra.ph/روی-یک-OpenStick-ده-دلاری-چه-سرویس‌هایی-اجرا-می‌کنم-11-08",
+   "title": "What I run on my $10 USD OpenStick homelab",
+   "updated_at": 1794133578,
+   "url": "https://blog.bosscher.ch/posts/openstick/",
+   "url_key": "blog.bosscher.ch/posts/openstick"
+  },
+  "hackernews:50410107": {
+   "attempts": 0,
+   "created_at": 1794160617,
+   "message_id": 55,
+   "score": 566,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "محرک اصلی تصمیم، پشتیبانی دیرهنگام از AGENTS.md و دردسرهای تبدیل فرمت میان آن و CLAUDE.md بود.",
+     "در محیط ادغام‌شده فقط یک نشست فعال بود و افزونه رسمی آن هم ناپایدار و ناقص عمل می‌کرد.",
+     "بسته‌های مکرر با تغییرات زیاد در system prompt، افزونگی پیاده‌سازی و مصرف بالاتر از Pi گزارش شد."
+    ],
+    "hashtags": [
+     "Pi_Coding",
+     "Claude_Code",
+     "برنامه_نویسی_AI"
+    ],
+    "hook": "توسعه‌دهنده‌ای به خاطر ناپایداری و افزونگی، Claude Code را کنار گذاشت و به Pi مهاجرت کرد.",
+    "title": "کد نویسی با Pi جایگزین Claude Code شد"
+   },
+   "telegraph_url": "https://telegra.ph/یک-توسعه‌دهنده-کلاد-کد-را-کنار-گذاشت-و-به-پای-مهاجرت-کرد-11-08",
+   "title": "Goodbye Claude, hello Pi",
+   "updated_at": 1794160618,
+   "url": "https://caleb.software/posts/claude-to-pi.html",
+   "url_key": "caleb.software/posts/claude-to-pi.html"
+  },
+  "hackernews:50411961": {
+   "attempts": 0,
+   "created_at": 1794175748,
+   "message_id": 61,
+   "score": 316,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "llama-modchip مدل DeepSeek-V4-Flash را با اصلاح llama.cpp در 56.56 گیگابایت جا داده و روی CPU اجرا می‌کند.",
+     "با تایلینگ چندسطحی برای کش‌های CPU، پرفیل حدود 77٪ و دیکود 53٪ سریع‌تر می‌شود.",
+     "روش Self-Speculative وضعیت عامل‌ها را در 13 میلی‌ثانیه بازنشانی می‌کند."
+    ],
+    "hashtags": [
+     "llama.cpp",
+     "DeepSeek",
+     "MoE"
+    ],
+    "hook": "ابزار llama-modchip نسخه‌های 284 میلیاردی DeepSeek را بدون GPU روی 64 گیگابایت RAM اجرا می‌کند.",
+    "title": "اجرای DeepSeek 284B فقط با 64 گیگ RAM"
+   },
+   "telegraph_url": "https://telegra.ph/چالش‌های-اجرای-Llama-modchip-برای-مدل‌های-بزرگ-11-08",
+   "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+   "updated_at": 1794175748,
+   "url": "https://github.com/synchopate/llama-modchip",
+   "url_key": "github.com/synchopate/llama-modchip"
+  },
+  "hackernews:50415628": {
+   "attempts": 0,
+   "created_at": 1794175734,
+   "message_id": 59,
+   "score": 462,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "مسئولان مالی و کارمندان غیرمهندسی از دسترسی به Claude Code و GitHub حذف شدند.",
+     "تغییر به‌دلیل نگرانی‌های ریسک و افزایش نظارت بر کدهای تولیدشده انجام شد.",
+     "تریدرها هنوز می‌توانند برای تحلیل داده از دستیار هوش مصنوعی داخلی بانک استفاده کنند."
+    ],
+    "hashtags": [
+     "GoldmanSachs",
+     "AI",
+     "ClaudeCode"
+    ],
+    "hook": "گلدمن ساکس ابزارهای کدنویسی هوش مصنوعی را فقط به مهندسان اختصاص داد.",
+    "title": "Goldman Sachs دسترسی به Claude Code را محدود کرد"
+   },
+   "telegraph_url": "https://telegra.ph/گلدمن-ساکس-دسترسی-معامله‌گران-به-Claude-Code-را-بست-11-08",
+   "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+   "updated_at": 1794175734,
+   "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+   "url_key": "thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
+  },
+  "hackernews:50418016": {
+   "attempts": 1,
+   "created_at": 1794206172,
+   "last_error": "summarization: model never returned valid JSON for hackernews:50418016",
+   "score": 509,
+   "source": "hackernews",
+   "status": "RETRY",
+   "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+   "updated_at": 1794206172,
+   "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+   "url_key": "nvidianews.nvidia.com/news/a-message-to-our-company"
+  },
+  "hackernews:50422069": {
+   "attempts": 0,
+   "created_at": 1794253954,
+   "message_id": 70,
+   "score": 523,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "تحلیل ۱٬۴۰۰ نشست Claude Code با Gemini 4 Argon تغییر ناگهانی در شیوه استنتاج را در ۳ نوامبر ثبت کرد.",
+     "حجم استدلال در حالت high کاهش یافت و تست یک باگ واقعی Opus 5.5 high را پس از ۳ ساعت بدون راه‌حل نشان داد.",
+     "مدل xhigh پس از مکث بیشتر، اصلاح را در چند دقیقه پیدا می‌کند و توصیه Theo دیگر معتبر نیست."
+    ],
+    "hashtags": [
+     "Claude",
+     "Opus",
+     "AI"
+    ],
+    "hook": "گزارش‌ها نشان می‌دهند از ۳ نوامبر نحوه استدلال Opus 5.5 تغییر کرده است.",
+    "title": "آیا Opus 5.5 ضعیف شد؟"
+   },
+   "telegraph_url": "https://telegra.ph/آیا-نسخه-Opus-55-ضعیف‌تر-شده-11-09",
+   "title": "Is Opus 5.5 nerfed? Thinking patterns changed on November 3",
+   "updated_at": 1794253954,
+   "url": "https://twitter.com/shanemelaugh/status/2119192075505893695",
+   "url_key": "twitter.com/shanemelaugh/status/2119192075505893695"
+  },
+  "hackernews:50424581": {
+   "attempts": 0,
+   "created_at": 1794253919,
+   "message_id": 67,
+   "score": 656,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این وب‌سایت بزرگترین پایگاه داده هواپیماهای کاغذی با آموزش تصویری است.",
+     "مدل‌هایی مانند Firefly 5 و Unite رکوردهای جهانی پرواز دارند.",
+     "هر کاربر می‌تواند هواپیمای مناسب مهارت خودش را انتخاب کند."
+    ],
+    "hashtags": [
+     "havaeyemakaabad",
+     "paperairplane",
+     "foldableflight"
+    ],
+    "hook": "مجموعه عظیمی از الگوهای هواپیمای کاغذی با آموزش تصویری گام‌به‌گام.",
+    "title": "مجموعه عظیم‌تری از هواپیماهای کاغذی"
+   },
+   "telegraph_url": "https://telegra.ph/بزرگ‌ترین-پایگاه-داده-هواپیماهای-کاغذی-با-آموزش‌های-ویدیویی-11-09",
+   "title": "Fold Epic Paper Airplanes",
+   "updated_at": 1794253920,
+   "url": "https://www.foldableflight.com",
+   "url_key": "foldableflight.com"
+  },
+  "hackernews:50427362": {
+   "attempts": 0,
+   "created_at": 1794281778,
+   "message_id": 77,
+   "score": 482,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "RTR تراکنش‌ها را به‌صورت لحظه‌ای و تمام‌وقت از طریق کانال‌های بانکی موجود تسویه می‌کند.",
+     "این زیرساخت ملی شفافیت جریان نقدی و پیام‌های غنی بر پایه ISO 20022 را فراهم می‌کند.",
+     "نظام بانکی کانادا می‌تواند خدمات نوین بپردازد و پس‌انداز هزینه تا ۱۴.۵ میلیارد دلار را تجربه کند."
+    ],
+    "hashtags": [
+     "RTR",
+     "PaymentsCanada",
+     "فینتک"
+    ],
+    "hook": "Payments Canada شبکه پرداخت لحظه‌ای RTR را با کارکرد ۲۴/۷ راه‌اندازی کرد.",
+    "title": "کانادا: راه‌اندازی شبکه پرداخت لحظه‌ای RTR"
+   },
+   "telegraph_url": "https://telegra.ph/کانادا-راه‌اندازی-سرویس-پرداخت-آنی-Real-Time-Rail-را-اعلام-کرد-11-10",
+   "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+   "updated_at": 1794281778,
+   "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
+   "url_key": "payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy"
+  },
+  "hackernews:50429068": {
+   "attempts": 0,
+   "created_at": 1794322538,
+   "message_id": 80,
+   "score": 736,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "این دو مدل برای چالش‌های سخت فنی طراحی شده و در کدنویسی، مالی و علوم پیشرفت نشان داده‌اند.",
+     "دقت ارتباط بالاتر، سرعت خروجی تا ۳۰٪ بیشتر و قیمت پایه پایین‌تر از نسل قبل از مزایای اصلی است.",
+     "Fable 5.2 برای همه در دسترس است؛ Mythos 5.2 تنها با تایید برنامه‌های Life Sciences و Cyber قابل دسترسی است."
+    ],
+    "hashtags": [
+     "anthropic",
+     "claude",
+     "fable5.2"
+    ],
+    "hook": "آنثروپیک نسخه‌های 5.2 دو مدل فنی Claude Fable و Claude Mythos را عرضه کرد.",
+    "title": "آنثروپیک مدل‌های Fable 5.2 و Mythos 5.2 را منتشر کرد"
+   },
+   "telegraph_url": "https://telegra.ph/آپدیت-Claude-Fable-52-و-Mythos-52-برای-چالش‌های-فنی-سنگین-11-10",
+   "title": "Claude Fable 5.2 and Mythos 5.2",
+   "updated_at": 1794322538,
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+   "url_key": "anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  "hackernews:50431058": {
+   "attempts": 0,
+   "created_at": 1794281757,
+   "message_id": 74,
+   "score": 516,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "USPS حاشیه‌های دقیق ZIP Code را بر اساس داده‌های واقعی توزیع نامه ارائه می‌دهد.",
+     "این حاشیه‌ها به شرکت‌های نقشه‌کشی، بیمه، املاک و لجستیک برای رفع ابهام جغرافیایی کمک می‌کنند.",
+     "دسترسی چهار بار در سال بروزرسانی می‌شود و برخی بخش‌ها توزیع محدودی دارند."
+    ],
+    "hashtags": [
+     "USPS",
+     "Geospatial",
+     "OpenData"
+    ],
+    "hook": "USPS نقشه رسمی حاشیه ZIP Code‌ها را برای اصلاح داده‌های جغرافیایی عرضه کرد.",
+    "title": "USPS حاشیه‌های رسمی ZIP Code را منتشر کرد"
+   },
+   "telegraph_url": "https://telegra.ph/پست-ایالات-متحده-پلیگان‌های-مرزی-کد-پستی-ارائه-کرد-11-10",
+   "title": "USPS now offers official ZIP Code boundary polygons",
+   "updated_at": 1794281758,
+   "url": "https://postalpro.usps.com/zcb",
+   "url_key": "postalpro.usps.com/zcb"
+  },
+  "hackernews:50436640": {
+   "attempts": 0,
+   "created_at": 1794322570,
+   "message_id": 83,
+   "score": 470,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "هزینه‌ها ۹۸٪ کاهش یافت چون مدل تصمیم‌گیری متن تولید نمی‌کند.",
+     "اجرا روی SageMaker با سرویس‌های استاندارد AWS مانند SQS و Lambda.",
+     "راه‌اندازی آسان با AWS AppConfig برای تغییر ایمن بین مدل‌ها."
+    ],
+    "hashtags": [
+     "ai_aws",
+     "cost_saving",
+     "llm_mcp"
+    ],
+    "hook": "دو مهندس آمازون در یک سیستم تیکت‌دهی عظیم، Sonnet 4.6 را با یک مدل تصمیم‌گیری جایگزین کردند.",
+    "title": "آمازون با یک مدل تصمیم‌گیری هزینه‌ها را ۹۸٪ کاهش داد"
+   },
+   "telegraph_url": "https://telegra.ph/جایگزینی-مدل-لارج-با-یک-مدل-تصمیم‌گیرنده-و-صرفه‌جویی-میلیون‌دولاری-آمازون-11-10",
+   "title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+   "updated_at": 1794322570,
+   "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/",
+   "url_key": "strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider"
+  },
+  "hackernews:50438318": {
+   "attempts": 0,
+   "created_at": 1794378470,
+   "message_id": 93,
+   "score": 471,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "هوش مصنوعی تست‌های سطحی و نامکفی می‌نویسد و شکاف پوشش تست پنهان می‌ماند.",
+     "کدهای بیش‌ازحد پیچیده با توابع کمکی غیرضروری، درک و رفع باگ را سخت می‌کند.",
+     "کاهش درک انسانی از کد و سرعت بالا، باعث انباشت فنی‌دِبت و کد نامتوازن می‌شود."
+    ],
+    "hashtags": [
+     "AI_Coding",
+     "code_quality",
+     "tech_debt"
+    ],
+    "hook": "برنامه‌نویسی با LLM‌ها کیفیت، تست و نگهداری کد را زیر سؤال می‌برد.",
+    "title": "استفاده از هوش مصنوعی، کدهای شکننده می‌سازد"
+   },
+   "telegraph_url": "https://telegra.ph/استفاده-از-AI-پایه‌های-کد-را-شکننده-می‌کند-11-11",
+   "title": "AI usage generates a fragile codebase",
+   "updated_at": 1794378470,
+   "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
+   "url_key": "evanxmerz.com/post/ai-usage-generates-a-fragile-codebase"
+  },
+  "hackernews:50439193": {
+   "attempts": 0,
+   "created_at": 1794345567,
+   "message_id": 86,
+   "score": 531,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "الگوریتم عامل هوش مصنوعی، رمزنگاری Signal را تا سطح دستورالعمل‌های ماشین اثبات کرد.",
+     "هوش مصنوعی فرآیندی که قبلا سال‌ها طول می‌کشید را به چهار هفته کاهش داد.",
+     "این پیشرفت اعتماد به حریم خصوصی کاربران را افزایش می‌دهد."
+    ],
+    "hashtags": [
+     "AlphaProof",
+     "هوش_مصنوعی",
+     "امنیت"
+    ],
+    "hook": "الگوریتم‌های عامل هوش مصنوعی جزئیات امنیتی Signal را تا سطح کد ماشین اثبات کردند.",
+    "title": "AlphaProof Code و اثبات رسمی رمزنگاری Signal"
+   },
+   "telegraph_url": null,
+   "title": "AlphaProof Code",
+   "updated_at": 1794345567,
+   "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+   "url_key": "deepmind.google/blog/introducing-alphaproof-code"
+  },
+  "hackernews:50441707": {
+   "attempts": 0,
+   "created_at": 1794378454,
+   "message_id": 91,
+   "score": 838,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "تاسمتا روی برد ESP، برود MQTT و Node-RED روی Raspberry Pi زیرساخت محلی او هستند.",
+     "اگر اینترنت قطع شود، کلیدهای دیواری و داشبورد هنوز کار می‌کنند و Alexa فقط یک راه دیگر است.",
+     "چندین راه ورود وجود دارد: اپلیکیشن، Alexa، QR کد یا NFC تا هیچ دستگاهی قفل نباشد."
+    ],
+    "hashtags": [
+     "خانه_هوشمند",
+     "اتوماسیون",
+     "MQTT"
+    ],
+    "hook": "چرا همه‌ی هسته‌ی اتوماسیون خانه باید بدون اینترنت و سرور فروشنده کار کنند؟",
+    "title": "دستگاه‌های خانه هوشمند نباید به اینترنت وابسته باشند"
+   },
+   "telegraph_url": "https://telegra.ph/چرا-خانه‌ی-هوشمند-باید-بدون-اینترنت-کار-کند-11-11",
+   "title": "Smart home devices should work without the internet",
+   "updated_at": 1794378454,
+   "url": "https://docodethatmatters.com/home-automation-overnight-success/",
+   "url_key": "docodethatmatters.com/home-automation-overnight-success"
+  },
+  "hackernews:50442736": {
+   "attempts": 0,
+   "created_at": 1794345594,
+   "message_id": 89,
+   "score": 515,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Verisign قصد لغو ۲۲,۰۰۰ دامنه و redirect ایمیلی .name را لغو کرد و دامنه‌های موجود تا ابد باقی می‌مانند.",
+     "ثبت‌نام جدید برای دامنه‌های سطح سوم .name متوقف می‌شود اما دامنه‌های قدیمی تحت تأثیر قرار نمی‌گیرند.",
+     "این پیروزی نتیجه همکاری جمعی فعالان و وکلایی بود که در ICANN درخواست بازنگری کردند."
+    ],
+    "hashtags": [
+     "dotname",
+     "Verisign",
+     "domain"
+    ],
+    "hook": "پس از نبرد طولانی، Verisign تصمیم لغو ۲۲,۰۰۰ دامنه و ایمیل خود را پس گرفت.",
+    "title": "بازگشت دامنه‌های .name پس از جنگ حقوقی"
+   },
+   "telegraph_url": "https://telegra.ph/Verisign-نقشه‌ی-لغو-دامین‌های-name-را-پس-کشید-11-10",
+   "title": ".name Grandfathered",
+   "updated_at": 1794345594,
+   "url": "https://neil.fraser.name/news/2026/11/10/",
+   "url_key": "neil.fraser.name/news/2026/11/10"
+  },
+  "hackernews:50445401": {
+   "attempts": 0,
+   "created_at": 1794417085,
+   "message_id": 98,
+   "score": 540,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "سکون توسط تویوتا با هدف آزمایش مفاهیم جدید حمل‌ونقل احیا شده و KEI-01 اولین محصول آن است.",
+     "KEI-01 یک کامیون Kei 660cci است که برای کاربردهای تجاری، کشاورزی و شهری طراحی شده.",
+     "این محصول از اواخر 2027 فقط در برنامه محدود ناوگان (fleet) عرضه می‌شود و بعداً ممکن است گسترش یابد."
+    ],
+    "hashtags": [
+     "Toyota",
+     "Scion",
+     "KEI-01"
+    ],
+    "hook": "تویوتا برند سکون را بازگرداند و اولین محصولش کامیون کوچک KEI-01 است.",
+    "title": "سکون برمی‌گردد: کامیون کوچک KEI-01 برای آمریکا"
+   },
+   "telegraph_url": "https://telegra.ph/برگشتن-اسکون-تویوتا-با-کامیونت-کوچک‌ساز-به-آمریکا-می‌آید-11-11",
+   "title": "Scion is back and is going to sell a kei truck in America",
+   "updated_at": 1794417085,
+   "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+   "url_key": "theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america"
+  },
+  "hackernews:50450488": {
+   "attempts": 0,
+   "created_at": 1794444363,
+   "message_id": 101,
+   "score": 817,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "او زبان‌شناسی زِن (PEP 20) را نوشت و الگوریتم مرتب‌سازی Timsort را ابداع کرد.",
+     "پترز در طراحی اولیه پایتون با گیدو شریک بود و سال‌ها نقش نگهدار کیفیت کد را داشت.",
+     "تأثیر او بر جامعه پایتون چنان عمیق است که بسیاری آن را عامل شکل‌گیری سبک مدرن پایتون می‌دانند."
+    ],
+    "hashtags": [
+     "پایتون",
+     "تیم_پترز",
+     "تاریخچه_برنامه"
+    ],
+    "hook": "تیم پترز، معمار نامرئی پایتون و نویسنده زبان‌شناسی زِن، در ۱۵ جولای درگذشت.",
+    "title": "درگذشت تیم پترز، چهره کلیدی پایتون"
+   },
+   "telegraph_url": "https://telegra.ph/گذشت-تیم-پترز-معمار-ارشد-پایتون-11-12",
+   "title": "Tim Peters has died",
+   "updated_at": 1794444363,
+   "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
+   "url_key": "discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028"
+  },
+  "hackernews:50452455": {
+   "attempts": 0,
+   "created_at": 1794417065,
+   "message_id": 95,
+   "score": 697,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "48 عامل مستقل تصاویر Lidar ناسا از جنگل‌های مکزیک را بررسی کردند و یک هرم مایایی کشف نشده را یافتند.",
+     "این سایت احتمالاً در ثبت INAH نیست، هرچند ممکن است پیش از این در مقاله‌ای ثبت شده باشد.",
+     "بررسی نشان داد عامل‌ها می‌توانند داده‌های LiDAR را به سرعت تحلیل کنند و محققان را راهنمایی نمایند."
+    ],
+    "hashtags": [
+     "AI_Agents",
+     "LiDAR",
+     "Maya"
+    ],
+    "hook": "تیم هوش مصنوعی داده‌های Lidar ناسا را بررسی کرد و یک سایت مایایی کشف نشده پیدا کرد.",
+    "title": "48 عامل هوش مصنوعی در ۷۲ ساعت هرم مایا یافتند"
+   },
+   "telegraph_url": "https://telegra.ph/هوش-مصنوعی-سایتی-از-مایاها-را-در-۷۲-ساعت-زیر-جنگل-ردیابی-کرد-11-11",
+   "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+   "updated_at": 1794417065,
+   "url": "https://pietromiotti.com/latest/maya-site/?maya",
+   "url_key": "pietromiotti.com/latest/maya-site/?maya"
+  },
+  "hackernews:50455394": {
+   "attempts": 0,
+   "created_at": 1794482236,
+   "message_id": 110,
+   "score": 499,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "هشدار دود کاذب از ورود آب پاش‌های فیزیکی دیتاسنتر جلوگیری کرد، اما تهویه کاملاً قطع شده بود.",
+     "تیم سیستم برای محافظت از سرورها و توقف خودکار معامله، کابل‌های برق را از دوشاخه کشیدند.",
+     "این تجربه نشان می‌دهد چرا زیرساخت حیاتی، نیازمند مکانیسم خاموش دستی و واکنش سریع است."
+    ],
+    "hashtags": [
+     "JaneStreet",
+     "Datacenter",
+     "OCaml"
+    ],
+    "hook": "یک هشدار دودی کاذب، دیتاسنتر نیویورک جان استریت را بدون خنک‌کننده رها کرد و تیم فنی به کشیدن کابل‌ها پرداخت.",
+    "title": "هشدار اشتباه دود، تقریباً دیتاسنتر NY جان استریت را غرق کرد"
+   },
+   "telegraph_url": "https://telegra.ph/یک-کشف-غلط-دود-در-دیتاسنتر-جین-استریت-و-نجات-سرورها-از-اسپرینکلر-11-12",
+   "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+   "updated_at": 1794482236,
+   "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+   "url_key": "michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter"
+  },
+  "hackernews:50456631": {
+   "attempts": 0,
+   "created_at": 1794444386,
+   "message_id": 104,
+   "score": 629,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "AWS Emulator شبیه‌ساز لوکال API‌های AWS است که درخواست‌ها را بدون تماس با سرورهای واقعی AWS هندل می‌کند.",
+     "بدون حساب AWS و با تنظیم متغیرهای محیطی یا حالت Embedded، کد خود را روی ماشین توسعه، سرور یا CI تست کنید.",
+     "مخصوص ساخت و تست است؛ برای بارهای کاری تولید یا تست امنیت پیشنهاد نمی‌شود."
+    ],
+    "hashtags": [
+     "AWS",
+     "Emulator",
+     "CloudComputing"
+    ],
+    "hook": "شبیه‌ساز لوکال AWS که بدون نیاز به حساب یا هزینه، API‌ها را در سیستم شما شبیه‌سازی می‌کند.",
+    "title": "AWS Emulator: شبیه‌ساز رایگان API‌های AWS"
+   },
+   "telegraph_url": "https://telegra.ph/AWS-Emulator-شبیه‌ساز-رایگان-APIهای-آمازون-برای-توسعه-و-تست-11-12",
+   "title": "AWS emulator",
+   "updated_at": 1794444386,
+   "url": "https://github.com/aws/aws-emulator",
+   "url_key": "github.com/aws/aws-emulator"
+  },
+  "hackernews:50458900": {
+   "attempts": 0,
+   "created_at": 1794482208,
+   "message_id": 107,
+   "score": 563,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "United banned AI agents like Meta's Muse from booking flights, citing credential-sharing risks.",
+     "Agents might violate federal rules, such as in-person luggage checks.",
+     "United fares remain bookable through aggregators like Kayak and Google Flights."
+    ],
+    "hashtags": [
+     "United_Airlines",
+     "AI_Agents",
+     "flight_booking"
+    ],
+    "hook": "United Airlines blocks personal AI agents from making flight reservations.",
+    "title": "United AI agents are banned from booking flights"
+   },
+   "telegraph_url": "https://telegra.ph/خطه‌های-پروازی-یونایتد-ممنوعیت-رزرو-با-عامل‌های-هوش-مصنوعی-11-12",
+   "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+   "updated_at": 1794482209,
+   "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+   "url_key": "cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights"
+  },
+  "hackernews:50465829": {
+   "attempts": 0,
+   "created_at": 1794513454,
+   "message_id": 116,
+   "score": 699,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "عرضه اولیه سهام (IPO) شرکت Anthropic ثبت شد و طبق برنامه، فروش سهام از ۱۰ نوامبر آغاز می‌شود.",
+     "سهام کلاس A در نزدک با نماد ANT معامله خواهند شد.",
+     "شرکت در دوره Roadshow خود، داده‌های مالی سه ماهه سوم ۲۰۲۶ شامل رشد درآمد و حاشیه عملیاتی را منتشر کرد."
+    ],
+    "hashtags": [
+     "Anthropic",
+     "IPO",
+     "AI"
+    ],
+    "hook": "Anthropic درخواست ثبت عرضه اولیه سهام خود را برای تبدیل شدن به شرکت سهامی عام ثبت کرد.",
+    "title": "انتشار سهام شرکت Anthropic در بورس"
+   },
+   "telegraph_url": "https://telegra.ph/Anthropic-به-بورس-می‌رود-نماد-ANT-در-نزدک-11-12",
+   "title": "Anthropic IPO",
+   "updated_at": 1794513455,
+   "url": "https://ipo.anthropic.com/us/",
+   "url_key": "ipo.anthropic.com/us"
+  },
+  "hackernews:50467087": {
+   "attempts": 0,
+   "created_at": 1794513428,
+   "message_id": 113,
+   "score": 2104,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "شرکت انویدیا رسماً تغییر در مدیریت ارشد خود را اعلام کرده است.",
+     "جایگزین جنسون هوانگ تا چه زمانی بر عهده خواهد بود مشخص نیست.",
+     "این خبر می‌تواند بر روند توسعه چیپ‌های AI و بازار رقبایش تأثیر بگذارد."
+    ],
+    "hashtags": [
+     "NVIDIA",
+     "مدیرعامل",
+     "هوش_مصنوعی"
+    ],
+    "hook": "انویدیا از کناریدن جنسون هوانگ به عنوان مدیرعاملش خبر داد.",
+    "title": "تغییر مدیرعامل انویدیا"
+   },
+   "telegraph_url": "https://telegra.ph/استعفای-جنسن-هانگ-از-مدیریت-انویدیا-11-12",
+   "title": "Jensen Huang resigns",
+   "updated_at": 1794513429,
+   "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+   "url_key": "apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f"
+  },
+  "hackernews:50470488": {
+   "attempts": 0,
+   "created_at": 1794567761,
+   "message_id": 126,
+   "score": 539,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "ویرایشگر بصری گلدوزی به زبان Rust که طرح‌های SVG را به دوخت تبدیل می‌کند.",
+     "پشتیبانی از پروتکل MCP برای ساخت و ویرایش طرح با عامل‌های هوش مصنوعی.",
+     "خروجی‌های PES, DST, EXP, JEF, VP3 و اتصال مستقیم به Brother Skitch از طریق بلوتوث."
+    ],
+    "hashtags": [
+     "ZigZag",
+     "متن_باز",
+     "هوش_مصنوعی"
+    ],
+    "hook": "اپلیکیشن رایگان و متن‌باز ZigZag کار با ماشین‌های گلدوزی را بدون اشتراک ممکن می‌کند.",
+    "title": "نرم‌افزار متن‌باز ZigZag برای دوخت سوزن‌زنی"
+   },
+   "telegraph_url": "https://telegra.ph/ZigZag-اپ‌دیس-رایگان-و-متن‌باز-تدوین-و-دوخت-طرح‌های-تزئینی-11-13",
+   "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+   "updated_at": 1794567761,
+   "url": "https://github.com/simpsoka/zigzag",
+   "url_key": "github.com/simpsoka/zigzag"
+  },
+  "hackernews:50471431": {
+   "attempts": 0,
+   "created_at": 1794534668,
+   "message_id": 119,
+   "score": 463,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "Hydrogen برای اجرای سریع کارهای برنامه‌نویسی و workflows اتوماتیک طراحی شده.",
+     "قیمت آن برای هر ۱ میلیون توکن ورودی ۱.۵۰ دلار و خروجی ۷.۵۰ دلار است.",
+     "در مقایسه با 3.8 Flash، ۲.۵ برابر سریع‌تر و نمره Terminal-Bench آن از ۱۸.۲ به ۵۷ درصد رسید."
+    ],
+    "hashtags": [
+     "GoogleAI",
+     "Gemini4",
+     "HIDROGEN"
+    ],
+    "hook": "گوگل مدل جدید Gemini 4 Hydrogen را برای کارهای سریع و اتوماسیون معرفی کرد.",
+    "title": "معرفی Gemini 4 Hydrogen"
+   },
+   "telegraph_url": "https://telegra.ph/معرفی-Gemini-4-Hydrogen-مدل-اجرایی-برای-کارهای-روزمره-11-13",
+   "title": "Gemini 4 Hydrogen",
+   "updated_at": 1794534669,
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+   "url_key": "blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen"
+  },
+  "hackernews:50472038": {
+   "attempts": 0,
+   "created_at": 1794534687,
+   "message_id": 121,
+   "score": 419,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "after a decade، تایپ never که با علامت ! نمایش داده می‌شود، رسماً پایدار شد و جایگزین Infallible خواهد شد",
+     "پایه و اساس Allocator API برای تعریف اختصاصی‌سازی حافظه در Vec و Box فراهم شد",
+     "DropGuard جدید امکان اجرای کد در تمام مسیرهای خروج تابع را بدون دردسر فراهم می‌کند"
+    ],
+    "hashtags": [
+     "Rust",
+     "NeverType",
+     "Memory"
+    ],
+    "hook": "با نسخه 1.100 از Rust، تایپ never ( ! ) بعد از سال‌ها پایدار شد و API اختصاصی memory بهبود یافت.",
+    "title": "آپدیت مهم Rust 1.100: never type پایدار شد"
+   },
+   "telegraph_url": "https://telegra.ph/نسخه-1100-زبان-Rust-منتشر-شد-11-13",
+   "title": "Rust 1.100",
+   "updated_at": 1794534687,
+   "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+   "url_key": "blog.rust-lang.org/2026/11/12/rust-1.100.0"
+  },
+  "hackernews:50474959": {
+   "attempts": 0,
+   "created_at": 1794599168,
+   "message_id": 132,
+   "score": 550,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "نویسنده با مهندسی معکوس اپلیکیشن موبایل Coway، راهی برای کنترل مستقیم دستگاه پیدا کرد تا از ابر دور بزند.",
+     "وابستگی به سرویس ابری Coway بی‌ثبات بود: تغییر اپ IoCare+, قطع سرورها، و بسته شدن اکانت با یک نسخه قدیمی.",
+     "هدف نهایی جایگزینی کنترل از راه دور با راه‌اندازی سرور داخلی است که دستگاه مستقیم با آن ارتباط برقرار کند."
+    ],
+    "hashtags": [
+     "IoT",
+     "Home_Assistant",
+     "Coway"
+    ],
+    "hook": "مطلب دربارهٔ مهندسی معکوس یک Coway Airmega IconS برای کنترل محلی دستگاه بدون وابستگی به سرویس ابری Coway است.",
+    "title": "دور زدن ابر Coway برای پمپ هوا"
+   },
+   "telegraph_url": "https://telegra.ph/دور-زدن-ابر-Coway-با-مهندسی-معکوس-و-حمله-MitM-11-13",
+   "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+   "updated_at": 1794599168,
+   "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+   "url_key": "scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud"
+  },
+  "hackernews:50477231": {
+   "attempts": 0,
+   "created_at": 1794567738,
+   "message_id": 123,
+   "score": 612,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "کارمندان انویدیا در یک درخواست داخلی خواستار بازگشت جنسن هوانگ به عنوان مدیرعامل شدند.",
+     "حذف او بازار شرکت را حدود ۱ تریلیون دلار کاهش داده و رسوایی ایجاد کرد.",
+     "بسیاری از پرسنل نگرانند و معتقدند انویدیا بدون هوانگ به بنیان خود آسیب می‌بیند."
+    ],
+    "hashtags": [
+     "Nvidia",
+     "JensenHuang",
+     "تکنولوژی"
+    ],
+    "hook": "بیش از ۱۶۰۰ نظر در پشتیبانی از بازگشت بنیان‌گذار انویدیا به شرکت ثبت شده است.",
+    "title": "کارکنان انویدیا بازگشت جنسن هوانگ را خواستار شدند"
+   },
+   "telegraph_url": "https://telegra.ph/کارمندان-انویدیا-خواستار-بازگشت-جسن-هوانگ-شدند-11-13",
+   "title": "Nvidia employees petition to bring back Jensen Huang",
+   "updated_at": 1794567738,
+   "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
+   "url_key": "wired.com/story/nvidia-employees-petition-for-jensen-huangs-return"
+  },
+  "hackernews:50486482": {
+   "attempts": 0,
+   "created_at": 1794599095,
+   "message_id": 129,
+   "score": 552,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "LibreOffice در پیامی اعلام کرد که برخلاف برخی رقبای تجاری، این نرم‌افزار ۳۶۵ روز سال بدون وقفه کار می‌کند.",
+     "این اظهارنظر ضمنی اشاره به وابستگی سرویس‌های ابری یا اشتراکی به قطعی‌های برنامه‌ریزی‌شده دارد.",
+     "کاربران در پاسخ به تأیید عملکرد روان این بسته آفیس روی لینوکس و پایداری آن پرداختند."
+    ],
+    "hashtags": [
+     "LibreOffice",
+     "OpenSource",
+     "Linux"
+    ],
+    "hook": "حساب رسمی LibreOffice با توییتی کوتاه، پایداری و دسترسی همیشگی این نرم‌افزار را به شیوه‌ای طنزآمیز به رخ کشید.",
+    "title": "توییت طنزآمیز LibreOffice درباره کارکرد سالانه"
+   },
+   "telegraph_url": "https://telegra.ph/کابرد-سال‌های-کامل-پیام-خنده‌دار-لایبر‌آفیس-11-13",
+   "title": "LibreOffice actually works 365 days a year",
+   "updated_at": 1794599096,
+   "url": "https://twitter.com/LibreOffice/status/2121205272479998268",
+   "url_key": "twitter.com/libreoffice/status/2121205272479998268"
+  },
+  "hackernews:50486748": {
+   "attempts": 0,
+   "created_at": 1794619696,
+   "message_id": 138,
+   "score": 325,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "هوش مصنوعی Claude محتوای ۱۰۰۹ صفحه دفاتر منطق‌دان گودل را در دو روز تحلیل کرد.",
+     "مطابق ادعا، صدها قضیه اثبات‌شده ناشناخته و ده‌ها ایده پیش‌گامانه در این دفاتر نهفته است.",
+     "تیم تحقیقاتی هلسینکی برای خواندن شورت‌هایند Gabelsberger از هوش مصنوعی کمک گرفت."
+    ],
+    "hashtags": [
+     "گودل",
+     "هوش_مصنوعی",
+     "ریاضی"
+    ],
+    "hook": "AI محتوای دفاتر گودل را تفسیر کرد و صدها قضیه اثبات‌شده ناشناخته را آشکار ساخت.",
+    "title": "هوش مصنوعی قفل دفترچه‌های گودل را باز کرد"
+   },
+   "telegraph_url": "https://telegra.ph/هوش-مصنوعی-دفترچه‌های-نادر-گوئل-را-گشود-11-14",
+   "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+   "updated_at": 1794619696,
+   "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+   "url_key": "theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths"
+  },
+  "hackernews:50487185": {
+   "attempts": 0,
+   "created_at": 1794652186,
+   "message_id": 144,
+   "score": 262,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "مدل LeWM در محاسبات ۲۵ گامه دقت کاملی دارد اما در اهداف ۷۵ گامه به ۲۲ درصد موفقیت می‌رسد.",
+     "تقسیم کار به زیرلنگرهای ۲۵ گامه موفقیت را از ۲۲ به ۸۵ درصد رساند، سه برابر تغییر فیزیک.",
+     "روش‌های جدید بدون بازآموزی مدل پیاده شدند و به ربات‌ها کمک می‌کنند کارهای بلندمدت را حل کنند."
+    ],
+    "hashtags": [
+     "JEPA",
+     "جهانی_مدل",
+     "یادگیری_عمیق"
+    ],
+    "hook": "کشف می‌کند که افق برنامه‌ریزی مدل حدود ۲۵ گام است و میله‌بندی آن ۶۰ امتیاز موفقیت می‌افزاید.",
+    "title": "600 آزمایش بر روی مدل‌های جهانی JEPA"
+   },
+   "telegraph_url": "https://telegra.ph/۶۰۰-آزمایش-روی-JEPA-معماری-خوب-است-برنامه‌ریزی-مشکل-دارد-11-14",
+   "title": "After 600 experiments, here's what I discovered about JEPA world models",
+   "updated_at": 1794652186,
+   "url": "https://haddyalchaer.com/jepa",
+   "url_key": "haddyalchaer.com/jepa"
+  },
+  "hackernews:50489641": {
+   "attempts": 0,
+   "created_at": 1794619667,
+   "message_id": 135,
+   "score": 1291,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "فرمان توقف همه پروازهای برخاسته به دلیل «وضعیت‌های غیرعادی و ایمنی» صادر شد.",
+     "مسئولان هیچ نشانه‌ای از سوءقصد یا حمله سایبری ندیدند و آن را ناشی از قطعی مخابراتی می‌دانند.",
+     "صدها هزار مسافر در فرودگاه‌ها باقی ماندند و زمان بازگشت آن‌ها نامشخص است."
+    ],
+    "hashtags": [
+     "FAA",
+     "هوانوردی",
+     "قطعی_تلکام"
+    ],
+    "hook": "سازمان هوانوردی فدرال آمریکا به دلیل یک قطعی مخابراتی، توقف سراسری پروازهای برخاسته را اعلام کرد.",
+    "title": "قطع سراسری پروازها در آمریکا"
+   },
+   "telegraph_url": "https://telegra.ph/توقف-ملی-پروازها-در-آمریکا-اختلال-مخابراتی-و-پیامدهای-لجستیکی-11-14",
+   "title": "FAA issues national ground stop",
+   "updated_at": 1794619668,
+   "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
+   "url_key": "nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247"
+  },
+  "hackernews:50493062": {
+   "attempts": 0,
+   "created_at": 1794652162,
+   "message_id": 141,
+   "score": 267,
+   "source": "hackernews",
+   "status": "PUBLISHED",
+   "summary": {
+    "bullets": [
+     "حذف API عمومی منسوخ و عملیات DIAG_MASK با ارتقای پروتکل RPC به نسخه ۹",
+     "پشتیبانی جدید از کوانتایز FP8، کاهش YaRN قابل تنظیم و بهینه‌سازی‌های گسترده برای CUDA و Metal",
+     "پیشرفت‌های بزرگ در بک‌اند Vulkan و SYCL از جملهscheduler MoE در سطح دستگاه"
+    ],
+    "hashtags": [
+     "ggml",
+     "llama.cpp",
+     "GPU"
+    ],
+    "hook": "نسخه اصلی ggml با حذف APIهای قدیمی و پشتیبانی جدید از FP8 و YaRN عرضه شد.",
+    "title": "ggml نسخه ۱.۰.۰ منتشر شد"
+   },
+   "telegraph_url": "https://telegra.ph/نسخه-100-ggml-منتشر-شد-11-14",
+   "title": "Ggml v1.0.0",
+   "updated_at": 1794652162,
+   "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
+   "url_key": "github.com/ggml-org/ggml/releases/tag/v1.0.0"
+  }
+ },
+ "version": 1
+}
